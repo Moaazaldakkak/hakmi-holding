@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hakmi Holding - Coming Soon</title>
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style data-purpose="custom-fonts">
+    @font-face {
+      font-family: 'Lyon Arabic Display';
+      src: url('fonts/COMM - Lyon Arabic Display Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Lyon Arabic Display';
+      src: url('fonts/COMM - Lyon Arabic Display Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Lyon Arabic Display';
+      src: url('fonts/COMM - Lyon Arabic Display Light.otf') format('opentype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Lyon Arabic Display';
+      src: url('fonts/COMM - Lyon Arabic Display Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Lyon Arabic Display';
+      src: url('fonts/COMM - Lyon Arabic Display Black.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    .font-serif {
+      font-family: 'Lyon Arabic Display', serif;
+    }
+    
+    .font-sans {
+      font-family: 'Lyon Arabic Display', sans-serif;
+    }
+    
+    .bg-left-bottom {
+      background-position: left 90%;
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'custom-cream': '#F3F0E8',
+            'custom-navy': '#1a344c',
+            'custom-terracotta': '#1a344c',
+            'custom-input-border': '#D5CFC4',
+            'custom-text-muted': '#000000',
+            'custom-text-light': '#026481'
+          },
+          textShadow: {
+            'md': '0 2px 4px rgba(0,0,0,0.3)',
+            'lg': '0 4px 8px rgba(0,0,0,0.4)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-custom-cream font-sans min-h-screen flex flex-col m-0 p-0">
+<!-- BEGIN: MainContent -->
+<main class="flex-grow flex flex-col md:flex-row w-full h-[calc(100vh-100px)]">
+<!-- Left Column: Content -->
+<div class="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-24 lg:px-32 xl:px-40 py-12 relative h-full overflow-y-auto">
+<!-- Pattern Background (under content) -->
+<div class="absolute inset-0 -z-10 bg-[url('images/bg-pattern.svg')] bg-no-repeat bg-contain" style="background-position: left 90%;"></div>
+<!-- Logo Placeholder -->
+<div class="absolute top-12 left-8 md:left-24 lg:left-32 xl:left-40"><img src="images/logo.svg" alt="Hakmi Holding" class="h-10 md:h-12 w-auto"/></div>
+<div class="max-w-md mt-12 md:mt-0 relative z-10 pb-16 md:pb-0">
+<!-- Headline -->
+<h1 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] font-semibold md:text-custom-navy text-custom-navy tracking-tight leading-tight mb-5 md:text-shadow-none">
+          Something<br/>
+          Exceptional is<br/>
+          Coming Soon
+        </h1>
+<!-- Description -->
+<p class="md:text-custom-text-light text-custom-text-muted text-base md:text-lg mb-8 leading-relaxed font-light">
+          We are currently crafting a digital experience that reflects our heritage and excellence. Please check back soon.
+        </p>
+<!-- Form -->
+<form class="flex flex-col gap-5 font-sans" id="notify-form">
+<div>
+<input class="w-full px-5 py-3.5 bg-white border border-custom-input-border rounded-full focus:outline-none focus:ring-1 focus:ring-custom-navy text-custom-navy placeholder-custom-text-light" placeholder="Name" type="text" name="name" required/>
+</div>
+<div>
+<input class="w-full px-5 py-3.5 bg-white border border-custom-input-border rounded-full focus:outline-none focus:ring-1 focus:ring-custom-navy text-custom-navy placeholder-custom-text-light" placeholder="Email" type="email" name="email" required/>
+</div>
+<button class="w-full bg-custom-terracotta text-white font-medium tracking-wider uppercase py-3.5 rounded-full hover:bg-opacity-90 transition duration-300 shadow-md" type="submit">
+            Notify Me
+          </button>
+<div id="form-message" class="mt-4 text-sm hidden"></div>
+</form>
+
+<script>
+document.getElementById('notify-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const form = this;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const messageDiv = document.getElementById('form-message');
+    
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    messageDiv.classList.add('hidden');
+    
+    const formData = new FormData(form);
+    
+    try {
+        const response = await fetch('send-email.php', {
+            method: 'POST',
+            body: formData
+        });
+        
+        const text = await response.text();
+        
+        if (response.ok && text === 'success') {
+            messageDiv.textContent = 'Thanks! We\'ll notify you soon.';
+            messageDiv.className = 'mt-4 text-sm text-green-600';
+            form.reset();
+        } else {
+            messageDiv.textContent = text || 'Something went wrong. Please try again.';
+            messageDiv.className = 'mt-4 text-sm text-red-600';
+        }
+    } catch (error) {
+        messageDiv.textContent = 'Network error. Please try again.';
+        messageDiv.className = 'mt-4 text-sm text-red-600';
+    }
+    
+    messageDiv.classList.remove('hidden');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Notify Me';
+});
+</script>
+</div>
+</div>
+<!-- Right Column: Image -->
+<div class="hidden md:block w-1/2 h-full">
+<img alt="Modern Architecture" class="w-full h-full object-cover object-left" src="images/modern-architecture.jpg"/>
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: Footer -->
+<footer class="bg-custom-cream border-t border-[#E5E0D8] w-full z-10 shrink-0 py-4 font-sans">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-4">
+<div class="flex flex-wrap items-center justify-center space-x-4 text-xs text-custom-text-light">
+<a class="hover:text-custom-navy transition font-sans" href="#" data-modal="privacy">Privacy Policy</a>
+<span class="text-custom-text-light/50">|</span>
+<a class="hover:text-custom-navy transition font-sans" href="#" data-modal="terms">Terms of Service</a>
+</div>
+<div class="text-center md:text-left">
+<span class="text-xs text-custom-text-light/70">© 2026 Hakimi Holding. All rights reserved.</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+
+<!-- Privacy Policy Modal -->
+<div id="privacy-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+  <div class="bg-custom-cream rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl">
+    <div class="p-6 md:p-8 border-b border-[#E5E0D8] flex items-center justify-between">
+      <h2 class="font-serif text-2xl font-semibold text-custom-navy">Privacy Policy</h2>
+      <button data-close="privacy" class="text-custom-navy hover:text-custom-terracotta transition text-2xl leading-none font-sans">&times;</button>
+    </div>
+    <div class="p-6 md:p-8 text-custom-text-muted text-sm leading-relaxed font-sans">
+      <p class="mb-4"><strong class="text-custom-navy font-sans">Effective Date: August 2026</strong></p>
+      <p class="mb-4">Hakmi Holding ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">1. Information We Collect</h3>
+      <p class="mb-4 font-sans">We may collect personal information you voluntarily provide when you subscribe to our notifications, including your name and email address.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">2. How We Use Your Information</h3>
+      <p class="mb-4 font-sans">We use your information solely to notify you about our website launch, updates, and relevant news. We do not sell, trade, or rent your personal information to third parties.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">3. Data Security</h3>
+      <p class="mb-4 font-sans">We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">4. Your Rights</h3>
+      <p class="mb-4 font-sans">You may unsubscribe from our notifications at any time by contacting us. You have the right to access, correct, or request deletion of your personal data.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">5. Contact Us</h3>
+      <p class="mb-4 font-sans">For any questions about this Privacy Policy, please contact us at <a href="mailto:privacy@hakmiholding.com" class="text-custom-terracotta hover:underline font-sans">privacy@hakmiholding.com</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div id="terms-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+  <div class="bg-custom-cream rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl">
+    <div class="p-6 md:p-8 border-b border-[#E5E0D8] flex items-center justify-between">
+      <h2 class="font-serif text-2xl font-semibold text-custom-navy">Terms of Service</h2>
+      <button data-close="terms" class="text-custom-navy hover:text-custom-terracotta transition text-2xl leading-none font-sans">&times;</button>
+    </div>
+    <div class="p-6 md:p-8 text-custom-text-muted text-sm leading-relaxed font-sans">
+      <p class="mb-4"><strong class="text-custom-navy font-sans">Effective Date: August 2026</strong></p>
+      <p class="mb-4">By accessing and using the Hakmi Holding website ("Website"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part, please do not use our Website.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">1. Use of Website</h3>
+      <p class="mb-4 font-sans">The Website is provided for informational purposes only. You agree not to misuse the Website or interfere with its operation, security, or integrity.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">2. Intellectual Property</h3>
+      <p class="mb-4 font-sans">All content, trademarks, logos, and designs on this Website are the property of Hakmi Holding or its licensors. No license is granted to reproduce, distribute, or create derivative works without express written permission.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">3. Notification Sign-Up</h3>
+      <p class="mb-4 font-sans">By submitting your name and email, you consent to receive notifications about our launch and updates. You may unsubscribe at any time.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">4. Disclaimer</h3>
+      <p class="mb-4 font-sans">The Website is provided "as is" without warranties of any kind. Hakmi Holding does not guarantee uninterrupted or error-free access.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">5. Limitation of Liability</h3>
+      <p class="mb-4 font-sans">Hakmi Holding shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Website.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">6. Governing Law</h3>
+      <p class="mb-4 font-sans">These Terms shall be governed by the laws of the jurisdiction where Hakmi Holding is registered.</p>
+      
+      <h3 class="font-semibold text-custom-navy mb-2 font-sans">7. Contact Us</h3>
+      <p class="mb-4 font-sans">For questions about these Terms, contact us at <a href="mailto:legal@hakmiholding.com" class="text-custom-terracotta hover:underline font-sans">legal@hakmiholding.com</a>.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Modal functionality
+  document.querySelectorAll('[data-modal]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const modalId = this.dataset.modal + '-modal';
+      document.getElementById(modalId).classList.remove('hidden');
+      document.getElementById(modalId).classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  document.querySelectorAll('[data-close]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const modalId = this.dataset.close + '-modal';
+      document.getElementById(modalId).classList.add('hidden');
+      document.getElementById(modalId).classList.remove('flex');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Close on backdrop click
+  document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.add('hidden');
+        this.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      });
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+</body></html>
