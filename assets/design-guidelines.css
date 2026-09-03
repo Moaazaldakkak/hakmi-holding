@@ -1,0 +1,299 @@
+/*
+ * Hakmi Holding visual system
+ * Source: hakmi_design_guidelines.html
+ *
+ * Palette
+ *   Primary Navy    #0B192C
+ *   Secondary Navy  #1E3E62
+ *   Accent Gold     #C5A880
+ *   Light BG        #F8F9FA
+ *   Text Dark        #2B2D42
+ *   Text Muted       #5A6065
+ */
+
+:root {
+	--hakmi-primary-navy: #0B192C;
+	--hakmi-secondary-navy: #1E3E62;
+	--hakmi-accent-gold: #C5A880;
+	--hakmi-accent-gold-hover: #b09168;
+	--hakmi-text-dark: #2B2D42;
+	--hakmi-text-muted: #5A6065;
+	--hakmi-bg-light: #F8F9FA;
+	--hakmi-bg-card: #FFFFFF;
+	--hakmi-border: #E2E8F0;
+	--hakmi-font-sans: "Plus Jakarta Sans", "Roboto", Arial, sans-serif;
+	--hakmi-font-display: "Instrument Serif", "Roboto Slab", Georgia, serif;
+	--hakmi-font-arabic: "Lyon Arabic Display", "Plus Jakarta Sans", Tahoma, Arial, sans-serif;
+}
+
+/* ------------------------------------------------------------------ */
+/* Remap Elementor kit tokens to Hakmi brand                           */
+/* ------------------------------------------------------------------ */
+.elementor-kit-4 {
+	--e-global-color-secondary: var(--hakmi-primary-navy);
+	--e-global-color-accent: var(--hakmi-accent-gold);
+	--e-global-color-31c76fa: var(--hakmi-text-muted);
+
+	--e-global-typography-primary-font-family: "Plus Jakarta Sans";
+	--e-global-typography-secondary-font-family: "Instrument Serif";
+	--e-global-typography-text-font-family: "Plus Jakarta Sans";
+	--e-global-typography-accent-font-family: "Plus Jakarta Sans";
+	--e-global-typography-d41d0c7-font-family: "Instrument Serif";
+	--e-global-typography-c201a61-font-family: "Instrument Serif";
+}
+
+html[dir="rtl"] .elementor-kit-4 {
+	/* Same brand tokens as LTR; Lyon leads so Arabic glyphs resolve first. */
+	--e-global-typography-primary-font-family: "Lyon Arabic Display", "Plus Jakarta Sans";
+	--e-global-typography-secondary-font-family: "Lyon Arabic Display", "Instrument Serif";
+	--e-global-typography-text-font-family: "Lyon Arabic Display", "Plus Jakarta Sans";
+	--e-global-typography-accent-font-family: "Lyon Arabic Display", "Plus Jakarta Sans";
+	--e-global-typography-d41d0c7-font-family: "Lyon Arabic Display", "Instrument Serif";
+	--e-global-typography-c201a61-font-family: "Lyon Arabic Display", "Instrument Serif";
+}
+
+html,
+body {
+	background-color: var(--hakmi-bg-light);
+	color: var(--hakmi-text-dark);
+}
+
+body,
+.elementor,
+.elementor-widget-text-editor,
+.elementor-icon-box-description,
+.elementskit-navbar-nav,
+.jkit-button-wrapper {
+	font-family: var(--hakmi-font-sans);
+	line-height: 1.8;
+}
+
+/* Display / editorial headings keep a premium serif. */
+.elementor-heading-title,
+h1,
+h2,
+h3 {
+	font-family: var(--hakmi-font-display);
+	letter-spacing: 0;
+}
+
+/* RTL uses the same brand system; Lyon leads for Arabic glyphs, Latin fonts follow. */
+html[dir="rtl"] body,
+html[dir="rtl"] .elementor,
+html[dir="rtl"] .elementor-widget-text-editor,
+html[dir="rtl"] .elementor-widget-text-editor p,
+html[dir="rtl"] .elementor-icon-box-description,
+html[dir="rtl"] .elementskit-navbar-nav,
+html[dir="rtl"] .jkit-button-wrapper,
+html[dir="rtl"] .profile-name,
+html[dir="rtl"] .profile-des {
+	font-family: "Lyon Arabic Display", var(--hakmi-font-sans);
+}
+
+html[dir="rtl"] .elementor-heading-title,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] .elementor .elementor-heading-title,
+html[dir="rtl"] .elementor-1527 .elementor-heading-title,
+html[dir="rtl"] .elementor-1267 .elementor-heading-title,
+html[dir="rtl"] .elementor-1419 .elementor-heading-title {
+	font-family: "Lyon Arabic Display", var(--hakmi-font-display) !important;
+	font-weight: 700;
+}
+
+/* ------------------------------------------------------------------ */
+/* Accent gold replaces template orange                                */
+/* ------------------------------------------------------------------ */
+.elementor-view-default .elementor-icon,
+.elementor-icon-list-icon i,
+.elementor-icon-list-icon svg,
+.elementor-counter-number,
+.elementor-counter-number-prefix,
+.elementor-counter-number-suffix {
+	color: var(--hakmi-accent-gold);
+	fill: var(--hakmi-accent-gold);
+}
+
+.elementor-widget-divider .elementor-divider-separator {
+	border-color: var(--hakmi-accent-gold);
+}
+
+.elementor-view-stacked .elementor-icon {
+	background-color: var(--hakmi-accent-gold) !important;
+	color: var(--hakmi-primary-navy) !important;
+	fill: var(--hakmi-primary-navy) !important;
+}
+
+.jkit-testimonials .profile-name {
+	color: var(--hakmi-accent-gold);
+}
+
+/* ------------------------------------------------------------------ */
+/* Buttons                                                             */
+/* ------------------------------------------------------------------ */
+.jkit-button .jkit-button-wrapper,
+.elementor-button,
+.elementor-button-link {
+	border-radius: 0;
+	font-family: var(--hakmi-font-sans);
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.jkit-button .jkit-button-wrapper:hover,
+.elementor-button:hover,
+.elementor-button-link:hover {
+	background-color: var(--hakmi-accent-gold) !important;
+	border-color: var(--hakmi-accent-gold) !important;
+	color: var(--hakmi-primary-navy) !important;
+}
+
+/* Ghost / outline buttons pick up gold on hover. */
+.elementor-button-link[style*="transparent"]:hover,
+.jkit-button .jkit-button-wrapper[style*="transparent"]:hover {
+	box-shadow: inset 0 0 0 1px var(--hakmi-accent-gold);
+}
+
+/* ------------------------------------------------------------------ */
+/* Surfaces: quiet light backgrounds, navy dark bands                  */
+/* ------------------------------------------------------------------ */
+.elementor-kit-4 {
+	background-color: var(--hakmi-bg-light);
+}
+
+/* Soften cream sections toward approved light background. */
+body .elementor-kit-4,
+.page,
+.site {
+	background-color: var(--hakmi-bg-light);
+}
+
+/* Dark template blacks → primary navy */
+.elementor-element[style*="background-color: #000"],
+.elementor-element[style*="background-color:#000"],
+.elementor-element[style*="background: #000"],
+.elementor-element[style*="background:#000"],
+.elementor-element[style*="background-color: #100C0A"],
+.elementor-element[style*="background-color:#100C0A"],
+.elementor-element[style*="background-color: #020101"],
+.elementor-element[style*="background-color:#020101"] {
+	background-color: var(--hakmi-primary-navy) !important;
+}
+
+/* Footer / end bands often use near-black via Elementor CSS variables. */
+.elementor-location-footer,
+.ekit-template-content-footer,
+.elementor-1419 {
+	--e-global-color-secondary: var(--hakmi-primary-navy);
+}
+
+/* ------------------------------------------------------------------ */
+/* Text hierarchy — muted body copy; avoid forcing dark on hero text   */
+/* ------------------------------------------------------------------ */
+.elementor-icon-box-description,
+.profile-des,
+.elementor-icon-list-text {
+	color: var(--hakmi-text-muted);
+}
+
+/* Large display titles — preserve Elementor light/dark per-section colors. */
+.elementor-widget-heading .elementor-heading-title {
+	margin-block-end: 0.75rem;
+}
+
+.elementor-widget-image img {
+	border-radius: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Navigation                                                          */
+/* ------------------------------------------------------------------ */
+.elementskit-navbar-nav > li > a {
+	font-family: var(--hakmi-font-sans);
+	font-weight: 500;
+	letter-spacing: 0.01em;
+}
+
+html[dir="rtl"] .elementskit-navbar-nav > li > a {
+	font-family: "Lyon Arabic Display", var(--hakmi-font-sans);
+}
+
+.elementskit-navbar-nav > li > a:hover,
+.elementskit-navbar-nav > li.current-menu-item > a {
+	color: var(--hakmi-accent-gold) !important;
+}
+
+.elementskit-dropdown {
+	border-top: 2px solid var(--hakmi-accent-gold);
+	background: var(--hakmi-bg-card);
+}
+
+/* ------------------------------------------------------------------ */
+/* Testimonials / quotes                                               */
+/* ------------------------------------------------------------------ */
+.jkit-testimonials .comment-content p {
+	font-family: var(--hakmi-font-display);
+}
+
+html[dir="rtl"] .jkit-testimonials .comment-content p {
+	font-family: "Lyon Arabic Display", var(--hakmi-font-display);
+}
+
+.jkit-testimonials .profile-name {
+	font-weight: 700;
+}
+
+.jkit-testimonials .tns-controls button {
+	border-color: var(--hakmi-accent-gold) !important;
+	color: var(--hakmi-accent-gold) !important;
+}
+
+.jkit-testimonials .tns-controls button:hover {
+	background: var(--hakmi-accent-gold) !important;
+	color: var(--hakmi-primary-navy) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* Accordion / FAQ                                                     */
+/* ------------------------------------------------------------------ */
+.elementskit-accordion-title,
+.elementskit-card-header {
+	font-family: var(--hakmi-font-sans);
+	color: var(--hakmi-primary-navy);
+}
+
+html[dir="rtl"] .elementskit-accordion-title,
+html[dir="rtl"] .elementskit-card-header {
+	font-family: "Lyon Arabic Display", var(--hakmi-font-sans);
+}
+
+.elementskit-accordion .elementskit-card {
+	border-color: var(--hakmi-border);
+}
+
+.elementskit-accordion .elementskit-btn-link:hover {
+	color: var(--hakmi-accent-gold);
+}
+
+/* ------------------------------------------------------------------ */
+/* Selection & focus                                                   */
+/* ------------------------------------------------------------------ */
+::selection {
+	background: rgba(197, 168, 128, 0.35);
+	color: var(--hakmi-primary-navy);
+}
+
+a:focus-visible,
+button:focus-visible,
+.jkit-button-wrapper:focus-visible {
+	outline: 2px solid var(--hakmi-accent-gold);
+	outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+	body {
+		overflow-x: hidden;
+	}
+}
