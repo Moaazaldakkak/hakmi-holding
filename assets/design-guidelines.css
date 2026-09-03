@@ -21,9 +21,9 @@
 	--hakmi-bg-light: #F8F9FA;
 	--hakmi-bg-card: #FFFFFF;
 	--hakmi-border: #E2E8F0;
-	--hakmi-font-sans: "Plus Jakarta Sans", "Roboto", Arial, sans-serif;
-	--hakmi-font-display: "Instrument Serif", "Roboto Slab", Georgia, serif;
-	--hakmi-font-arabic: "Lyon Arabic Display", "Plus Jakarta Sans", Tahoma, Arial, sans-serif;
+	--hakmi-font: "Lyon Arabic Display", Tahoma, Arial, sans-serif;
+	--hakmi-content-max: 1440px;
+	--hakmi-content-pad: 16px;
 }
 
 /* ------------------------------------------------------------------ */
@@ -34,72 +34,68 @@
 	--e-global-color-accent: var(--hakmi-accent-gold);
 	--e-global-color-31c76fa: var(--hakmi-text-muted);
 
-	--e-global-typography-primary-font-family: "Plus Jakarta Sans";
-	--e-global-typography-secondary-font-family: "Instrument Serif";
-	--e-global-typography-text-font-family: "Plus Jakarta Sans";
-	--e-global-typography-accent-font-family: "Plus Jakarta Sans";
-	--e-global-typography-d41d0c7-font-family: "Instrument Serif";
-	--e-global-typography-c201a61-font-family: "Instrument Serif";
-}
-
-html[dir="rtl"] .elementor-kit-4 {
-	/* Same brand tokens as LTR; Lyon leads so Arabic glyphs resolve first. */
-	--e-global-typography-primary-font-family: "Lyon Arabic Display", "Plus Jakarta Sans";
-	--e-global-typography-secondary-font-family: "Lyon Arabic Display", "Instrument Serif";
-	--e-global-typography-text-font-family: "Lyon Arabic Display", "Plus Jakarta Sans";
-	--e-global-typography-accent-font-family: "Lyon Arabic Display", "Plus Jakarta Sans";
-	--e-global-typography-d41d0c7-font-family: "Lyon Arabic Display", "Instrument Serif";
-	--e-global-typography-c201a61-font-family: "Lyon Arabic Display", "Instrument Serif";
+	--e-global-typography-primary-font-family: "Lyon Arabic Display";
+	--e-global-typography-secondary-font-family: "Lyon Arabic Display";
+	--e-global-typography-text-font-family: "Lyon Arabic Display";
+	--e-global-typography-accent-font-family: "Lyon Arabic Display";
+	--e-global-typography-d41d0c7-font-family: "Lyon Arabic Display";
+	--e-global-typography-c201a61-font-family: "Lyon Arabic Display";
 }
 
 html,
 body {
 	background-color: var(--hakmi-bg-light);
 	color: var(--hakmi-text-dark);
+	font-family: var(--hakmi-font);
+	line-height: 1.8;
 }
 
 body,
 .elementor,
 .elementor-widget-text-editor,
+.elementor-widget-text-editor p,
+.elementor-icon-box-title,
 .elementor-icon-box-description,
+.elementor-heading-title,
 .elementskit-navbar-nav,
-.jkit-button-wrapper {
-	font-family: var(--hakmi-font-sans);
-	line-height: 1.8;
+.jkit-button-wrapper,
+.profile-name,
+.profile-des,
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+select,
+textarea {
+	font-family: var(--hakmi-font) !important;
 }
 
-/* Display / editorial headings keep a premium serif. */
 .elementor-heading-title,
 h1,
 h2,
 h3 {
-	font-family: var(--hakmi-font-display);
 	letter-spacing: 0;
-}
-
-/* RTL uses the same brand system; Lyon leads for Arabic glyphs, Latin fonts follow. */
-html[dir="rtl"] body,
-html[dir="rtl"] .elementor,
-html[dir="rtl"] .elementor-widget-text-editor,
-html[dir="rtl"] .elementor-widget-text-editor p,
-html[dir="rtl"] .elementor-icon-box-description,
-html[dir="rtl"] .elementskit-navbar-nav,
-html[dir="rtl"] .jkit-button-wrapper,
-html[dir="rtl"] .profile-name,
-html[dir="rtl"] .profile-des {
-	font-family: "Lyon Arabic Display", var(--hakmi-font-sans);
-}
-
-html[dir="rtl"] .elementor-heading-title,
-html[dir="rtl"] h1,
-html[dir="rtl"] h2,
-html[dir="rtl"] h3,
-html[dir="rtl"] .elementor .elementor-heading-title,
-html[dir="rtl"] .elementor-1527 .elementor-heading-title,
-html[dir="rtl"] .elementor-1267 .elementor-heading-title,
-html[dir="rtl"] .elementor-1419 .elementor-heading-title {
-	font-family: "Lyon Arabic Display", var(--hakmi-font-display) !important;
 	font-weight: 700;
+}
+
+/* Content width + edge padding */
+.e-con-boxed > .e-con-inner,
+.elementor-section .elementor-container {
+	max-width: var(--hakmi-content-max) !important;
+	width: 100%;
+	padding-inline: var(--hakmi-content-pad) !important;
+	margin-inline: auto;
+	box-sizing: border-box;
+}
+
+/* Header logo */
+.elementor-1267 .elementor-widget-image img,
+.elementor-1419 .elementor-widget-image img {
+	max-height: 42px;
+	width: auto;
+	height: auto;
 }
 
 /* ------------------------------------------------------------------ */
@@ -136,7 +132,7 @@ html[dir="rtl"] .elementor-1419 .elementor-heading-title {
 .elementor-button,
 .elementor-button-link {
 	border-radius: 0;
-	font-family: var(--hakmi-font-sans);
+	font-family: var(--hakmi-font) !important;
 	font-weight: 600;
 	letter-spacing: 0.02em;
 	transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
@@ -150,150 +146,145 @@ html[dir="rtl"] .elementor-1419 .elementor-heading-title {
 	color: var(--hakmi-primary-navy) !important;
 }
 
-/* Ghost / outline buttons pick up gold on hover. */
-.elementor-button-link[style*="transparent"]:hover,
-.jkit-button .jkit-button-wrapper[style*="transparent"]:hover {
-	box-shadow: inset 0 0 0 1px var(--hakmi-accent-gold);
+/* Hero secondary CTA */
+.hakmi-hero-secondary .jkit-button-wrapper {
+	background: transparent !important;
+	border: 1px solid rgba(255, 255, 255, 0.55) !important;
+	color: #fff !important;
+}
+
+.hakmi-hero-secondary .jkit-button-wrapper:hover {
+	border-color: var(--hakmi-accent-gold) !important;
+	color: var(--hakmi-accent-gold) !important;
+	background: transparent !important;
+}
+
+.elementor-element-3e41fe34 {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: wrap !important;
+	gap: 12px !important;
+	align-items: center !important;
+	width: auto !important;
+}
+
+/* Fact strip: title + subtitle, quieter icons */
+.hakmi-fact-strip .elementor-icon-box-icon {
+	display: none;
+}
+
+.hakmi-fact-strip .elementor-icon-box-title {
+	color: var(--hakmi-primary-navy);
+	font-size: 1.15rem;
+}
+
+.hakmi-fact-strip .elementor-icon-box-description {
+	color: var(--hakmi-text-muted);
+}
+
+/* Sectors: stack header + rows full width (template was side-by-side) */
+.elementor-element-27e22567 > .e-con-inner {
+	display: flex !important;
+	flex-direction: column !important;
+	flex-wrap: nowrap !important;
+	gap: 28px !important;
+	align-items: stretch !important;
+}
+
+.elementor-element-27e22567 > .e-con-inner > .e-con {
+	width: 100% !important;
+	max-width: 100% !important;
+	flex: 0 0 auto !important;
+}
+
+/* Sectors 4 + 3 rows */
+.hakmi-sectors-row {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+	gap: 16px !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+.hakmi-sector-card {
+	flex: 1 1 0 !important;
+	min-width: 0 !important;
+	width: auto !important;
+	max-width: none !important;
+}
+
+.hakmi-sector-card img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	display: block;
+}
+
+.hakmi-sector-card .elementor-heading-title {
+	margin-top: 0.75rem;
+	font-size: 1.05rem;
+	color: var(--hakmi-primary-navy);
+}
+
+.hakmi-sectors-row--3 {
+	justify-content: center !important;
+}
+
+.hakmi-sectors-row--3 .hakmi-sector-card {
+	flex: 0 1 calc((100% - 32px) / 3) !important;
+}
+
+/* Companies process: hide numeric step labels */
+.hakmi-companies-process .elementor-element-6dff06c,
+.hakmi-companies-process .elementor-element-63bcb046,
+.hakmi-companies-process .elementor-element-38f2a5da,
+.hakmi-companies-process .elementor-element-148cded9 {
+	display: none !important;
+}
+
+/* Fact strip: force 3 columns */
+.hakmi-fact-strip .elementor-element-18861dba {
+	grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 980px) {
+	.hakmi-sectors-row,
+	.hakmi-sectors-row--3 {
+		flex-wrap: wrap;
+	}
+
+	.hakmi-sector-card,
+	.hakmi-sectors-row--3 .hakmi-sector-card {
+		flex: 1 1 calc(50% - 10px);
+	}
+}
+
+@media (max-width: 640px) {
+	.hakmi-sector-card,
+	.hakmi-sectors-row--3 .hakmi-sector-card {
+		flex: 1 1 100%;
+	}
+
+	.hakmi-sector-card img {
+		height: 200px;
+	}
 }
 
 /* ------------------------------------------------------------------ */
-/* Surfaces: quiet light backgrounds, navy dark bands                  */
+/* Surfaces                                                            */
 /* ------------------------------------------------------------------ */
-.elementor-kit-4 {
-	background-color: var(--hakmi-bg-light);
-}
-
-/* Soften cream sections toward approved light background. */
-body .elementor-kit-4,
+.elementor-kit-4,
 .page,
 .site {
 	background-color: var(--hakmi-bg-light);
 }
 
-/* Dark template blacks → primary navy */
-.elementor-element[style*="background-color: #000"],
-.elementor-element[style*="background-color:#000"],
-.elementor-element[style*="background: #000"],
-.elementor-element[style*="background:#000"],
-.elementor-element[style*="background-color: #100C0A"],
-.elementor-element[style*="background-color:#100C0A"],
-.elementor-element[style*="background-color: #020101"],
-.elementor-element[style*="background-color:#020101"] {
-	background-color: var(--hakmi-primary-navy) !important;
-}
-
-/* Footer / end bands often use near-black via Elementor CSS variables. */
-.elementor-location-footer,
-.ekit-template-content-footer,
-.elementor-1419 {
-	--e-global-color-secondary: var(--hakmi-primary-navy);
-}
-
-/* ------------------------------------------------------------------ */
-/* Text hierarchy — muted body copy; avoid forcing dark on hero text   */
-/* ------------------------------------------------------------------ */
-.elementor-icon-box-description,
-.profile-des,
-.elementor-icon-list-text {
-	color: var(--hakmi-text-muted);
-}
-
-/* Large display titles — preserve Elementor light/dark per-section colors. */
-.elementor-widget-heading .elementor-heading-title {
-	margin-block-end: 0.75rem;
-}
-
-.elementor-widget-image img {
-	border-radius: 0;
-}
-
-/* ------------------------------------------------------------------ */
-/* Navigation                                                          */
-/* ------------------------------------------------------------------ */
-.elementskit-navbar-nav > li > a {
-	font-family: var(--hakmi-font-sans);
-	font-weight: 500;
-	letter-spacing: 0.01em;
-}
-
-html[dir="rtl"] .elementskit-navbar-nav > li > a {
-	font-family: "Lyon Arabic Display", var(--hakmi-font-sans);
-}
-
-.elementskit-navbar-nav > li > a:hover,
-.elementskit-navbar-nav > li.current-menu-item > a {
+a.ekit-menu-nav-link:hover,
+.elementskit-navbar-nav > li > a:hover {
 	color: var(--hakmi-accent-gold) !important;
 }
 
-.elementskit-dropdown {
-	border-top: 2px solid var(--hakmi-accent-gold);
-	background: var(--hakmi-bg-card);
-}
-
-/* ------------------------------------------------------------------ */
-/* Testimonials / quotes                                               */
-/* ------------------------------------------------------------------ */
-.jkit-testimonials .comment-content p {
-	font-family: var(--hakmi-font-display);
-}
-
-html[dir="rtl"] .jkit-testimonials .comment-content p {
-	font-family: "Lyon Arabic Display", var(--hakmi-font-display);
-}
-
-.jkit-testimonials .profile-name {
-	font-weight: 700;
-}
-
-.jkit-testimonials .tns-controls button {
-	border-color: var(--hakmi-accent-gold) !important;
-	color: var(--hakmi-accent-gold) !important;
-}
-
-.jkit-testimonials .tns-controls button:hover {
-	background: var(--hakmi-accent-gold) !important;
-	color: var(--hakmi-primary-navy) !important;
-}
-
-/* ------------------------------------------------------------------ */
-/* Accordion / FAQ                                                     */
-/* ------------------------------------------------------------------ */
-.elementskit-accordion-title,
-.elementskit-card-header {
-	font-family: var(--hakmi-font-sans);
-	color: var(--hakmi-primary-navy);
-}
-
-html[dir="rtl"] .elementskit-accordion-title,
-html[dir="rtl"] .elementskit-card-header {
-	font-family: "Lyon Arabic Display", var(--hakmi-font-sans);
-}
-
-.elementskit-accordion .elementskit-card {
-	border-color: var(--hakmi-border);
-}
-
-.elementskit-accordion .elementskit-btn-link:hover {
-	color: var(--hakmi-accent-gold);
-}
-
-/* ------------------------------------------------------------------ */
-/* Selection & focus                                                   */
-/* ------------------------------------------------------------------ */
-::selection {
-	background: rgba(197, 168, 128, 0.35);
-	color: var(--hakmi-primary-navy);
-}
-
-a:focus-visible,
-button:focus-visible,
-.jkit-button-wrapper:focus-visible {
-	outline: 2px solid var(--hakmi-accent-gold);
-	outline-offset: 3px;
-}
-
-@media (max-width: 767px) {
-	body {
-		overflow-x: hidden;
-	}
+html {
+	overflow-x: hidden;
 }
