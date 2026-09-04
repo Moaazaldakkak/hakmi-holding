@@ -182,59 +182,6 @@ h3 {
 	color: var(--hakmi-text-muted);
 }
 
-/* Sectors: stack header + rows full width (template was side-by-side) */
-.elementor-element-27e22567 > .e-con-inner {
-	display: flex !important;
-	flex-direction: column !important;
-	flex-wrap: nowrap !important;
-	gap: 28px !important;
-	align-items: stretch !important;
-}
-
-.elementor-element-27e22567 > .e-con-inner > .e-con {
-	width: 100% !important;
-	max-width: 100% !important;
-	flex: 0 0 auto !important;
-}
-
-/* Sectors 4 + 3 rows */
-.hakmi-sectors-row {
-	display: flex !important;
-	flex-direction: row !important;
-	flex-wrap: nowrap !important;
-	gap: 16px !important;
-	width: 100% !important;
-	max-width: 100% !important;
-}
-
-.hakmi-sector-card {
-	flex: 1 1 0 !important;
-	min-width: 0 !important;
-	width: auto !important;
-	max-width: none !important;
-}
-
-.hakmi-sector-card img {
-	width: 100%;
-	height: 220px;
-	object-fit: cover;
-	display: block;
-}
-
-.hakmi-sector-card .elementor-heading-title {
-	margin-top: 0.75rem;
-	font-size: 1.05rem;
-	color: var(--hakmi-primary-navy);
-}
-
-.hakmi-sectors-row--3 {
-	justify-content: center !important;
-}
-
-.hakmi-sectors-row--3 .hakmi-sector-card {
-	flex: 0 1 calc((100% - 32px) / 3) !important;
-}
-
 /* Companies process: hide numeric step labels */
 .hakmi-companies-process .elementor-element-6dff06c,
 .hakmi-companies-process .elementor-element-63bcb046,
@@ -246,29 +193,6 @@ h3 {
 /* Fact strip: force 3 columns */
 .hakmi-fact-strip .elementor-element-18861dba {
 	grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-
-@media (max-width: 980px) {
-	.hakmi-sectors-row,
-	.hakmi-sectors-row--3 {
-		flex-wrap: wrap;
-	}
-
-	.hakmi-sector-card,
-	.hakmi-sectors-row--3 .hakmi-sector-card {
-		flex: 1 1 calc(50% - 10px);
-	}
-}
-
-@media (max-width: 640px) {
-	.hakmi-sector-card,
-	.hakmi-sectors-row--3 .hakmi-sector-card {
-		flex: 1 1 100%;
-	}
-
-	.hakmi-sector-card img {
-		height: 200px;
-	}
 }
 
 /* ------------------------------------------------------------------ */
