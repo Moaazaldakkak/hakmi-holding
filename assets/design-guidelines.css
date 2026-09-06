@@ -310,7 +310,7 @@ h3 {
 	}
 }
 
-/* Selected companies — process-style 4-column strip */
+/* Selected companies — portfolio cards */
 .hakmi-companies-section {
 	background-color: #f7eede;
 	color: var(--hakmi-primary-navy);
@@ -318,138 +318,150 @@ h3 {
 
 .hakmi-companies-section > .e-con-inner {
 	display: flex !important;
-	flex-direction: row !important;
-	align-items: stretch !important;
-	gap: 0 !important;
+	flex-direction: column !important;
+	gap: 32px !important;
 	padding-block: 72px !important;
 }
 
-.hakmi-companies-intro {
-	flex: 0 0 30%;
-	width: 30%;
-	max-width: 30%;
-	padding-inline-end: 24px;
+.hakmi-companies-header {
 	display: flex;
 	align-items: flex-start;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.hakmi-companies-intro {
+	max-width: 40rem;
+}
+
+.hakmi-companies-tag {
+	display: inline-block;
+	margin: 0 0 12px;
+	padding: 0.35rem 0.85rem;
+	border-radius: 999px;
+	background: rgba(11, 25, 44, 0.06);
+	color: var(--hakmi-primary-navy);
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.hakmi-companies-tag::before {
+	content: "• ";
+	color: var(--hakmi-accent-gold);
 }
 
 .hakmi-companies-title {
-	margin: 0;
+	margin: 0 0 0.65rem;
 	color: var(--hakmi-primary-navy);
-	font-size: clamp(1.75rem, 2.6vw, 2.75rem);
+	font-size: clamp(2rem, 3.4vw, 3rem);
 	font-weight: 700;
 	line-height: 1.2;
 }
 
+.hakmi-companies-lead {
+	margin: 0;
+	color: var(--hakmi-primary-navy);
+	font-size: 1rem;
+	line-height: 1.85;
+	opacity: 0.78;
+}
+
+.hakmi-companies-aside {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	color: var(--hakmi-primary-navy);
+	font-size: 0.9rem;
+	white-space: nowrap;
+}
+
+.hakmi-companies-aside svg {
+	flex: 0 0 auto;
+	opacity: 0.7;
+}
+
 .hakmi-companies-grid {
-	flex: 0 0 70%;
-	width: 70%;
-	max-width: 70%;
 	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 25%));
-	gap: 0;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 16px;
 }
 
 .hakmi-company-card {
-	padding: 32px;
-	background: transparent;
-}
-
-.hakmi-company-card:first-child {
-	border-inline-start: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	padding: 22px 20px 18px;
+	border: 1px solid rgba(11, 25, 44, 0.12);
+	border-radius: 10px;
+	background: #fff;
 }
 
 .hakmi-company-logo {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	height: 64px;
-	margin-bottom: 1.25rem;
+	min-height: 56px;
+	margin-bottom: 1.1rem;
 }
 
 .hakmi-company-logo img {
 	display: block;
-	max-height: 52px;
+	max-height: 48px;
 	width: auto;
 	max-width: 100%;
 	object-fit: contain;
 }
 
-.hakmi-company-mark {
-	color: var(--hakmi-primary-navy);
-	font-size: 2.15rem;
-	font-weight: 700;
-	line-height: 1;
-	letter-spacing: 0.02em;
-}
-
 .hakmi-company-card h3 {
-	margin: 0 0 0.65rem;
+	margin: 0 0 0.55rem;
 	color: var(--hakmi-primary-navy);
-	font-size: 1.125rem;
-	font-weight: 600;
-}
-
-.hakmi-company-card h3 span {
-	color: var(--hakmi-primary-navy);
-	font-weight: 500;
+	font-size: 1.05rem;
+	font-weight: 700;
 }
 
 .hakmi-company-card p {
-	margin: 0;
+	margin: 0 0 1.25rem;
 	color: var(--hakmi-primary-navy);
-	font-size: 1rem;
+	font-size: 0.92rem;
 	line-height: 1.8;
+	opacity: 0.78;
+	flex: 1 1 auto;
+}
+
+.hakmi-company-meta {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: auto;
+	padding-top: 12px;
+	border-top: 1px solid rgba(11, 25, 44, 0.1);
+	color: var(--hakmi-primary-navy);
+	font-size: 0.8rem;
+}
+
+.hakmi-company-meta svg {
+	flex: 0 0 auto;
+	opacity: 0.65;
 }
 
 @media (max-width: 1024px) {
-	.hakmi-companies-section > .e-con-inner {
-		flex-direction: column !important;
+	.hakmi-companies-header {
+		flex-direction: column;
 	}
 
-	.hakmi-companies-intro,
-	.hakmi-companies-grid {
-		flex: 0 0 auto;
-		width: 100%;
-		max-width: 100%;
-	}
-
-	.hakmi-companies-intro {
-		padding-inline-end: 0;
-		margin-bottom: 24px;
+	.hakmi-companies-aside {
+		white-space: normal;
 	}
 
 	.hakmi-companies-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	.hakmi-company-card {
-		border-inline-start: 0;
-		border-top: 1px solid rgba(11, 25, 44, 0.18);
-	}
-
-	.hakmi-company-card:nth-child(-n+2) {
-		border-top: 0;
-	}
-
-	.hakmi-company-card:nth-child(odd) {
-		border-inline-end: 1px solid rgba(11, 25, 44, 0.18);
 	}
 }
 
 @media (max-width: 767px) {
 	.hakmi-companies-grid {
 		grid-template-columns: 1fr;
-	}
-
-	.hakmi-company-card,
-	.hakmi-company-card:nth-child(odd) {
-		border-inline-end: 0;
-		border-top: 1px solid rgba(11, 25, 44, 0.18);
-	}
-
-	.hakmi-company-card:first-child {
-		border-top: 0;
 	}
 }
 
