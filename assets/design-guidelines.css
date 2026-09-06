@@ -869,15 +869,23 @@ a.hakmi-cta-btn-secondary:hover {
 	font-weight: 700;
 }
 
-.hakmi-footer-col:first-child h3::before {
-	content: "";
+.hakmi-footer-logo {
 	display: inline-block;
-	width: 7px;
-	height: 7px;
-	margin-inline-end: 8px;
-	border-radius: 0;
-	background: var(--hakmi-accent-gold);
-	vertical-align: middle;
+	margin-bottom: 1rem;
+}
+
+.hakmi-footer-logo img {
+	display: block;
+	height: 48px;
+	width: auto;
+}
+
+.hakmi-footer-slogan {
+	margin: 0;
+	color: var(--hakmi-accent-gold) !important;
+	font-size: 1.35rem !important;
+	font-weight: 700;
+	line-height: 1.55 !important;
 }
 
 .hakmi-footer-col p,
