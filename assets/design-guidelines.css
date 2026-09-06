@@ -18,7 +18,7 @@
 	--hakmi-accent-gold-hover: #b09168;
 	--hakmi-text-dark: #2B2D42;
 	--hakmi-text-muted: #5A6065;
-	--hakmi-bg-light: #F8F9FA;
+	--hakmi-bg-light: #f7eede;
 	--hakmi-bg-card: #FFFFFF;
 	--hakmi-border: #E2E8F0;
 	--hakmi-font: "Lyon Arabic Display", Tahoma, Arial, sans-serif;
@@ -971,5 +971,34 @@ a.hakmi-cta-btn-secondary:hover {
 
 	.hakmi-cta-inner {
 		padding-block: 64px;
+	}
+}
+
+/* Scroll reveal — matches Elementor fadeInUp on later sections */
+.hakmi-reveal {
+	opacity: 0;
+	transform: translate3d(0, 48px, 0);
+	transition: opacity 0.85s ease, transform 0.85s ease;
+	transition-delay: var(--hakmi-reveal-delay, 0ms);
+	will-change: opacity, transform;
+}
+
+.hakmi-reveal.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+.hakmi-reveal-d1 { --hakmi-reveal-delay: 80ms; }
+.hakmi-reveal-d2 { --hakmi-reveal-delay: 160ms; }
+.hakmi-reveal-d3 { --hakmi-reveal-delay: 240ms; }
+.hakmi-reveal-d4 { --hakmi-reveal-delay: 320ms; }
+.hakmi-reveal-d5 { --hakmi-reveal-delay: 400ms; }
+.hakmi-reveal-d6 { --hakmi-reveal-delay: 480ms; }
+
+@media (prefers-reduced-motion: reduce) {
+	.hakmi-reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
 	}
 }
