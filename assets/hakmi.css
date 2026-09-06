@@ -212,7 +212,7 @@ body.hakmi-ref-page {
 .hakmi-link-on-dark,
 a.hakmi-link-on-dark {
 	color: #fff;
-	font-weight: 500;
+	font-weight: 400;
 	text-decoration: none;
 	transition: color var(--hakmi-transition);
 }
@@ -614,7 +614,7 @@ a.hakmi-btn-hero:hover {
 	gap: 1.25rem;
 	max-width: 1440px;
 	margin-inline: auto;
-	padding: 1.5rem 1rem 0;
+	padding: 2rem 1rem 0;
 }
 
 .hakmi-header-logo img {
@@ -637,7 +637,7 @@ a.hakmi-btn-hero:hover {
 }
 
 .hakmi-header .hakmi-link-on-dark {
-	font-size: 0.95rem;
+	font-size: 1.2rem;
 	white-space: nowrap;
 }
 
