@@ -1,0 +1,747 @@
+/*
+ * Hakmi UI system
+ * Use these classes on new pages. Existing website pages do not load this file.
+ *
+ * Palette
+ *   Primary Navy    #1A344C
+ *   Secondary Navy  #026481
+ *   Accent Gold     #D9AA5A
+ *   Dragon Fire     #D65A3C
+ *   Light BG        #F7EEDE
+ *   Text Dark       #2B2D42
+ *   Text Muted      #5A6065
+ */
+
+/* ------------------------------------------------------------------ */
+/* Tokens                                                              */
+/* ------------------------------------------------------------------ */
+
+:root {
+	--hakmi-navy: #1a344c;
+	--hakmi-navy-mid: #026481;
+	--hakmi-gold: #d9aa5a;
+	--hakmi-gold-hover: #b09168;
+	--hakmi-dragon-fire: #d65a3c;
+	--hakmi-dragon-fire-hover: #be4a2f;
+	--hakmi-text: #2b2d42;
+	--hakmi-muted: #5a6065;
+	--hakmi-bg: #f7eede;
+	--hakmi-white: #ffffff;
+	--hakmi-light: #efebe2;
+	--hakmi-border: #e2e8f0;
+	--hakmi-font: "Lyon Arabic Display", Tahoma, Arial, sans-serif;
+	--hakmi-radius: 0;
+	--hakmi-transition: 180ms ease;
+	--hakmi-content: 1120px;
+
+}
+
+/* ------------------------------------------------------------------ */
+/* Base (only applies where this file is loaded)                       */
+/* ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body.hakmi-ref-page {
+	margin: 0;
+	background: var(--hakmi-bg);
+	color: var(--hakmi-text);
+	font-family: var(--hakmi-font);
+	font-size: 1rem;
+	line-height: 1.8;
+	font-weight: 400;
+}
+
+/* ------------------------------------------------------------------ */
+/* Typography                                                          */
+/* ------------------------------------------------------------------ */
+
+.hakmi-display,
+.hakmi-h1,
+.hakmi-h2,
+.hakmi-h3,
+.hakmi-h4,
+.hakmi-h5,
+.hakmi-h6 {
+	margin: 0 0 0.5em;
+	color: var(--hakmi-navy);
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 1.25;
+}
+
+.hakmi-display {
+	font-size: clamp(2.25rem, 4vw, 3.25rem);
+	font-weight: 900;
+}
+
+.hakmi-h1 {
+	font-size: clamp(2rem, 3.2vw, 2.75rem);
+}
+
+.hakmi-h2 {
+	font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+}
+
+.hakmi-h3 {
+	font-size: 1.35rem;
+}
+
+.hakmi-h4 {
+	font-size: 1.15rem;
+}
+
+.hakmi-h5 {
+	font-size: 1rem;
+}
+
+.hakmi-h6 {
+	font-size: 0.875rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.hakmi-eyebrow {
+	margin: 0 0 0.5rem;
+	color: var(--hakmi-gold);
+	font-size: 0.875rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+}
+
+.hakmi-lead {
+	margin: 0 0 1rem;
+	color: var(--hakmi-text);
+	font-size: 1.15rem;
+	line-height: 1.85;
+}
+
+.hakmi-p {
+	margin: 0 0 1rem;
+	color: var(--hakmi-text);
+	font-size: 1rem;
+}
+
+.hakmi-p-muted {
+	margin: 0 0 1rem;
+	color: var(--hakmi-muted);
+	font-size: 1rem;
+}
+
+.hakmi-p-small {
+	margin: 0 0 0.75rem;
+	color: var(--hakmi-muted);
+	font-size: 0.875rem;
+	line-height: 1.7;
+}
+
+.hakmi-caption {
+	margin: 0;
+	color: var(--hakmi-muted);
+	font-size: 0.75rem;
+	letter-spacing: 0.04em;
+}
+
+.hakmi-quote {
+	margin: 0;
+	padding-inline-start: 1.25rem;
+	border-inline-start: 3px solid var(--hakmi-gold);
+	color: var(--hakmi-navy);
+	font-size: 1.2rem;
+	font-weight: 500;
+	line-height: 1.7;
+}
+
+/* ------------------------------------------------------------------ */
+/* Links                                                               */
+/* ------------------------------------------------------------------ */
+
+.hakmi-link {
+	color: var(--hakmi-navy-mid);
+	font-weight: 600;
+	text-decoration: underline;
+	text-underline-offset: 0.18em;
+	transition: color var(--hakmi-transition);
+}
+
+.hakmi-link:hover {
+	color: var(--hakmi-gold);
+}
+
+.hakmi-link-gold {
+	color: var(--hakmi-gold);
+	font-weight: 600;
+	text-decoration: none;
+	transition: color var(--hakmi-transition);
+}
+
+.hakmi-link-gold:hover {
+	color: var(--hakmi-gold-hover);
+}
+
+.hakmi-link-fire {
+	color: var(--hakmi-dragon-fire);
+	font-weight: 600;
+	text-decoration: none;
+	transition: color var(--hakmi-transition);
+}
+
+.hakmi-link-fire:hover {
+	color: var(--hakmi-dragon-fire-hover);
+}
+
+.hakmi-link-nav {
+	color: var(--hakmi-navy);
+	font-weight: 500;
+	text-decoration: none;
+	transition: color var(--hakmi-transition);
+}
+
+.hakmi-link-nav:hover {
+	color: var(--hakmi-gold);
+}
+
+.hakmi-link-on-dark,
+a.hakmi-link-on-dark {
+	color: #fff;
+	font-weight: 500;
+	text-decoration: none;
+	transition: color var(--hakmi-transition);
+}
+
+.hakmi-link-on-dark:hover,
+a.hakmi-link-on-dark:hover {
+	color: var(--hakmi-gold);
+}
+
+/* ------------------------------------------------------------------ */
+/* Buttons                                                             */
+/* ------------------------------------------------------------------ */
+
+.hakmi-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	min-height: 48px;
+	padding: 1rem 3rem;
+	border: 1px solid transparent;
+	border-radius: var(--hakmi-radius);
+	background: transparent;
+	color: inherit;
+	font-family: inherit;
+	font-size: 0.95rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	line-height: 1.2;
+	text-decoration: none;
+	cursor: pointer;
+	transition:
+		background-color var(--hakmi-transition),
+		color var(--hakmi-transition),
+		border-color var(--hakmi-transition),
+		box-shadow var(--hakmi-transition);
+}
+
+.hakmi-btn:disabled,
+.hakmi-btn.is-disabled {
+	opacity: 0.45;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+.hakmi-btn svg {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	flex-shrink: 0;
+}
+
+.hakmi-btn-primary,
+a.hakmi-btn-primary {
+	background: var(--hakmi-gold);
+	border-color: var(--hakmi-gold);
+	color: var(--hakmi-navy);
+}
+
+.hakmi-btn-primary:hover,
+a.hakmi-btn-primary:hover {
+	background: var(--hakmi-gold-hover);
+	border-color: var(--hakmi-gold-hover);
+	color: var(--hakmi-navy);
+}
+
+.hakmi-btn-secondary {
+	background: var(--hakmi-navy);
+	border-color: var(--hakmi-navy);
+	color: #fff;
+}
+
+.hakmi-btn-secondary:hover {
+	background: var(--hakmi-gold);
+	border-color: var(--hakmi-gold);
+	color: var(--hakmi-navy);
+}
+
+.hakmi-btn-outline {
+	background: transparent;
+	border-color: var(--hakmi-navy);
+	color: var(--hakmi-navy);
+}
+
+.hakmi-btn-outline:hover {
+	background: var(--hakmi-navy);
+	color: #fff;
+}
+
+.hakmi-btn-ghost {
+	background: transparent;
+	border-color: var(--hakmi-gold);
+	color: var(--hakmi-gold);
+}
+
+.hakmi-btn-ghost:hover {
+	background: var(--hakmi-gold);
+	color: var(--hakmi-navy);
+}
+
+.hakmi-btn-fire {
+	background: var(--hakmi-dragon-fire);
+	border-color: var(--hakmi-dragon-fire);
+	color: #fff;
+}
+
+.hakmi-btn-fire:hover {
+	background: var(--hakmi-dragon-fire-hover);
+	border-color: var(--hakmi-dragon-fire-hover);
+	color: #fff;
+}
+
+.hakmi-btn-light,
+a.hakmi-btn-light {
+	background: transparent;
+	border-color: var(--hakmi-light);
+	color: var(--hakmi-light);
+}
+
+.hakmi-btn-light:hover,
+a.hakmi-btn-light:hover {
+	background: transparent;
+	border-color: var(--hakmi-gold);
+	color: var(--hakmi-gold);
+}
+
+.hakmi-btn-hero,
+a.hakmi-btn-hero {
+	background: transparent;
+	border-color: rgba(255, 255, 255, 0.55);
+	color: #fff;
+}
+
+.hakmi-btn-hero:hover,
+a.hakmi-btn-hero:hover {
+	background: transparent;
+	border-color: var(--hakmi-gold);
+	color: var(--hakmi-gold);
+}
+
+.hakmi-btn-text {
+	min-height: auto;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--hakmi-navy-mid);
+	letter-spacing: 0.02em;
+}
+
+.hakmi-btn-text:hover {
+	color: var(--hakmi-gold);
+}
+
+.hakmi-btn-sm {
+	min-height: 38px;
+	padding: 1rem 3rem;
+	font-size: 0.85rem;
+}
+
+.hakmi-btn-lg {
+	min-height: 56px;
+	padding: 0.9rem 1.7rem;
+	font-size: 1.05rem;
+}
+
+.hakmi-btn-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Lists                                                               */
+/* ------------------------------------------------------------------ */
+
+.hakmi-list,
+.hakmi-list-ordered {
+	margin: 0 0 1rem;
+	padding-inline-start: 1.25rem;
+	color: var(--hakmi-text);
+}
+
+.hakmi-list li + li,
+.hakmi-list-ordered li + li {
+	margin-top: 0.35rem;
+}
+
+.hakmi-list-plain {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.hakmi-list-plain li + li {
+	margin-top: 0.35rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Forms                                                               */
+/* ------------------------------------------------------------------ */
+
+.hakmi-label {
+	display: block;
+	margin-bottom: 0.35rem;
+	color: var(--hakmi-navy);
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.hakmi-input,
+.hakmi-select,
+.hakmi-textarea {
+	width: 100%;
+	max-width: 420px;
+	padding: 0.7rem 0.85rem;
+	border: 1px solid var(--hakmi-border);
+	border-radius: var(--hakmi-radius);
+	background: var(--hakmi-white);
+	color: var(--hakmi-text);
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 1.5;
+	transition: border-color var(--hakmi-transition);
+}
+
+.hakmi-input:focus,
+.hakmi-select:focus,
+.hakmi-textarea:focus {
+	outline: 2px solid var(--hakmi-gold);
+	outline-offset: 1px;
+	border-color: var(--hakmi-gold);
+}
+
+.hakmi-textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+/* ------------------------------------------------------------------ */
+/* Surfaces                                                            */
+/* ------------------------------------------------------------------ */
+
+.hakmi-card {
+	padding: 1.5rem;
+	background: var(--hakmi-white);
+	border: 1px solid var(--hakmi-border);
+}
+
+.hakmi-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.2rem 0.55rem;
+	background: rgba(197, 168, 128, 0.16);
+	color: var(--hakmi-navy);
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+}
+
+.hakmi-badge-navy {
+	background: var(--hakmi-navy);
+	color: #fff;
+}
+
+.hakmi-badge-fire {
+	background: var(--hakmi-dragon-fire);
+	color: #fff;
+}
+
+.hakmi-divider {
+	width: 48px;
+	height: 2px;
+	margin: 0.75rem 0 1.25rem;
+	border: 0;
+	background: var(--hakmi-gold);
+}
+
+.hakmi-divider-full {
+	width: 100%;
+	height: 1px;
+	margin: 1.5rem 0;
+	border: 0;
+	background: var(--hakmi-border);
+}
+
+.hakmi-surface-navy {
+	background: var(--hakmi-navy);
+	color: #fff;
+}
+
+.hakmi-surface-navy .hakmi-h2,
+.hakmi-surface-navy .hakmi-h3,
+.hakmi-surface-navy .hakmi-p {
+	color: #fff;
+}
+
+.hakmi-surface-navy .hakmi-p-muted {
+	color: rgba(255, 255, 255, 0.72);
+}
+
+/* ------------------------------------------------------------------ */
+/* Reference page chrome (this page only)                              */
+/* ------------------------------------------------------------------ */
+
+.hakmi-ref-page {
+	min-height: 100vh;
+}
+
+.hakmi-ref-header {
+	padding: 2.5rem 1.25rem 2rem;
+	background: var(--hakmi-navy);
+	color: #fff;
+}
+
+.hakmi-ref-header .hakmi-display,
+.hakmi-ref-header .hakmi-lead {
+	color: #fff;
+	max-width: var(--hakmi-content);
+	margin-inline: auto;
+}
+
+.hakmi-ref-wrap {
+	max-width: var(--hakmi-content);
+	margin: 0 auto;
+	padding: 2.5rem 1.25rem 4rem;
+}
+
+.hakmi-ref-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1.25rem;
+	margin: 0 0 2.5rem;
+	padding: 0;
+	list-style: none;
+}
+
+.hakmi-ref-section {
+	margin-bottom: 3.5rem;
+}
+
+.hakmi-ref-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 1rem;
+}
+
+.hakmi-ref-swatch {
+	min-height: 88px;
+	padding: 0.9rem;
+	border: 1px solid var(--hakmi-border);
+	background: var(--swatch, var(--hakmi-navy));
+	color: #fff;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.hakmi-ref-swatch.is-light {
+	color: var(--hakmi-navy);
+}
+
+.hakmi-ref-code {
+	display: inline-block;
+	margin-top: 0.35rem;
+	padding: 0.1rem 0.35rem;
+	background: var(--hakmi-bg);
+	border: 1px solid var(--hakmi-border);
+	color: var(--hakmi-muted);
+	font-family: Consolas, "Courier New", monospace;
+	font-size: 0.75rem;
+	font-weight: 400;
+}
+
+.hakmi-ref-sample {
+	margin-bottom: 1.25rem;
+}
+
+.hakmi-ref-on-dark {
+	padding: 1.25rem;
+	background: var(--hakmi-navy);
+}
+
+/* ------------------------------------------------------------------ */
+/* Site header + hero (used on live pages)                             */
+/* ------------------------------------------------------------------ */
+
+.hakmi-header {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline: 0;
+	z-index: 20;
+	font-family: var(--hakmi-font);
+}
+
+.hakmi-header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.25rem;
+	max-width: 1440px;
+	margin-inline: auto;
+	padding: 1.5rem 1rem 0;
+}
+
+.hakmi-header-logo img {
+	display: block;
+	height: 42px;
+	width: auto;
+}
+
+.hakmi-nav {
+	display: flex;
+	align-items: center;
+	gap: 1.35rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.hakmi-nav-item {
+	position: relative;
+}
+
+.hakmi-header .hakmi-link-on-dark {
+	font-size: 0.95rem;
+	white-space: nowrap;
+}
+
+.hakmi-nav-sub {
+	display: none;
+	position: absolute;
+	inset-block-start: 100%;
+	inset-inline-start: 0;
+	min-width: 14rem;
+	margin: 0.4rem 0 0;
+	padding: 0.5rem 0;
+	list-style: none;
+	background: var(--hakmi-navy);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hakmi-nav-item:hover > .hakmi-nav-sub,
+.hakmi-nav-item.is-open > .hakmi-nav-sub {
+	display: block;
+}
+
+.hakmi-nav-sub a {
+	display: block;
+	padding: 0.45rem 1rem;
+	color: #fff;
+	font-weight: 500;
+	text-decoration: none;
+	transition: color var(--hakmi-transition);
+}
+
+.hakmi-nav-sub a:hover {
+	color: var(--hakmi-gold);
+}
+
+.hakmi-nav-toggle {
+	display: none;
+	width: 42px;
+	height: 42px;
+	padding: 0;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+}
+
+.hakmi-nav-toggle span {
+	display: block;
+	width: 18px;
+	height: 2px;
+	margin: 4px auto;
+	background: currentColor;
+}
+
+.hakmi-hero-copy {
+	max-width: 42rem;
+	font-family: var(--hakmi-font);
+}
+
+.hakmi-hero-copy .hakmi-display,
+.hakmi-hero-copy .hakmi-h1,
+.hakmi-hero-copy .hakmi-h2 {
+	color: #fff;
+}
+
+.hakmi-hero-copy .hakmi-lead,
+.hakmi-hero-copy .hakmi-p {
+	color: rgba(255, 255, 255, 0.88);
+}
+
+@media (max-width: 1024px) {
+	.hakmi-nav-toggle {
+		display: block;
+	}
+
+	.hakmi-header-actions {
+		display: none;
+	}
+
+	.hakmi-nav {
+		display: none;
+		position: absolute;
+		inset-block-start: 100%;
+		inset-inline: 1rem;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+		padding: 0.75rem 0;
+		background: var(--hakmi-navy);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+	}
+
+	.hakmi-header.is-open .hakmi-nav {
+		display: flex;
+	}
+
+	.hakmi-nav-item {
+		padding: 0.55rem 1rem;
+	}
+
+	.hakmi-nav-sub {
+		position: static;
+		min-width: 0;
+		margin: 0.35rem 0 0;
+		border: 0;
+		background: transparent;
+	}
+}
