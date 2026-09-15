@@ -745,3 +745,311 @@ a.hakmi-btn-hero:hover {
 		background: transparent;
 	}
 }
+
+/* ------------------------------------------------------------------ */
+/* Inner pages                                                         */
+/* ------------------------------------------------------------------ */
+
+body.hakmi-inner-page {
+	margin: 0;
+	background: var(--hakmi-bg);
+	color: var(--hakmi-text);
+	font-family: var(--hakmi-font);
+	line-height: 1.8;
+}
+
+.hakmi-header-inner-page {
+	position: sticky;
+	top: 0;
+	background: var(--hakmi-navy);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hakmi-header-inner-page .hakmi-header-inner {
+	padding-block: 1rem;
+}
+
+.hakmi-nav-item.is-active > .hakmi-link-on-dark,
+.hakmi-nav-sub a[aria-current="page"] {
+	color: var(--hakmi-gold);
+}
+
+.hakmi-page-main {
+	min-height: 50vh;
+}
+
+.hakmi-page-hero {
+	padding: 3.5rem 1rem 2.5rem;
+	background: linear-gradient(135deg, var(--hakmi-navy) 0%, var(--hakmi-navy-mid) 100%);
+	color: #fff;
+}
+
+.hakmi-page-hero-inner {
+	max-width: var(--hakmi-content);
+	margin-inline: auto;
+}
+
+.hakmi-page-hero .hakmi-eyebrow {
+	color: var(--hakmi-gold);
+}
+
+.hakmi-page-hero .hakmi-display,
+.hakmi-page-hero .hakmi-h1,
+.hakmi-page-hero .hakmi-lead {
+	color: #fff;
+}
+
+.hakmi-page-hero .hakmi-lead {
+	max-width: 42rem;
+	opacity: 0.92;
+}
+
+.hakmi-page-section {
+	padding: 2.75rem 1rem;
+}
+
+.hakmi-page-section.is-alt {
+	background: #fff;
+}
+
+.hakmi-page-section-inner {
+	max-width: var(--hakmi-content);
+	margin-inline: auto;
+}
+
+.hakmi-page-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 1.25rem;
+}
+
+.hakmi-page-grid.is-2 {
+	grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+
+.hakmi-data-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: 1.5rem;
+	background: #fff;
+	border: 1px solid var(--hakmi-border);
+}
+
+.hakmi-data-card h3 {
+	margin: 0;
+	color: var(--hakmi-navy);
+	font-size: 1.2rem;
+}
+
+.hakmi-data-card p {
+	margin: 0;
+	color: var(--hakmi-muted);
+}
+
+.hakmi-data-card .hakmi-card-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: auto;
+}
+
+.hakmi-status {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.25rem 0.65rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+
+.hakmi-status-development {
+	background: rgba(2, 100, 129, 0.12);
+	color: var(--hakmi-navy-mid);
+}
+
+.hakmi-status-future {
+	background: rgba(217, 170, 90, 0.18);
+	color: var(--hakmi-gold-shade-1, #a38044);
+}
+
+.hakmi-status-negotiation {
+	background: rgba(214, 90, 60, 0.12);
+	color: var(--hakmi-dragon-fire);
+}
+
+.hakmi-filter-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.hakmi-filter-btn {
+	padding: 0.45rem 0.9rem;
+	border: 1px solid var(--hakmi-border);
+	background: #fff;
+	color: var(--hakmi-navy);
+	font-family: inherit;
+	font-size: 0.875rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color var(--hakmi-transition), color var(--hakmi-transition), border-color var(--hakmi-transition);
+}
+
+.hakmi-filter-btn.is-active,
+.hakmi-filter-btn:hover {
+	border-color: var(--hakmi-gold);
+	background: var(--hakmi-gold);
+	color: var(--hakmi-navy);
+}
+
+.hakmi-values-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 1rem;
+}
+
+.hakmi-value-item {
+	padding: 1rem 1.1rem;
+	background: #fff;
+	border-inline-start: 3px solid var(--hakmi-gold);
+}
+
+.hakmi-value-item h4 {
+	margin: 0 0 0.35rem;
+	color: var(--hakmi-navy);
+}
+
+.hakmi-value-item p {
+	margin: 0;
+	color: var(--hakmi-muted);
+	font-size: 0.95rem;
+}
+
+.hakmi-founder-block {
+	padding: 2rem;
+	background: #fff;
+	border-inline-start: 4px solid var(--hakmi-gold);
+}
+
+.hakmi-founder-block .hakmi-quote {
+	margin-bottom: 1rem;
+}
+
+.hakmi-founder-signature {
+	margin: 1.25rem 0 0;
+	color: var(--hakmi-navy);
+	font-weight: 700;
+}
+
+.hakmi-country-card {
+	padding: 1.25rem 1.35rem;
+	background: #fff;
+	border-top: 3px solid var(--hakmi-gold);
+}
+
+.hakmi-country-card h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1.05rem;
+}
+
+.hakmi-notice {
+	padding: 1rem 1.15rem;
+	background: rgba(217, 170, 90, 0.12);
+	border-inline-start: 3px solid var(--hakmi-gold);
+	color: var(--hakmi-navy);
+}
+
+.hakmi-news-card time {
+	display: block;
+	margin-bottom: 0.35rem;
+	color: var(--hakmi-muted);
+	font-size: 0.8rem;
+}
+
+.hakmi-news-card .hakmi-badge {
+	margin-bottom: 0.65rem;
+}
+
+.hakmi-form-section {
+	padding: 2rem;
+	background: #fff;
+	border: 1px solid var(--hakmi-border);
+}
+
+.hakmi-form-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.hakmi-form-grid .hakmi-form-full {
+	grid-column: 1 / -1;
+}
+
+.hakmi-form-section label {
+	display: block;
+	margin-bottom: 0.75rem;
+}
+
+.hakmi-form-section label span {
+	display: block;
+	margin-bottom: 0.35rem;
+	color: var(--hakmi-navy);
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.hakmi-form-section input,
+.hakmi-form-section select,
+.hakmi-form-section textarea {
+	width: 100%;
+}
+
+.hakmi-form-section textarea {
+	min-height: 120px;
+}
+
+.hakmi-form-check {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.5rem;
+	font-size: 0.9rem;
+}
+
+.hakmi-form-check input {
+	width: auto;
+	margin-top: 0.25rem;
+}
+
+.hakmi-legal-block + .hakmi-legal-block {
+	margin-top: 2rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--hakmi-border);
+}
+
+.skip-link {
+	position: absolute;
+	inset-inline-start: 1rem;
+	top: -100px;
+	z-index: 100;
+	padding: 0.5rem 1rem;
+	background: var(--hakmi-gold);
+	color: var(--hakmi-navy);
+	text-decoration: none;
+}
+
+.skip-link:focus {
+	top: 1rem;
+}
+
+@media (max-width: 768px) {
+	.hakmi-form-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.hakmi-page-hero {
+		padding-block: 2.5rem 2rem;
+	}
+}
