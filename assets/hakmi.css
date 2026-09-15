@@ -745,3 +745,287 @@ a.hakmi-btn-hero:hover {
 		background: transparent;
 	}
 }
+
+/* ------------------------------------------------------------------ */
+/* Design reference page (reference.html)                              */
+/* ------------------------------------------------------------------ */
+
+.hakmi-ref-page .hakmi-contact-section {
+	display: block;
+}
+
+.hakmi-ref-page .hakmi-reveal {
+	opacity: 1;
+	transform: none;
+}
+
+.hakmi-ref-toc-group {
+	margin: 0 0 1rem;
+}
+
+.hakmi-ref-toc-group h3 {
+	margin: 0 0 0.5rem;
+	color: var(--hakmi-navy);
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.hakmi-ref-toc-group ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.hakmi-ref-section-label {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 0.35rem 1rem;
+	margin: 0 0 0.75rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid var(--hakmi-border);
+}
+
+.hakmi-ref-section-label h3 {
+	margin: 0;
+	color: var(--hakmi-navy);
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.hakmi-ref-section-label span {
+	color: var(--hakmi-muted);
+	font-size: 0.8rem;
+}
+
+.hakmi-ref-section-frame {
+	margin: 0 0 2.5rem;
+	border: 1px dashed var(--hakmi-border);
+	background: var(--hakmi-white);
+}
+
+.hakmi-ref-section-frame > .hakmi-ref-section-label {
+	margin: 0;
+	padding: 0.65rem 1rem;
+	background: var(--hakmi-bg);
+	border-bottom: 1px solid var(--hakmi-border);
+}
+
+.hakmi-ref-section-frame > .hakmi-ref-section-label + * {
+	margin-top: 0;
+}
+
+.hakmi-ref-scale-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	gap: 0.5rem;
+	margin-bottom: 1.25rem;
+}
+
+.hakmi-ref-scale-grid .hakmi-ref-swatch {
+	min-height: 64px;
+	font-size: 0.7rem;
+}
+
+.hakmi-ref-token-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem 2rem;
+	margin-bottom: 1.25rem;
+}
+
+.hakmi-ref-token {
+	padding: 0.75rem 1rem;
+	border: 1px solid var(--hakmi-border);
+	background: var(--hakmi-white);
+	min-width: 140px;
+}
+
+.hakmi-ref-token strong {
+	display: block;
+	margin-bottom: 0.25rem;
+	color: var(--hakmi-navy);
+	font-size: 0.85rem;
+}
+
+.hakmi-ref-token code {
+	font-size: 0.72rem;
+	color: var(--hakmi-muted);
+}
+
+.hakmi-ref-filter-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 1rem;
+}
+
+.hakmi-ref-filter-row .hakmi-btn-sm {
+	min-height: 36px;
+	padding: 0.45rem 1rem;
+}
+
+.hakmi-ref-filter-row .is-active {
+	background: var(--hakmi-navy);
+	border-color: var(--hakmi-navy);
+	color: #fff;
+}
+
+.hakmi-ref-status-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 1rem;
+}
+
+.hakmi-ref-nav-demo {
+	padding: 1rem 1.25rem;
+}
+
+.hakmi-ref-nav-demo .hakmi-nav {
+	position: static;
+	flex-wrap: wrap;
+}
+
+.hakmi-ref-hero-demo {
+	padding: 3rem 1.25rem;
+	background: linear-gradient(135deg, var(--hakmi-navy-shade-2, #0d1a26), var(--hakmi-navy));
+}
+
+.hakmi-ref-hero-demo .hakmi-hero-copy {
+	max-width: 36rem;
+}
+
+.hakmi-ref-fact-demo.hakmi-fact-strip {
+	background: var(--hakmi-white);
+}
+
+.hakmi-ref-fact-demo .hakmi-ref-fact-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	padding: 1.25rem;
+	text-align: center;
+}
+
+.hakmi-ref-fact-demo .hakmi-ref-fact-item h3 {
+	margin: 0 0 0.35rem;
+	color: var(--hakmi-navy);
+	font-size: 1.1rem;
+}
+
+.hakmi-ref-fact-demo .hakmi-ref-fact-item p {
+	margin: 0;
+	color: var(--hakmi-muted);
+	font-size: 0.88rem;
+}
+
+.hakmi-ref-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.9rem;
+}
+
+.hakmi-ref-table th,
+.hakmi-ref-table td {
+	padding: 0.65rem 0.85rem;
+	border: 1px solid var(--hakmi-border);
+	text-align: start;
+}
+
+.hakmi-ref-table th {
+	background: var(--hakmi-navy);
+	color: #fff;
+	font-weight: 600;
+}
+
+.hakmi-ref-table tr:nth-child(even) td {
+	background: rgba(26, 52, 76, 0.04);
+}
+
+.hakmi-ref-notice {
+	padding: 0.85rem 1rem;
+	margin-bottom: 1rem;
+	border-inline-start: 3px solid var(--hakmi-gold);
+	background: var(--hakmi-bg);
+	color: var(--hakmi-navy);
+	font-size: 0.9rem;
+}
+
+.hakmi-ref-notice.is-info {
+	border-color: var(--hakmi-teal, var(--hakmi-navy-mid));
+}
+
+.hakmi-ref-notice.is-warning {
+	border-color: var(--hakmi-dragon-fire);
+}
+
+.hakmi-ref-icon-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	gap: 1rem;
+}
+
+.hakmi-ref-icon-grid .hakmi-sector-icon {
+	margin-inline: auto;
+}
+
+.hakmi-ref-presence-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 14px;
+	padding: 1.25rem;
+}
+
+.hakmi-ref-presence-card {
+	padding: 1.25rem;
+	border: 1px solid var(--hakmi-border);
+	background: var(--hakmi-white);
+}
+
+.hakmi-ref-presence-card h4 {
+	margin: 0 0 0.35rem;
+	color: var(--hakmi-navy);
+	font-size: 1.05rem;
+}
+
+.hakmi-ref-presence-card p {
+	margin: 0;
+	color: var(--hakmi-muted);
+	font-size: 0.88rem;
+}
+
+.hakmi-ref-project-card {
+	padding: 1.25rem;
+	border: 1px solid var(--hakmi-border);
+	background: var(--hakmi-white);
+}
+
+.hakmi-ref-project-card h4 {
+	margin: 0 0 0.5rem;
+	color: var(--hakmi-navy);
+}
+
+.hakmi-ref-eyebrow {
+	margin: 0 0 0.5rem;
+	color: var(--hakmi-gold);
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.hakmi-ref-mini-footer {
+	margin-top: 3rem;
+}
+
+@media (max-width: 767px) {
+	.hakmi-ref-fact-demo .hakmi-ref-fact-grid,
+	.hakmi-ref-presence-grid {
+		grid-template-columns: 1fr;
+	}
+}

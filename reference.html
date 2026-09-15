@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>مرجع التصميم | مجموعة الحاكمي القابضة</title>
+	<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="assets/fonts/lyon-arabic.css">
+	<link rel="stylesheet" href="assets/hakmi.css">
+	<link rel="stylesheet" href="assets/design-guidelines.css">
+</head>
+<body class="hakmi-ref-page">
+	<header class="hakmi-ref-header">
+		<p class="hakmi-eyebrow">Design Reference · مرجع التصميم</p>
+		<h1 class="hakmi-display">مرجع عناصر وأنماط واجهة الحاكمي</h1>
+		<p class="hakmi-lead">صفحة داخلية لعرض جميع رموز العلامة والعناصر وأنماط الأقسام المستخدمة في الموقع. تُحمَّل <code class="hakmi-ref-code">assets/hakmi.css</code> و <code class="hakmi-ref-code">assets/design-guidelines.css</code>.</p>
+	</header>
+
+	<main class="hakmi-ref-wrap">
+		<nav aria-label="جدول المحتويات">
+			<div class="hakmi-ref-toc-group">
+				<h3>Brand · العلامة</h3>
+				<ul>
+					<li><a class="hakmi-link-nav" href="#brand-colors">الألوان</a></li>
+					<li><a class="hakmi-link-nav" href="#brand-type">الخطوط</a></li>
+					<li><a class="hakmi-link-nav" href="#brand-layout">المسافات والتخطيط</a></li>
+				</ul>
+			</div>
+			<div class="hakmi-ref-toc-group">
+				<h3>Elements · العناصر</h3>
+				<ul>
+					<li><a class="hakmi-link-nav" href="#el-links">الروابط</a></li>
+					<li><a class="hakmi-link-nav" href="#el-buttons">الأزرار</a></li>
+					<li><a class="hakmi-link-nav" href="#el-badges">الشارات والحالات</a></li>
+					<li><a class="hakmi-link-nav" href="#el-forms">النماذج</a></li>
+					<li><a class="hakmi-link-nav" href="#el-cards">البطاقات والأسطح</a></li>
+					<li><a class="hakmi-link-nav" href="#el-nav">التنقل والفلاتر</a></li>
+					<li><a class="hakmi-link-nav" href="#el-icons">الأيقونات</a></li>
+					<li><a class="hakmi-link-nav" href="#el-misc">جدول · تنبيه · تسمية قسم</a></li>
+				</ul>
+			</div>
+			<div class="hakmi-ref-toc-group">
+				<h3>Sections · الأقسام</h3>
+				<ul>
+					<li><a class="hakmi-link-nav" href="#sec-hero">الهيرو</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-facts">شريط الحقائق</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-about">عن المجموعة</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-sectors">شبكة القطاعات</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-companies">شبكة الشركات</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-projects">المشروعات والفلاتر</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-presence">الانتشار الجغرافي</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-partners">شريط الشركاء</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-cta">شريط CTA</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-contact">نموذج التواصل</a></li>
+					<li><a class="hakmi-link-nav" href="#sec-footer">التذييل</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- BRAND -->
+		<section class="hakmi-ref-section" id="brand-colors">
+			<p class="hakmi-eyebrow">Brand · Palette</p>
+			<h2 class="hakmi-h2">الألوان الأساسية</h2>
+			<hr class="hakmi-divider">
+			<div class="hakmi-ref-grid">
+				<div class="hakmi-ref-swatch" style="--swatch: #1a344c">Navy · كحلي<br>#1A344C</div>
+				<div class="hakmi-ref-swatch" style="--swatch: #026481">Teal · فيروزي<br>#026481</div>
+				<div class="hakmi-ref-swatch" style="--swatch: #d9aa5a">Gold · ذهبي<br>#D9AA5A</div>
+				<div class="hakmi-ref-swatch" style="--swatch: #d65a3c">Coral · مرجاني<br>#D65A3C</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: #ffffff">White · أبيض<br>#FFFFFF</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: #f7eede">BG Light · خلفية<br>#F7EEDE</div>
+			</div>
+
+			<h3 class="hakmi-h4">درجات الكحلي · Navy scale</h3>
+			<div class="hakmi-ref-scale-grid">
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-navy-shade-2)">Shade 2</div>
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-navy-shade-1)">Shade 1</div>
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-navy)">Base</div>
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-navy-tint-1)">Tint 1</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: var(--hakmi-navy-tint-2)">Tint 2</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: var(--hakmi-navy-tint-3)">Tint 3</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: var(--hakmi-navy-tint-4)">Tint 4</div>
+			</div>
+
+			<h3 class="hakmi-h4">درجات الذهب · Gold scale</h3>
+			<div class="hakmi-ref-scale-grid">
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-gold-shade-2)">Shade 2</div>
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-gold-shade-1)">Shade 1</div>
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-gold)">Base</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: var(--hakmi-gold-tint-1)">Tint 1</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: var(--hakmi-gold-tint-2)">Tint 2</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: var(--hakmi-gold-tint-3)">Tint 3</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: var(--hakmi-gold-tint-4)">Tint 4</div>
+			</div>
+
+			<h3 class="hakmi-h4">درجات الفيروزي والمرجاني · Teal &amp; Coral</h3>
+			<div class="hakmi-ref-scale-grid">
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-teal)">Teal</div>
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-teal-shade-1)">Teal S1</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: var(--hakmi-teal-tint-4)">Teal T4</div>
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-coral)">Coral</div>
+				<div class="hakmi-ref-swatch" style="--swatch: var(--hakmi-coral-shade-1)">Coral S1</div>
+				<div class="hakmi-ref-swatch is-light" style="--swatch: var(--hakmi-coral-tint-4)">Coral T4</div>
+			</div>
+		</section>
+
+		<section class="hakmi-ref-section" id="brand-type">
+			<p class="hakmi-eyebrow">Brand · Typography</p>
+			<h2 class="hakmi-h2">الخطوط والنصوص</h2>
+			<hr class="hakmi-divider">
+			<p class="hakmi-p-muted">Lyon Arabic Display — <code class="hakmi-ref-code">--hakmi-font</code></p>
+
+			<div class="hakmi-ref-sample">
+				<p class="hakmi-display">نبني قيمة تمتد عبر القطاعات والأجيال.</p>
+				<span class="hakmi-ref-code">.hakmi-display</span>
+			</div>
+			<div class="hakmi-ref-sample">
+				<h1 class="hakmi-h1">عنوان رئيسي H1</h1>
+				<span class="hakmi-ref-code">.hakmi-h1</span>
+			</div>
+			<div class="hakmi-ref-sample">
+				<h2 class="hakmi-h2">عنوان قسم H2</h2>
+				<span class="hakmi-ref-code">.hakmi-h2</span>
+			</div>
+			<div class="hakmi-ref-sample">
+				<h3 class="hakmi-h3">عنوان فرعي H3</h3>
+				<span class="hakmi-ref-code">.hakmi-h3</span>
+			</div>
+			<div class="hakmi-ref-sample">
+				<p class="hakmi-eyebrow">02 — تعريف المجموعة</p>
+				<span class="hakmi-ref-code">.hakmi-eyebrow · section label pattern</span>
+			</div>
+			<div class="hakmi-ref-sample">
+				<p class="hakmi-lead">منذ انطلاق أعمالها في المملكة العربية السعودية عام 1985، تطورت مجموعة الحاكمي القابضة.</p>
+				<span class="hakmi-ref-code">.hakmi-lead</span>
+			</div>
+			<div class="hakmi-ref-sample">
+				<p class="hakmi-p">فقرة أساسية — line-height 1.8 للعربية.</p>
+				<p class="hakmi-p-muted">نص ثانوي · .hakmi-p-muted</p>
+				<p class="hakmi-p-small">ملاحظة صغيرة · .hakmi-p-small</p>
+				<p class="hakmi-caption">تسمية · .hakmi-caption</p>
+			</div>
+		</section>
+
+		<section class="hakmi-ref-section" id="brand-layout">
+			<p class="hakmi-eyebrow">Brand · Layout tokens</p>
+			<h2 class="hakmi-h2">المسافات والتخطيط</h2>
+			<hr class="hakmi-divider">
+			<div class="hakmi-ref-token-row">
+				<div class="hakmi-ref-token">
+					<strong>Border radius</strong>
+					<code>--hakmi-radius: 0</code>
+					<p class="hakmi-p-small">زوايا مربعة في كل المكونات</p>
+				</div>
+				<div class="hakmi-ref-token">
+					<strong>Content max</strong>
+					<code>--hakmi-content-max: 1440px</code>
+				</div>
+				<div class="hakmi-ref-token">
+					<strong>Edge padding</strong>
+					<code>--hakmi-content-pad: 16px</code>
+				</div>
+				<div class="hakmi-ref-token">
+					<strong>Section block</strong>
+					<code>padding-block: 72px</code>
+				</div>
+				<div class="hakmi-ref-token">
+					<strong>Button gap</strong>
+					<code>gap: 12px</code>
+				</div>
+				<div class="hakmi-ref-token">
+					<strong>Transition</strong>
+					<code>180ms ease</code>
+				</div>
+			</div>
+		</section>
+
+		<!-- ELEMENTS -->
+		<section class="hakmi-ref-section" id="el-links">
+			<p class="hakmi-eyebrow">Elements · Links</p>
+			<h2 class="hakmi-h2">الروابط</h2>
+			<hr class="hakmi-divider">
+			<p class="hakmi-p"><a class="hakmi-link" href="#el-buttons">رابط أساسي</a> <span class="hakmi-ref-code">.hakmi-link</span></p>
+			<p class="hakmi-p"><a class="hakmi-link-gold" href="#brand-colors">رابط ذهبي</a> <span class="hakmi-ref-code">.hakmi-link-gold</span></p>
+			<p class="hakmi-p"><a class="hakmi-link-fire" href="#brand-colors">رابط مرجاني</a> <span class="hakmi-ref-code">.hakmi-link-fire</span></p>
+			<p class="hakmi-p"><a class="hakmi-link-nav" href="#sec-hero">رابط تنقل</a> <span class="hakmi-ref-code">.hakmi-link-nav</span></p>
+			<div class="hakmi-ref-on-dark">
+				<a class="hakmi-link-on-dark" href="index.html">رابط على خلفية داكنة</a>
+				<span class="hakmi-ref-code">.hakmi-link-on-dark</span>
+			</div>
+		</section>
+
+		<section class="hakmi-ref-section" id="el-buttons">
+			<p class="hakmi-eyebrow">Elements · Buttons</p>
+			<h2 class="hakmi-h2">الأزرار</h2>
+			<hr class="hakmi-divider">
+			<div class="hakmi-ref-sample">
+				<div class="hakmi-btn-row">
+					<a class="hakmi-btn hakmi-btn-primary" href="#">أساسي · Primary</a>
+					<button class="hakmi-btn hakmi-btn-secondary" type="button">ثانوي · Secondary</button>
+					<a class="hakmi-btn hakmi-btn-outline" href="#">محدد · Outline</a>
+					<button class="hakmi-btn hakmi-btn-ghost" type="button">شفاف · Ghost</button>
+					<button class="hakmi-btn hakmi-btn-fire" type="button">مرجاني · Fire</button>
+					<button class="hakmi-btn hakmi-btn-text" type="button">نصي · Text</button>
+				</div>
+			</div>
+			<div class="hakmi-ref-sample">
+				<p class="hakmi-h5">على خلفية داكنة (هيرو)</p>
+				<div class="hakmi-ref-on-dark hakmi-btn-row">
+					<a class="hakmi-btn hakmi-btn-primary" href="#">تعرّف إلى المجموعة</a>
+					<a class="hakmi-btn hakmi-btn-light" href="#">حدود فاتحة · Light</a>
+					<a class="hakmi-btn hakmi-btn-hero" href="#">استكشف قطاعاتنا · Hero</a>
+				</div>
+			</div>
+			<div class="hakmi-ref-sample">
+				<div class="hakmi-btn-row">
+					<button class="hakmi-btn hakmi-btn-primary hakmi-btn-sm" type="button">صغير · sm</button>
+					<button class="hakmi-btn hakmi-btn-primary" type="button">افتراضي</button>
+					<button class="hakmi-btn hakmi-btn-primary hakmi-btn-lg" type="button">كبير · lg</button>
+					<button class="hakmi-btn hakmi-btn-primary" type="button" disabled>معطّل</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="hakmi-ref-section" id="el-badges">
+			<p class="hakmi-eyebrow">Elements · Badges &amp; status</p>
+			<h2 class="hakmi-h2">الشارات وحالات المشروع</h2>
+			<hr class="hakmi-divider">
+			<p class="hakmi-p-muted">حالات المشروع المعتمدة — <code class="hakmi-ref-code">projects.html</code></p>
+			<div class="hakmi-ref-status-row">
+				<span class="hakmi-badge hakmi-badge-navy">قائم</span>
+				<span class="hakmi-badge">قيد التنفيذ</span>
+				<span class="hakmi-badge">قيد التطوير</span>
+				<span class="hakmi-badge hakmi-badge-fire">قيد التفاوض</span>
+				<span class="hakmi-badge">قيد الدراسة</span>
+			</div>
+			<span class="hakmi-ref-code">.hakmi-badge · .hakmi-badge-navy · .hakmi-badge-fire</span>
+			<p class="hakmi-ref-sample">
+				<span class="hakmi-companies-tag">شركات المجموعة</span>
+				<span class="hakmi-ref-code">.hakmi-companies-tag</span>
+				<span class="hakmi-cta-badge" style="display:inline-block;margin-inline-start:1rem;">شراكات استراتيجية</span>
+				<span class="hakmi-ref-code">.hakmi-cta-badge</span>
+			</p>
+		</section>
+
+		<section class="hakmi-ref-section" id="el-forms">
+			<p class="hakmi-eyebrow">Elements · Forms</p>
+			<h2 class="hakmi-h2">عناصر النماذج</h2>
+			<hr class="hakmi-divider">
+			<p>
+				<label class="hakmi-label" for="ref-name">الاسم</label>
+				<input class="hakmi-input" id="ref-name" type="text" placeholder="الاسم الكامل">
+			</p>
+			<p>
+				<label class="hakmi-label" for="ref-topic">الموضوع</label>
+				<select class="hakmi-select" id="ref-topic">
+					<option>استفسار عام</option>
+					<option>شراكات</option>
+					<option>وظائف</option>
+				</select>
+			</p>
+			<p>
+				<label class="hakmi-label" for="ref-msg">الرسالة</label>
+				<textarea class="hakmi-textarea" id="ref-msg" placeholder="اكتب رسالتك"></textarea>
+			</p>
+			<p class="hakmi-p-small" style="color:var(--hakmi-coral)">مثال خطأ: يرجى إدخال بريد إلكتروني صالح.</p>
+			<span class="hakmi-ref-code">.hakmi-label · .hakmi-input · .hakmi-select · .hakmi-textarea</span>
+		</section>
+
+		<section class="hakmi-ref-section" id="el-cards">
+			<p class="hakmi-eyebrow">Elements · Cards &amp; surfaces</p>
+			<h2 class="hakmi-h2">البطاقات والأسطح</h2>
+			<hr class="hakmi-divider">
+			<div class="hakmi-card hakmi-ref-sample">
+				<span class="hakmi-badge">قطاع</span>
+				<h3 class="hakmi-h3">بطاقة محتوى</h3>
+				<p class="hakmi-p-muted">سطح أبيض بحدود فاتحة.</p>
+			</div>
+			<span class="hakmi-ref-code">.hakmi-card</span>
+			<div class="hakmi-card hakmi-surface-navy hakmi-ref-sample">
+				<h3 class="hakmi-h3">سطح كحلي</h3>
+				<p class="hakmi-p-muted">للشرائح الداكنة.</p>
+			</div>
+			<span class="hakmi-ref-code">.hakmi-surface-navy · .hakmi-divider · .hakmi-divider-full</span>
+		</section>
+
+		<section class="hakmi-ref-section" id="el-nav">
+			<p class="hakmi-eyebrow">Elements · Nav &amp; filters</p>
+			<h2 class="hakmi-h2">التنقل والفلاتر</h2>
+			<hr class="hakmi-divider">
+			<div class="hakmi-ref-on-dark hakmi-ref-nav-demo">
+				<ul class="hakmi-nav">
+					<li class="hakmi-nav-item"><a class="hakmi-link-on-dark" href="index.html">الرئيسية</a></li>
+					<li class="hakmi-nav-item"><a class="hakmi-link-on-dark" href="about.html">من نحن</a></li>
+					<li class="hakmi-nav-item"><a class="hakmi-link-on-dark" href="sectors.html">قطاعاتنا</a></li>
+					<li class="hakmi-nav-item"><a class="hakmi-link-on-dark" href="companies.html">شركاتنا</a></li>
+				</ul>
+			</div>
+			<span class="hakmi-ref-code">.hakmi-header · .hakmi-nav · .hakmi-nav-item · .hakmi-nav-sub</span>
+			<p class="hakmi-h5">فلاتر / Chips (مشروعات)</p>
+			<div class="hakmi-ref-filter-row">
+				<button class="hakmi-btn hakmi-btn-outline hakmi-btn-sm is-active" type="button">الكل</button>
+				<button class="hakmi-btn hakmi-btn-outline hakmi-btn-sm" type="button">عقاري</button>
+				<button class="hakmi-btn hakmi-btn-outline hakmi-btn-sm" type="button">صناعي</button>
+				<button class="hakmi-btn hakmi-btn-outline hakmi-btn-sm" type="button">سورية</button>
+				<button class="hakmi-btn hakmi-btn-outline hakmi-btn-sm" type="button">قيد التنفيذ</button>
+			</div>
+			<span class="hakmi-ref-code">.hakmi-btn-outline.hakmi-btn-sm · .is-active</span>
+		</section>
+
+		<section class="hakmi-ref-section" id="el-icons">
+			<p class="hakmi-eyebrow">Elements · Icons</p>
+			<h2 class="hakmi-h2">أيقونات القطاعات</h2>
+			<hr class="hakmi-divider">
+			<div class="hakmi-ref-icon-grid">
+				<div>
+					<div class="hakmi-sector-icon"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12H3zm2-2h14v-8.3L12 5.3 5 10.7V19z"/></svg></div>
+					<p class="hakmi-caption">عقاري</p>
+				</div>
+				<div>
+					<div class="hakmi-sector-icon"><svg viewBox="0 0 24 24"><path d="M4 20V8l4-2v14H4zm6 0V6l4-2v16h-4z"/></svg></div>
+					<p class="hakmi-caption">مواد</p>
+				</div>
+				<div>
+					<div class="hakmi-sector-icon"><svg viewBox="0 0 24 24"><path d="M2 22V10l10-5 10 5v12H2z"/></svg></div>
+					<p class="hakmi-caption">تصنيع</p>
+				</div>
+				<div>
+					<div class="hakmi-sector-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.5 2 6 4.2 6 7.5c0 2.1 1.1 3.9 2.8 5.1L12 22l3.2-9.4C16.9 11.4 18 9.6 18 7.5 18 4.2 15.5 2 12 2z"/></svg></div>
+					<p class="hakmi-caption">غذاء</p>
+				</div>
+			</div>
+			<span class="hakmi-ref-code">.hakmi-sector-icon</span>
+			<p class="hakmi-h5">خانة شعار شريك</p>
+			<div class="hakmi-partner-slot" style="max-width:200px"><span>شعار الشريك</span></div>
+			<span class="hakmi-ref-code">.hakmi-partner-slot · .hakmi-partner-slot.is-filled</span>
+		</section>
+
+		<section class="hakmi-ref-section" id="el-misc">
+			<p class="hakmi-eyebrow">Elements · Table · Notice · Section label</p>
+			<h2 class="hakmi-h2">جدول · تنبيه · تسمية قسم</h2>
+			<hr class="hakmi-divider">
+			<p class="hakmi-ref-eyebrow">05 — المشروعات</p>
+			<span class="hakmi-ref-code">Section eyebrow · NN — Label (بديل breadcrumbs)</span>
+			<div class="hakmi-ref-notice">تنبيه عام — يُستخدم لملاحظات المحتوى أو التحديثات.</div>
+			<div class="hakmi-ref-notice is-info">معلومة — رد خلال يوم عمل واحد.</div>
+			<div class="hakmi-ref-notice is-warning">تنبيه — يتطلب تدقيقاً قانونياً قبل النشر.</div>
+			<table class="hakmi-ref-table">
+				<thead>
+					<tr><th>المشروع</th><th>الموقع</th><th>الحالة</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>حمص أفينيو</td><td>حمص</td><td>قيد التنفيذ</td></tr>
+					<tr><td>مدينة السلام</td><td>حمص</td><td>قيد التطوير</td></tr>
+					<tr><td>شام هايتس</td><td>ريف دمشق</td><td>قيد الدراسة</td></tr>
+				</tbody>
+			</table>
+			<span class="hakmi-ref-code">.hakmi-ref-table (نمط جدول بسيط — لا يوجد مكوّن جدول مخصص بعد)</span>
+		</section>
+
+		<!-- SECTIONS -->
+		<section class="hakmi-ref-section" id="sections-intro">
+			<p class="hakmi-eyebrow">Section patterns</p>
+			<h2 class="hakmi-h2">أنماط الأقسام · Live section demos</h2>
+			<hr class="hakmi-divider">
+			<p class="hakmi-p">أمثلة حية من أنماط <code class="hakmi-ref-code">index.html</code> و <code class="hakmi-ref-code">design-guidelines.css</code>.</p>
+		</section>
+
+		<div class="hakmi-ref-section-frame" id="sec-hero">
+			<div class="hakmi-ref-section-label">
+				<h3>Page hero · الهيرو</h3>
+				<span>.hakmi-hero-copy · .hakmi-btn-light · .hakmi-btn-secondary</span>
+			</div>
+			<div class="hakmi-ref-hero-demo">
+				<div class="hakmi-hero-copy">
+					<h2 class="hakmi-h1">نبني قيمة تمتد عبر القطاعات والأجيال.</h2>
+					<p class="hakmi-lead">منذ انطلاق أعمالها في المملكة العربية السعودية عام 1985، تطورت مجموعة الحاكمي القابضة.</p>
+					<div class="hakmi-btn-row">
+						<a class="hakmi-btn hakmi-btn-light hakmi-btn-sm" href="#">استكشف قطاعاتنا</a>
+						<a class="hakmi-btn hakmi-btn-secondary" href="#">تعرّف إلى المجموعة</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hakmi-ref-section-frame" id="sec-facts">
+			<div class="hakmi-ref-section-label">
+				<h3>Fact / stats strip · شريط الحقائق</h3>
+				<span>.hakmi-fact-strip</span>
+			</div>
+			<div class="hakmi-ref-fact-demo hakmi-fact-strip">
+				<div class="hakmi-ref-fact-grid">
+					<div class="hakmi-ref-fact-item">
+						<h3>منذ 1985</h3>
+						<p>مسيرة بدأت في المملكة العربية السعودية.</p>
+					</div>
+					<div class="hakmi-ref-fact-item">
+						<h3>أسواق متعددة</h3>
+						<p>حضور عبر الشرق الأوسط وأوروبا وآسيا.</p>
+					</div>
+					<div class="hakmi-ref-fact-item">
+						<h3>قطاعات متكاملة</h3>
+						<p>عقار، مواد، صناعة، غذاء، زراعة.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hakmi-ref-section-frame" id="sec-about">
+			<div class="hakmi-ref-section-label">
+				<h3>2-col about · عن المجموعة</h3>
+				<span>.hakmi-about-section · .hakmi-about-grid</span>
+			</div>
+			<div class="hakmi-about-section">
+				<div class="e-con-inner hakmi-about-grid">
+					<div class="hakmi-about-media">
+						<img src="assets/wp-content/uploads/sites/6/2026/06/a-factory-structure-with-mountains-in-the-backgrou-2026-03-26-10-19-29-utc_11zon-1.jpg" width="640" height="427" alt="مجموعة الحاكمي" loading="lazy">
+					</div>
+					<div class="hakmi-about-content">
+						<p class="hakmi-about-kicker">مقدمة المجموعة</p>
+						<h2>نؤمن أن الاستثمار الحقيقي لا يُقاس بحجم الصفقة وحده.</h2>
+						<p class="hakmi-about-lead">تعمل المجموعة بمنظور المالك طويل الأجل، وتجمع بين رأس المال والخبرة التنفيذية.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hakmi-ref-section-frame" id="sec-sectors">
+			<div class="hakmi-ref-section-label">
+				<h3>Sector grid · شبكة القطاعات</h3>
+				<span>.hakmi-sectors-section · .hakmi-sector-card</span>
+			</div>
+			<div class="hakmi-sectors-section">
+				<div class="e-con-inner">
+					<div class="hakmi-sectors-intro">
+						<h2 class="hakmi-sectors-title">قطاعات الأعمال</h2>
+					</div>
+					<div class="hakmi-sectors-grid">
+						<article class="hakmi-sector-card">
+							<div class="hakmi-sector-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12H3zm2-2h14v-8.3L12 5.3 5 10.7V19z"/></svg></div>
+							<h3>التطوير العقاري</h3>
+							<p>تطوير المجتمعات السكنية والمشروعات متعددة الاستخدامات.</p>
+						</article>
+						<article class="hakmi-sector-card">
+							<div class="hakmi-sector-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V8l4-2v14H4zm6 0V6l4-2v16h-4z"/></svg></div>
+							<h3>مواد البناء والإكساء</h3>
+							<p>تجارة وتوزيع منتجات السيراميك والبورسلان والرخام.</p>
+						</article>
+						<article class="hakmi-sector-card">
+							<div class="hakmi-sector-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 22V10l10-5 10 5v12H2z"/></svg></div>
+							<h3>التصنيع</h3>
+							<p>خطوط ومصانع مرتبطة بمواد البناء والتشطيبات.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hakmi-ref-section-frame" id="sec-companies">
+			<div class="hakmi-ref-section-label">
+				<h3>Companies grid · شبكة الشركات</h3>
+				<span>.hakmi-companies-section · .hakmi-company-card</span>
+			</div>
+			<div class="hakmi-companies-section">
+				<div class="e-con-inner">
+					<div class="hakmi-companies-header">
+						<div class="hakmi-companies-intro">
+							<p class="hakmi-companies-tag">شركات المجموعة</p>
+							<h2 class="hakmi-companies-title">شركات المجموعة</h2>
+							<p class="hakmi-companies-lead">نماذج من محفظة مجموعة الحاكمي القابضة عبر الأسواق والقطاعات.</p>
+						</div>
+					</div>
+					<div class="hakmi-companies-grid">
+						<article class="hakmi-company-card">
+							<div class="hakmi-company-logo"><img src="assets/wp-content/uploads/logos/akzirve.png" alt="Akzirve"></div>
+							<h3>Akzirve - تركيا</h3>
+							<p>خبرة المجموعة في التطوير العقاري بمدينة إسطنبول.</p>
+							<footer class="hakmi-company-meta">
+								<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 21V8l7-5 4 2.9V6h2v1.6L21 10v11H3z"/></svg>
+								<span>التطوير العقاري</span>
+							</footer>
+						</article>
+						<article class="hakmi-company-card">
+							<div class="hakmi-company-logo"><img src="assets/wp-content/uploads/logos/bayt%20alibaa.jpg" alt="بيت الإباء"></div>
+							<h3>بيت الإباء - السعودية</h3>
+							<p>خبرة طويلة في مواد البناء والإكساء والتشطيبات.</p>
+							<footer class="hakmi-company-meta">
+								<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M21.7 7.3 16.7 2.3 15.3 3.7l1.3 1.3-8.6 8.6-1.3-1.3-1.4 1.4 1.3 1.3-3.6 3.6 2.8 2.8 3.6-3.6 1.3 1.3 1.4-1.4-1.3-1.3 8.6-8.6 1.3 1.3 1.4-1.4z"/></svg>
+								<span>مواد البناء</span>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hakmi-ref-section-frame" id="sec-projects">
+			<div class="hakmi-ref-section-label">
+				<h3>Projects + filters · المشروعات</h3>
+				<span>cards + .hakmi-btn-outline filters + status badges</span>
+			</div>
+			<div style="padding:1.25rem;background:#f7eede">
+				<div class="hakmi-ref-filter-row">
+					<button class="hakmi-btn hakmi-btn-outline hakmi-btn-sm is-active" type="button">الكل</button>
+					<button class="hakmi-btn hakmi-btn-outline hakmi-btn-sm" type="button">قائم</button>
+					<button class="hakmi-btn hakmi-btn-outline hakmi-btn-sm" type="button">قيد التنفيذ</button>
+					<button class="hakmi-btn hakmi-btn-outline hakmi-btn-sm" type="button">قيد الدراسة</button>
+				</div>
+				<div class="hakmi-companies-grid" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+					<article class="hakmi-ref-project-card">
+						<span class="hakmi-badge">قيد التنفيذ</span>
+						<h4>حمص أفينيو — حمص</h4>
+						<p class="hakmi-p-small">هيكلة مرنة للصفقات والشراكات.</p>
+					</article>
+					<article class="hakmi-ref-project-card">
+						<span class="hakmi-badge hakmi-badge-navy">قائم</span>
+						<h4>مدينة السلام — حمص</h4>
+						<p class="hakmi-p-small">إدارة التنفيذ والجودة والحوكمة.</p>
+					</article>
+					<article class="hakmi-ref-project-card">
+						<span class="hakmi-badge hakmi-badge-fire">قيد التفاوض</span>
+						<h4>شام هايتس — ريف دمشق</h4>
+						<p class="hakmi-p-small">شراكات مع جهات عامة وخاصة.</p>
+					</article>
+				</div>
+			</div>
+		</div>
+
+		<div class="hakmi-ref-section-frame" id="sec-presence">
+			<div class="hakmi-ref-section-label">
+				<h3>Country / presence cards · الانتشار</h3>
+				<span>card grid pattern · presence.html</span>
+			</div>
+			<div class="hakmi-ref-presence-grid">
+				<div class="hakmi-ref-presence-card">
+					<h4>السعودية</h4>
+					<p>المقر الرئيسي — الرياض</p>
+				</div>
+				<div class="hakmi-ref-presence-card">
+					<h4>تركيا</h4>
+					<p>التطوير العقاري — إسطنبول</p>
+				</div>
+				<div class="hakmi-ref-presence-card">
+					<h4>سورية</h4>
+					<p>محطة استثمار وتنمية</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="hakmi-ref-section-frame" id="sec-partners">
+			<div class="hakmi-ref-section-label">
+				<h3>Partners marquee · شريط الشركاء</h3>
+				<span>.hakmi-partners-section · .hakmi-marquee</span>
+			</div>
+			<section class="hakmi-partners-section">
+				<div class="hakmi-partners-inner">
+					<header class="hakmi-partners-header">
+						<p class="hakmi-partners-kicker">شبكة موثوقة</p>
+						<h2 class="hakmi-partners-title">شركائنا</h2>
+					</header>
+					<div class="hakmi-marquee" role="region" aria-label="شعارات الشركاء">
+						<div class="hakmi-marquee-track">
+							<div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
+							<div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
+							<div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
+							<div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
+							<div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
+							<div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
+							<div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
+							<div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="hakmi-ref-section-frame" id="sec-cta">
+			<div class="hakmi-ref-section-label">
+				<h3>CTA band · شريط دعوة للإجراء</h3>
+				<span>.hakmi-cta-section</span>
+			</div>
+			<section class="hakmi-cta-section">
+				<div class="hakmi-cta-inner">
+					<p class="hakmi-cta-badge">شراكات استراتيجية مؤسسية</p>
+					<h2 class="hakmi-cta-title">سورية: محطة استثمار وتنمية</h2>
+					<div class="hakmi-cta-copy"><p>تمثل سورية محوراً استراتيجياً جديداً في مسيرة المجموعة.</p></div>
+					<div class="hakmi-cta-actions">
+						<a class="hakmi-btn hakmi-cta-btn-primary" href="#">فرص الشراكة</a>
+						<a class="hakmi-btn hakmi-cta-btn-secondary" href="#">تواصل معنا</a>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="hakmi-ref-section-frame" id="sec-contact">
+			<div class="hakmi-ref-section-label">
+				<h3>Contact form block · نموذج التواصل</h3>
+				<span>.hakmi-contact-section (shown on this page only)</span>
+			</div>
+			<section class="hakmi-contact-section">
+				<div class="hakmi-contact-inner">
+					<div class="hakmi-contact-header">
+						<p class="hakmi-contact-tag">تواصل مؤسسي</p>
+						<h2>تواصل مع مجموعة الحاكمي القابضة</h2>
+						<p>للاستفسارات الاستثمارية والشراكات والتوريد والمشروعات.</p>
+					</div>
+					<div class="hakmi-contact-layout">
+						<form class="hakmi-contact-form" action="#" method="post">
+							<div class="hakmi-contact-fields">
+								<label><span>الاسم الكامل *</span><input type="text" placeholder="الاسم الثلاثي"></label>
+								<label><span>البريد الإلكتروني *</span><input type="email" placeholder="name@company.com"></label>
+							</div>
+							<label class="hakmi-contact-full"><span>الرسالة *</span><textarea rows="3" placeholder="تفاصيل الاستفسار"></textarea></label>
+							<button class="hakmi-btn hakmi-contact-submit" type="button">إرسال الاستفسار</button>
+						</form>
+						<aside class="hakmi-contact-aside">
+							<h3>المقر الرئيسي</h3>
+							<ul><li><strong>المقر</strong>برج الحاكمي للاستثمار، الرياض</li></ul>
+							<div class="hakmi-contact-badges"><span>رد خلال 24 ساعة</span><span>قنوات آمنة</span></div>
+						</aside>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="hakmi-ref-section-frame hakmi-ref-mini-footer" id="sec-footer">
+			<div class="hakmi-ref-section-label">
+				<h3>Footer chrome · التذييل</h3>
+				<span>.hakmi-site-footer — shared on index.html</span>
+			</div>
+			<footer class="hakmi-site-footer">
+				<div class="hakmi-footer-inner">
+					<div class="hakmi-footer-grid">
+						<div class="hakmi-footer-col hakmi-footer-brand">
+							<a class="hakmi-footer-logo" href="index.html"><img src="assets/logo_white.svg" alt="مجموعة الحاكمي"></a>
+							<p class="hakmi-footer-slogan">شراكات قوية. أصول منتجة. قيمة تستمر.</p>
+						</div>
+						<div class="hakmi-footer-col">
+							<h3>الملاحة السريعة</h3>
+							<ul>
+								<li><a href="about.html">عن المجموعة</a></li>
+								<li><a href="reference.html">مرجع التصميم</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="hakmi-footer-bar">
+						<p>© 2026 مجموعة الحاكمي القابضة</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</main>
+
+	<footer class="hakmi-site-footer">
+		<div class="hakmi-footer-inner">
+			<div class="hakmi-footer-bar">
+				<p><a href="index.html">← العودة إلى الموقع</a> · مرجع التصميم الداخلي · <code class="hakmi-ref-code">/reference.html</code></p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
