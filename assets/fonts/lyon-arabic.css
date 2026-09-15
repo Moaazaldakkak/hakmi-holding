@@ -1,4 +1,8 @@
 /* Lyon Arabic Display — local Hakmi brand fonts */
+:root {
+	--hakmi-font-fallback: "Lyon Arabic Display", "Instrument Serif", "Noto Naskh Arabic", Georgia, "Times New Roman", serif;
+}
+
 @font-face {
 	font-family: "Lyon Arabic Display";
 	src: url("LyonArabicDisplay-Light.otf") format("opentype");

@@ -1,38 +1,70 @@
 /*
- * Hakmi Holding visual system
- * Source: hakmi_design_guidelines.html
+ * Hakmi Holding visual system — Visual Identity 2026
  *
- * Palette
- *   Primary Navy    #0B192C
- *   Secondary Navy  #1E3E62
- *   Accent Gold     #C5A880
- *   Light BG        #F8F9FA
- *   Text Dark        #2B2D42
- *   Text Muted       #5A6065
+ * Primary palette
+ *   Navy    #1a344c   Teal    #026481
+ *   Coral   #d65a3c   Gold    #d9aa5a   White #ffffff
  */
 
 :root {
-	--hakmi-primary-navy: #0B192C;
-	--hakmi-secondary-navy: #1E3E62;
-	--hakmi-accent-gold: #C5A880;
-	--hakmi-accent-gold-hover: #b09168;
-	--hakmi-text-dark: #2B2D42;
-	--hakmi-text-muted: #5A6065;
-	--hakmi-bg-light: #f7eede;
-	--hakmi-bg-card: #FFFFFF;
-	--hakmi-border: #E2E8F0;
-	--hakmi-font: "Lyon Arabic Display", Tahoma, Arial, sans-serif;
+	--hakmi-navy: #1a344c;
+	--hakmi-navy-shade-1: #142739;
+	--hakmi-navy-shade-2: #0d1a26;
+	--hakmi-navy-tint-1: #485d70;
+	--hakmi-navy-tint-2: #768594;
+	--hakmi-navy-tint-3: #a3aeb7;
+	--hakmi-navy-tint-4: #d1d6db;
+
+	--hakmi-teal: #026481;
+	--hakmi-teal-shade-1: #024b61;
+	--hakmi-teal-shade-2: #013241;
+	--hakmi-teal-tint-1: #35839a;
+	--hakmi-teal-tint-2: #67a2b3;
+	--hakmi-teal-tint-3: #9ac1cd;
+	--hakmi-teal-tint-4: #cce0e6;
+
+	--hakmi-gold: #d9aa5a;
+	--hakmi-gold-shade-1: #a38044;
+	--hakmi-gold-shade-2: #6d552d;
+	--hakmi-gold-tint-1: #e1bb7b;
+	--hakmi-gold-tint-2: #e8cc9c;
+	--hakmi-gold-tint-3: #f0ddbd;
+	--hakmi-gold-tint-4: #f7eede;
+
+	--hakmi-coral: #d65a3c;
+	--hakmi-coral-shade-1: #a1442d;
+	--hakmi-coral-shade-2: #6b2d1e;
+	--hakmi-coral-tint-1: #de7b63;
+	--hakmi-coral-tint-2: #e69c8a;
+	--hakmi-coral-tint-3: #efbdb1;
+	--hakmi-coral-tint-4: #f7ded8;
+
+	--hakmi-white: #ffffff;
+
+	/* Semantic aliases */
+	--hakmi-primary-navy: var(--hakmi-navy);
+	--hakmi-secondary-navy: var(--hakmi-teal);
+	--hakmi-accent-gold: var(--hakmi-gold);
+	--hakmi-accent-gold-hover: var(--hakmi-gold-shade-1);
+	--hakmi-accent-coral: var(--hakmi-coral);
+	--hakmi-text-dark: var(--hakmi-navy);
+	--hakmi-text-muted: var(--hakmi-navy-tint-1);
+	--hakmi-bg-light: var(--hakmi-gold-tint-4);
+	--hakmi-bg-card: var(--hakmi-white);
+	--hakmi-border: var(--hakmi-navy-tint-4);
+	--hakmi-font: var(--hakmi-font-fallback, "Lyon Arabic Display", "Instrument Serif", "Noto Naskh Arabic", Georgia, "Times New Roman", serif);
 	--hakmi-content-max: 1440px;
 	--hakmi-content-pad: 16px;
+	--hakmi-fact-strip-height: 118px;
 }
 
 /* ------------------------------------------------------------------ */
 /* Remap Elementor kit tokens to Hakmi brand                           */
 /* ------------------------------------------------------------------ */
 .elementor-kit-4 {
-	--e-global-color-secondary: var(--hakmi-primary-navy);
-	--e-global-color-accent: var(--hakmi-accent-gold);
-	--e-global-color-31c76fa: var(--hakmi-text-muted);
+	--e-global-color-secondary: var(--hakmi-navy);
+	--e-global-color-accent: var(--hakmi-gold);
+	--e-global-color-31c76fa: var(--hakmi-navy-tint-1);
 
 	--e-global-typography-primary-font-family: "Lyon Arabic Display";
 	--e-global-typography-secondary-font-family: "Lyon Arabic Display";
@@ -143,7 +175,7 @@ h3 {
 .elementor-button-link:hover {
 	background-color: var(--hakmi-accent-gold) !important;
 	border-color: var(--hakmi-accent-gold) !important;
-	color: var(--hakmi-border) !important;
+	color: var(--hakmi-navy) !important;
 }
 
 /* Hero secondary CTA */
@@ -203,25 +235,123 @@ h3 {
 	grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 }
 
-/* About: gold titles, slightly smaller quote */
-.hakmi-about-section .elementor-element-54c02a60 p {
-	color: var(--hakmi-accent-gold) !important;
-	font-size: clamp(2.5rem, 5vw, 4.25rem) !important;
-	font-weight: 700 !important;
-	line-height: 1.2 !important;
-	margin: 0 !important;
+/* ------------------------------------------------------------------ */
+/* Above-the-fold: hero + fact strip fit in first viewport (desktop)   */
+/* ------------------------------------------------------------------ */
+@media (min-width: 1025px) and (min-height: 700px) {
+	.elementor-1527 .elementor-element.elementor-element-62516c04 {
+		--min-height: calc(100vh - var(--hakmi-fact-strip-height));
+		min-height: calc(100vh - var(--hakmi-fact-strip-height)) !important;
+		max-height: calc(100vh - var(--hakmi-fact-strip-height)) !important;
+		justify-content: center !important;
+	}
+
+	.elementor-1527 .elementor-element.elementor-element-62516c04 > .e-con-inner {
+		padding-block: 5.5rem 1.5rem !important;
+		gap: 1rem !important;
+	}
+
+	.elementor-1527 .elementor-element.elementor-element-7e96f104 .elementor-heading-title {
+		font-size: clamp(1.85rem, 3.2vw, 2.65rem) !important;
+		line-height: 1.25 !important;
+		margin-bottom: 0.65rem !important;
+	}
+
+	.elementor-1527 .elementor-element.elementor-element-101271d5 p {
+		font-size: 1rem !important;
+		line-height: 1.75 !important;
+		max-width: 40rem;
+	}
+
+	.elementor-1527 .elementor-element.elementor-element-3e41fe34 {
+		margin-top: 0.35rem !important;
+	}
+
+	.hakmi-fact-strip > .e-con-inner {
+		padding-block: 1.15rem !important;
+		gap: 0.5rem !important;
+	}
+
+	.hakmi-fact-strip .elementor-icon-box-title {
+		font-size: 1.05rem !important;
+	}
+
+	.hakmi-fact-strip .elementor-icon-box-description {
+		font-size: 0.88rem !important;
+		line-height: 1.55 !important;
+	}
+
+	.hakmi-fact-strip .elementor-element-1005869e {
+		display: none !important;
+	}
 }
 
-.hakmi-about-section .elementor-element-28ee6799 .elementor-heading-title {
-	color: var(--hakmi-primary-navy) !important;
-	font-size: 3rem !important;
-	line-height: 1.55 !important;
-	font-weight: 500 !important;
+/* ------------------------------------------------------------------ */
+/* About: 2-column intro with brand imagery                            */
+/* ------------------------------------------------------------------ */
+.hakmi-about-section > .e-con-inner,
+.hakmi-about-section .hakmi-about-grid {
+	display: grid !important;
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+	gap: clamp(1.5rem, 3vw, 3rem);
+	align-items: center;
+	padding-block: clamp(3.5rem, 6vw, 5rem) !important;
 }
 
-@media (max-width: 767px) {
-	.hakmi-about-section .elementor-element-28ee6799 .elementor-heading-title {
-		font-size: 1.75rem !important;
+.hakmi-about-media {
+	position: relative;
+	min-height: 320px;
+}
+
+.hakmi-about-media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 320px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.hakmi-about-media::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(135deg, rgba(26, 52, 76, 0.08), rgba(2, 100, 129, 0.18));
+	pointer-events: none;
+}
+
+.hakmi-about-kicker {
+	margin: 0 0 0.75rem;
+	color: var(--hakmi-gold);
+	font-size: 0.9rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+}
+
+.hakmi-about-content h2 {
+	margin: 0 0 1rem;
+	color: var(--hakmi-navy);
+	font-size: clamp(1.45rem, 2.4vw, 2rem);
+	font-weight: 700;
+	line-height: 1.55;
+}
+
+.hakmi-about-lead {
+	margin: 0;
+	color: var(--hakmi-navy-tint-1);
+	font-size: 1.02rem;
+	line-height: 1.9;
+}
+
+@media (max-width: 900px) {
+	.hakmi-about-section > .e-con-inner,
+	.hakmi-about-section .hakmi-about-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.hakmi-about-media {
+		min-height: 240px;
+		order: -1;
 	}
 }
 
@@ -270,27 +400,51 @@ h3 {
 .hakmi-sectors-grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 20px;
+	gap: 14px;
 }
 
 .hakmi-sector-card {
-	padding: 24px;
-	border: 1px solid rgba(255, 255, 255, 0.12);
-	background: rgba(255, 255, 255, 0.04);
+	padding: 20px 18px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.035);
+	transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.hakmi-sector-card:hover {
+	border-color: rgba(217, 170, 90, 0.35);
+	background: rgba(255, 255, 255, 0.06);
+}
+
+.hakmi-sector-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	margin-bottom: 0.85rem;
+	border: 1px solid rgba(217, 170, 90, 0.35);
+	background: rgba(217, 170, 90, 0.08);
+	color: var(--hakmi-gold);
+}
+
+.hakmi-sector-icon svg {
+	width: 22px;
+	height: 22px;
+	fill: currentColor;
 }
 
 .hakmi-sector-card h3 {
-	margin: 0 0 0.65rem;
-	color: var(--hakmi-accent-gold);
-	font-size: 1.25rem;
+	margin: 0 0 0.5rem;
+	color: var(--hakmi-gold);
+	font-size: 1.12rem;
 	font-weight: 700;
 }
 
 .hakmi-sector-card p {
 	margin: 0;
 	color: rgba(255, 255, 255, 0.82);
-	font-size: 0.98rem;
-	line-height: 1.8;
+	font-size: 0.92rem;
+	line-height: 1.75;
 }
 
 .hakmi-sectors-note {
@@ -339,7 +493,7 @@ h3 {
 	margin: 0 0 12px;
 	padding: 0.35rem 0.85rem;
 	border-radius: 0;
-	background: rgba(11, 25, 44, 0.06);
+	background: rgba(26, 52, 76, 0.06);
 	color: var(--hakmi-primary-navy);
 	font-size: 0.8rem;
 	font-weight: 600;
@@ -347,7 +501,7 @@ h3 {
 
 .hakmi-companies-tag::before {
 	content: "• ";
-	color: var(--hakmi-accent-gold);
+	color: var(--hakmi-gold);
 }
 
 .hakmi-companies-title {
@@ -392,9 +546,9 @@ h3 {
 	flex-direction: column;
 	min-height: 100%;
 	padding: 22px 20px 18px;
-	border: 1px solid rgba(11, 25, 44, 0.12);
+	border: 1px solid rgba(26, 52, 76, 0.12);
 	border-radius: 0;
-	background: #fff;
+	background: var(--hakmi-white);
 }
 
 .hakmi-company-logo {
@@ -435,7 +589,7 @@ h3 {
 	gap: 8px;
 	margin-top: auto;
 	padding-top: 12px;
-	border-top: 1px solid rgba(11, 25, 44, 0.1);
+	border-top: 1px solid rgba(26, 52, 76, 0.1);
 	color: var(--hakmi-primary-navy);
 	font-size: 0.8rem;
 }
@@ -462,6 +616,122 @@ h3 {
 @media (max-width: 767px) {
 	.hakmi-companies-grid {
 		grid-template-columns: 1fr;
+	}
+}
+
+/* ------------------------------------------------------------------ */
+/* Partners — infinite logo marquee (RTL-safe)                         */
+/* ------------------------------------------------------------------ */
+.hakmi-partners-section {
+	background: var(--hakmi-navy-shade-1);
+	color: var(--hakmi-white);
+	overflow: hidden;
+}
+
+.hakmi-partners-inner {
+	max-width: var(--hakmi-content-max);
+	margin-inline: auto;
+	padding: 56px var(--hakmi-content-pad) 48px;
+}
+
+.hakmi-partners-header {
+	text-align: center;
+	max-width: 40rem;
+	margin: 0 auto 2rem;
+}
+
+.hakmi-partners-kicker {
+	margin: 0 0 0.5rem;
+	color: var(--hakmi-gold);
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+}
+
+.hakmi-partners-title {
+	margin: 0 0 0.65rem;
+	color: var(--hakmi-white);
+	font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.hakmi-partners-lead {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.72);
+	font-size: 0.98rem;
+	line-height: 1.85;
+}
+
+.hakmi-marquee {
+	position: relative;
+	mask-image: linear-gradient(to left, transparent, #000 8%, #000 92%, transparent);
+	-webkit-mask-image: linear-gradient(to left, transparent, #000 8%, #000 92%, transparent);
+}
+
+.hakmi-marquee-track {
+	display: flex;
+	align-items: center;
+	width: max-content;
+	gap: 1.25rem;
+	animation: hakmi-marquee-rtl 42s linear infinite;
+	will-change: transform;
+}
+
+.hakmi-marquee:hover .hakmi-marquee-track,
+.hakmi-marquee:focus-within .hakmi-marquee-track {
+	animation-play-state: paused;
+}
+
+.hakmi-partner-slot {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 168px;
+	height: 88px;
+	padding: 0.75rem 1.25rem;
+	border: 1px dashed rgba(255, 255, 255, 0.22);
+	background: rgba(255, 255, 255, 0.04);
+	color: rgba(255, 255, 255, 0.55);
+	font-size: 0.82rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-align: center;
+}
+
+.hakmi-partner-slot img {
+	display: block;
+	max-width: 140px;
+	max-height: 52px;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	filter: brightness(0) invert(1);
+	opacity: 0.88;
+}
+
+.hakmi-partner-slot.is-filled {
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.12);
+	background: rgba(255, 255, 255, 0.06);
+}
+
+@keyframes hakmi-marquee-rtl {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(50%);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hakmi-marquee-track {
+		animation: none;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
 	}
 }
 
@@ -560,17 +830,17 @@ a.hakmi-cta-btn-primary:hover {
 
 .hakmi-cta-btn-secondary,
 a.hakmi-cta-btn-secondary {
-	background: #2a3444;
-	border-color: #2a3444;
-	color: #fff;
+	background: var(--hakmi-teal-shade-1);
+	border-color: var(--hakmi-teal-shade-1);
+	color: var(--hakmi-white);
 	border-radius: 0;
 }
 
 .hakmi-cta-btn-secondary:hover,
 a.hakmi-cta-btn-secondary:hover {
-	background: #3a4558;
-	border-color: #3a4558;
-	color: #fff;
+	background: var(--hakmi-teal);
+	border-color: var(--hakmi-teal);
+	color: var(--hakmi-white);
 }
 
 /* Contact form */
@@ -597,7 +867,7 @@ a.hakmi-cta-btn-secondary:hover {
 	margin: 0 0 12px;
 	padding: 0.35rem 0.9rem;
 	border-radius: 999px;
-	background: rgba(11, 25, 44, 0.06);
+	background: rgba(26, 52, 76, 0.06);
 	color: var(--hakmi-primary-navy);
 	font-size: 0.8rem;
 	font-weight: 600;
@@ -627,7 +897,7 @@ a.hakmi-cta-btn-secondary:hover {
 	padding: 28px;
 	border-radius: 12px;
 	background: #fff;
-	border: 1px solid rgba(11, 25, 44, 0.08);
+	border: 1px solid rgba(26, 52, 76, 0.08);
 }
 
 .hakmi-contact-fields {
@@ -656,7 +926,7 @@ a.hakmi-cta-btn-secondary:hover {
 .hakmi-contact-form textarea {
 	width: 100%;
 	padding: 0.75rem 0.85rem;
-	border: 1px solid rgba(11, 25, 44, 0.14);
+	border: 1px solid rgba(26, 52, 76, 0.14);
 	border-radius: 8px;
 	background: #fff;
 	color: var(--hakmi-primary-navy);
@@ -697,7 +967,7 @@ a.hakmi-cta-btn-secondary:hover {
 	gap: 8px;
 	margin: 0;
 	padding: 0.7rem 0.8rem;
-	border: 1px solid rgba(11, 25, 44, 0.12);
+	border: 1px solid rgba(26, 52, 76, 0.12);
 	border-radius: 8px;
 	font-weight: 500;
 	cursor: pointer;
@@ -705,7 +975,7 @@ a.hakmi-cta-btn-secondary:hover {
 
 .hakmi-contact-type-grid label:has(input:checked) {
 	border-color: var(--hakmi-accent-gold);
-	background: rgba(197, 168, 128, 0.12);
+	background: rgba(217, 170, 90, 0.12);
 }
 
 .hakmi-contact-upload .hakmi-contact-drop {
@@ -718,7 +988,7 @@ a.hakmi-cta-btn-secondary:hover {
 	padding: 16px;
 	border: 1px dashed rgba(26, 52, 76, 0.28);
 	border-radius: 10px;
-	background: rgba(11, 25, 44, 0.03);
+	background: rgba(26, 52, 76, 0.03);
 	color: var(--hakmi-primary-navy);
 	font-weight: 500;
 	text-align: center;
@@ -845,7 +1115,7 @@ a.hakmi-cta-btn-secondary:hover {
 
 /* Site footer */
 .hakmi-site-footer {
-	background: #08131f;
+	background: var(--hakmi-navy-shade-2);
 	color: rgba(255, 255, 255, 0.82);
 }
 
