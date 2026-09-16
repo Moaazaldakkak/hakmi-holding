@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/fonts/lyon-arabic.css">
   <link rel="stylesheet" href="assets/design-guidelines.css">
   <link rel="stylesheet" href="assets/hakmi.css">
+  <link rel="stylesheet" href="assets/hakmi-redesign.css">
   <link rel="stylesheet" href="assets/rtl-overrides.css">
 </head>
 <body class="hakmi-inner-page" data-page="news">
@@ -26,26 +27,31 @@
     <section class="hakmi-page-section is-alt">
       <div class="hakmi-page-section-inner">
         
-        <div class="hakmi-page-grid is-2"><article class="hakmi-data-card hakmi-news-card" id="launch-portal">
+        <div class="hakmi-news-layout">
+          <div class="hakmi-page-grid is-2"><article class="hakmi-data-card hakmi-news-card" id="launch-portal" data-news-category="group">
+          <div class="hakmi-news-thumb"><time datetime="2026">2026</time></div>
           <span class="hakmi-badge">أخبار المجموعة</span>
-          <time datetime="2026">2026</time>
           <h3>إطلاق البوابة المؤسسية لمجموعة الحاكمي القابضة</h3>
           <p>تعمل المجموعة على إطلاق مرجعها الرقمي الرسمي الذي يعرّف بهويتها الاستثمارية وقطاعاتها وشركاتها ومشروعاتها وانتشارها الجغرافي.</p>
-        </article><article class="hakmi-data-card hakmi-news-card" id="homs-avenue-update">
+          <div class="hakmi-news-meta"><span>مجموعة الحاكمي القابضة</span></div>
+        </article><article class="hakmi-data-card hakmi-news-card" id="homs-avenue-update" data-news-category="projects">
+          <div class="hakmi-news-thumb"><time datetime="2026">2026</time></div>
           <span class="hakmi-badge">تطورات المشروعات</span>
-          <time datetime="2026">2026</time>
           <h3>حمص أفينيو: مشروع حضري متكامل في مرحلة التطوير والاعتمادات</h3>
           <p>مشروع متعدد الاستخدامات يجمع السكن والمرافق والخدمات ضمن مخطط واحد، ويمثل نقطة انطلاق استراتيجية للمجموعة في سورية.</p>
-        </article><article class="hakmi-data-card hakmi-news-card" id="partnerships-open">
+          <div class="hakmi-news-meta"><span>مجموعة الحاكمي القابضة</span></div>
+        </article><article class="hakmi-data-card hakmi-news-card" id="partnerships-open" data-news-category="partnerships">
+          <div class="hakmi-news-thumb"><time datetime="2026">2026</time></div>
           <span class="hakmi-badge">الشراكات والاتفاقات</span>
-          <time datetime="2026">2026</time>
           <h3>فتح قنوات استقبال فرص الشراكة والاستثمار</h3>
           <p>تستقبل المجموعة استفسارات الجهات العامة وملاك الأراضي والمستثمرين والمشغلين عبر القنوات المؤسسية الرسمية.</p>
+          <div class="hakmi-news-meta"><span>مجموعة الحاكمي القابضة</span></div>
         </article></div>
-        <div style="margin-top:2rem">
-          <h2 class="hakmi-h3">التصنيفات</h2>
-          <ul class="hakmi-list"><li>أخبار المجموعة</li><li>أخبار الشركات</li><li>تطورات المشروعات</li><li>الشراكات والاتفاقات</li><li>التصنيع والمنتجات</li><li>الاستدامة والأثر</li><li>الفعاليات والمعارض</li><li>البيانات الصحفية</li></ul>
-          <p class="hakmi-p-muted" style="margin-top:1rem">Boilerplate: مجموعة الحاكمي القابضة مجموعة استثمارية عائلية خاصة أسسها نبيل حاكمي، وبدأت أعمالها في المملكة العربية السعودية عام 1985. تمتد خبراتها عبر التطوير العقاري ومواد البناء والتصنيع والغذاء والزراعة والتجارة، وتدير استثمارات وشراكات في عدد من الأسواق الإقليمية والدولية.</p>
+          <aside>
+            <h2 class="hakmi-h3">التصنيفات</h2>
+            <div class="hakmi-news-filters" role="group" aria-label="تصفية الأخبار"><button type="button" class="is-active" data-news-filter="all" aria-pressed="true">جميع الأخبار</button><button type="button" data-news-filter="group" aria-pressed="false">أخبار المجموعة</button><button type="button" data-news-filter="projects" aria-pressed="false">تطورات المشروعات</button><button type="button" data-news-filter="partnerships" aria-pressed="false">الشراكات والاتفاقات</button></div>
+            <p class="hakmi-p-muted" style="margin-top:1.25rem;font-size:0.88rem;line-height:1.75">مجموعة الحاكمي القابضة مجموعة استثمارية عائلية خاصة أسسها نبيل حاكمي، وبدأت أعمالها في المملكة العربية السعودية عام 1985. تمتد خبراتها عبر التطوير العقاري ومواد البناء والتصنيع والغذاء والزراعة والتجارة، وتدير استثمارات وشراكات في عدد من الأسواق الإقليمية والدولية.</p>
+          </aside>
         </div>
         
       </div>
@@ -54,5 +60,6 @@
   <div id="hakmi-site-footer"></div>
   <script src="assets/site-content.js"></script>
   <script src="assets/site-chrome.js"></script>
+  <script src="assets/site-enhancements.js"></script>
 </body>
 </html>

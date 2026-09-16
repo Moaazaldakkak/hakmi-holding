@@ -515,6 +515,7 @@
     <link rel='stylesheet' id='elementor-gf-jetbrainsmono-css' href='assets/fonts/jetbrainsmono.css' media='all' />
     <link rel='stylesheet' id='hakmi-lyon-arabic-css' href='assets/fonts/lyon-arabic.css' media='all' />
     <link rel='stylesheet' id='hakmi-design-guidelines-css' href='assets/design-guidelines.css' media='all' />
+    <link rel='stylesheet' href='assets/hakmi-redesign.css' media='all' />
     <link rel='stylesheet' id='hakmi-ui-css' href='assets/hakmi.css' media='all' />
     <link rel='stylesheet' id='rtl-overrides-css' href='assets/rtl-overrides.css' media='all' />
     <link rel='stylesheet' id='elementor-icons-ekiticons-css' href='assets/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css' media='all' />
@@ -584,21 +585,16 @@
             <li class="hakmi-nav-item">
               <a class="hakmi-link-on-dark" href="companies.html">شركاتنا</a>
             </li>
-            <li class="hakmi-nav-item">
-              <a class="hakmi-link-on-dark" href="#" aria-haspopup="true">المزيد</a>
+            <li class="hakmi-nav-item hakmi-nav-has-sub">
+              <a class="hakmi-link-on-dark" href="#" aria-haspopup="true" aria-expanded="false">المزيد<span class="hakmi-nav-chevron" aria-hidden="true"></span></a>
               <ul class="hakmi-nav-sub">
-                <li>
-                  <a href="projects.html">المشروعات والاستثمارات</a>
-                </li>
-                <li>
-                  <a href="presence.html">الانتشار</a>
-                </li>
-                <li>
-                  <a href="careers.html">الوظائف</a>
-                </li>
-                <li>
-                  <a href="legal.html">القانونية</a>
-                </li>
+                <li><a href="projects.html">المشروعات والاستثمارات</a></li>
+                <li><a href="presence.html">الانتشار</a></li>
+                <li><a href="news.html">الأخبار</a></li>
+                <li><a href="partnerships.html">الشراكات</a></li>
+                <li><a href="careers.html">الوظائف</a></li>
+                <li><a href="legal.html">القانونية</a></li>
+                <li><a href="reference.html">مرجع التصميم</a></li>
               </ul>
             </li>
             <li class="hakmi-nav-item">
@@ -856,25 +852,11 @@
           <h2 class="hakmi-partners-title" id="hakmi-partners-title">شركائنا</h2>
           <p class="hakmi-partners-lead">شبكة دولية من الشركاء والمستشارين والمصنعين والموردين الذين يدعمون مشروعات المجموعة وسلاسل قيمتها عبر الأسواق.</p>
         </header>
-        <div class="hakmi-marquee" role="region" aria-label="شعارات الشركاء">
-          <div class="hakmi-marquee-track">
-            <div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
-            <div class="hakmi-partner-slot" aria-hidden="true"><span>شعار الشريك</span></div>
-          </div>
+        <div class="hakmi-partner-network" role="list" aria-label="شبكة الشركات والشركاء">
+          <a class="hakmi-partner-wordmark" role="listitem" href="companies.html#akzirve">Akzirve</a>
+          <a class="hakmi-partner-wordmark" role="listitem" href="companies.html#bayt-alibaa">بيت الإباء</a>
+          <a class="hakmi-partner-wordmark" role="listitem" href="companies.html#qimam">قمم</a>
+          <a class="hakmi-partner-wordmark" role="listitem" href="about.html">HAKMI HOLDING</a>
         </div>
       </div>
     </section>
@@ -971,7 +953,7 @@
               </li>
               <li>
                 <strong>البريد</strong>
-                <a href="#">info@hakmiholding.com</a>
+                <a href="mailto:info@hakmiholding.com">info@hakmiholding.com</a>
               </li>
               <li>
                 <strong>ساعات العمل</strong>
@@ -1002,10 +984,11 @@
           <div class="hakmi-footer-col hakmi-reveal hakmi-reveal-d1">
             <h3>الملاحة السريعة</h3>
             <ul>
-              <li><a href="about.html">عن المجموعة</a></li>
-              <li><a href="sectors.html">محفظة الأعمال والقطاعات</a></li>
-              <li><a href="about.html#governance">الحوكمة والامتثال</a></li>
-              <li><a href="partnerships.html">فرص الشراكة</a></li>
+              <li><a href="about.html">من نحن</a></li>
+              <li><a href="sectors.html">قطاعاتنا</a></li>
+              <li><a href="companies.html">شركاتنا</a></li>
+              <li><a href="projects.html">المشروعات</a></li>
+              <li><a href="presence.html">الانتشار</a></li>
             </ul>
           </div>
           <div class="hakmi-footer-col hakmi-reveal hakmi-reveal-d2">
@@ -1014,29 +997,22 @@
               <li><a href="legal.html#privacy">سياسة الخصوصية</a></li>
               <li><a href="legal.html#disclaimer">إخلاء المسؤولية</a></li>
               <li><a href="legal.html#cookies">ملفات الارتباط</a></li>
-              <li><a href="about.html">من نحن</a></li>
+              <li><a href="partnerships.html">الشراكات</a></li>
             </ul>
           </div>
           <div class="hakmi-footer-col hakmi-reveal hakmi-reveal-d3">
-            <h3>المقر الرئيسي</h3>
-            <p>برج الحاكمي للاستثمار، الرياض، المملكة العربية السعودية</p>
-            <p><a href="contact.html">info@hakmiholding.com</a></p>
-            <div class="hakmi-footer-icons">
-              <a href="#" aria-label="البريد">
-                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              </a>
-              <a href="index.html" aria-label="الموقع">
-                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.4 9h-3.2a15 15 0 0 0-1.3-5.2A8 8 0 0 1 19.4 11zM12 4c.9 1.4 1.6 3.1 2 5H10c.4-1.9 1.1-3.6 2-5zM4.6 13h3.2c.2 1.9.6 3.6 1.3 5.2A8 8 0 0 1 4.6 13zM8 11H4.6A8 8 0 0 1 9.1 5.8 15 15 0 0 0 8 11zm2 2h4c-.4 1.9-1.1 3.6-2 5-.9-1.4-1.6-3.1-2-5zm5.9 5.2c.7-1.6 1.1-3.3 1.3-5.2h3.2a8 8 0 0 1-4.5 5.2z"/></svg>
-              </a>
-              <a href="#" aria-label="تواصل">
-                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18 16.1c-1.4 0-2.7.6-3.6 1.5l-6.9-4c.1-.4.2-.8.2-1.2s-.1-.8-.2-1.2l6.9-4C15.3 8.1 16.6 8.7 18 8.7c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4c0 .4.1.8.2 1.2l-6.9 4C6.4 8.3 5.1 7.7 3.7 7.7c-2.2 0-4 1.8-4 4s1.8 4 4 4c1.4 0 2.7-.6 3.6-1.5l6.9 4c-.1.4-.2.8-.2 1.2 0 2.2 1.8 4 4 4s4-1.8 4-4-1.8-4-4-4z"/></svg>
-              </a>
-            </div>
+            <h3>التواصل</h3>
+            <p>يسر المجموعة استقبال الاستفسارات المؤسسية عبر القنوات الرسمية.</p>
+            <ul class="hakmi-footer-emails">
+              <li><a href="mailto:info@hakmiholding.com">info@hakmiholding.com</a></li>
+              <li><a href="mailto:investments@hakmiholding.com">investments@hakmiholding.com</a></li>
+            </ul>
+            <p style="margin-top:0.75rem"><a href="contact.html">تواصل معنا</a></p>
           </div>
         </div>
         <div class="hakmi-footer-bar">
           <p>© 2026 مجموعة الحاكمي القابضة – جميع الحقوق محفوظة</p>
-          <p><a href="reference.html">مرجع التصميم</a> · Design reference</p>
+          <p class="hakmi-footer-ref"><a href="reference.html">مرجع التصميم</a></p>
         </div>
       </div>
     </footer>
@@ -1477,53 +1453,7 @@
       //# sourceURL=assets/wp-includes/js/wp-emoji-loader.min.js
     </script>
     <link rel='stylesheet' id='hakmi-design-guidelines-rtl-final-css' href='assets/design-guidelines.css' media='all' />
-    <script>
-      (function() {
-        var header = document.getElementById('hakmi-header');
-        if (!header) return;
-        var toggle = header.querySelector('.hakmi-nav-toggle');
-        var more = header.querySelector('.hakmi-nav-item:has(.hakmi-nav-sub) > a');
-        if (toggle) {
-          toggle.addEventListener('click', function() {
-            var open = header.classList.toggle('is-open');
-            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-          });
-        }
-        if (more) {
-          more.addEventListener('click', function(e) {
-            if (window.matchMedia('(max-width: 1024px)').matches) {
-              e.preventDefault();
-              more.parentElement.classList.toggle('is-open');
-            }
-          });
-        }
-      })();
-      (function() {
-        var items = document.querySelectorAll('.hakmi-reveal');
-        if (!items.length) return;
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          items.forEach(function(el) { el.classList.add('is-visible'); });
-          return;
-        }
-        var observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          });
-        }, { rootMargin: '0px 0px -80px 0px', threshold: 0.12 });
-        items.forEach(function(el) { observer.observe(el); });
-      })();
-      (function() {
-        var form = document.querySelector('.hakmi-contact-form');
-        if (!form) return;
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          form.reset();
-          var note = form.querySelector('.hakmi-contact-note');
-          if (note) note.textContent = 'تم استلام طلبكم. سيتواصل الفريق خلال يوم عمل واحد.';
-        });
-      })();
-    </script>
+    <link rel='stylesheet' href='assets/hakmi-redesign.css' media='all' />
+    <script src="assets/site-enhancements.js"></script>
   </body>
 </html>

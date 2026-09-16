@@ -16,6 +16,7 @@ HEAD = """<!DOCTYPE html>
   <link rel="stylesheet" href="assets/fonts/lyon-arabic.css">
   <link rel="stylesheet" href="assets/design-guidelines.css">
   <link rel="stylesheet" href="assets/hakmi.css">
+  <link rel="stylesheet" href="assets/hakmi-redesign.css">
   <link rel="stylesheet" href="assets/rtl-overrides.css">
 </head>
 <body class="hakmi-inner-page" data-page="{page_id}">
@@ -29,6 +30,7 @@ FOOT = """
   <div id="hakmi-site-footer"></div>
   <script src="assets/site-content.js"></script>
   <script src="assets/site-chrome.js"></script>
+  <script src="assets/site-enhancements.js"></script>
 </body>
 </html>
 """
@@ -78,26 +80,47 @@ def about_page():
     )
     body += section(
         """
-        <p class="hakmi-p">مجموعة الحاكمي القابضة هي مجموعة استثمارية عائلية أسسها الأستاذ نبيل حاكمي. بدأت مسيرتها من المملكة العربية السعودية عام 1985، ونمت عبر بناء أعمال متخصصة، وتطوير شراكات طويلة الأجل، والدخول المدروس إلى قطاعات وأسواق جديدة.</p>
-        <p class="hakmi-p">تغطي خبرات المجموعة اليوم التطوير العقاري، ومواد البناء والإكساء، والتصنيع، وسلاسل التوريد، والخدمات اللوجستية، والصناعات الغذائية، والاستثمار الزراعي، إلى جانب استثمارات وشراكات استراتيجية في عدد من الدول.</p>
-        <p class="hakmi-p">لا تعمل المجموعة بوصفها مالكاً مالياً بعيداً عن التشغيل؛ بل تتبنى نموذجاً يجمع بين الاستثمار والإدارة والخبرة الفنية والرقابة على الأداء. ويتيح هذا النموذج للمجموعة تطوير الأصول، ودعم الشركات التابعة، وتوحيد مصادر القوة، ونقل المعرفة بين الأسواق والقطاعات.</p>
+        <div class="hakmi-proof-strip">
+          <div class="hakmi-proof-item"><strong>منذ 1985</strong><span>مسيرة بدأت في المملكة العربية السعودية.</span></div>
+          <div class="hakmi-proof-item"><strong>أسواق متعددة</strong><span>حضور واستثمارات عبر الشرق الأوسط وأوروبا وآسيا.</span></div>
+          <div class="hakmi-proof-item"><strong>قطاعات متكاملة</strong><span>عقار، مواد، صناعة، غذاء، زراعة، تجارة وتوريد.</span></div>
+        </div>
+        <div class="hakmi-split-layout">
+          <div class="hakmi-prose-measure">
+            <p class="hakmi-p">مجموعة الحاكمي القابضة هي مجموعة استثمارية عائلية أسسها الأستاذ نبيل حاكمي. بدأت مسيرتها من المملكة العربية السعودية عام 1985، ونمت عبر بناء أعمال متخصصة، وتطوير شراكات طويلة الأجل، والدخول المدروس إلى قطاعات وأسواق جديدة.</p>
+            <p class="hakmi-p">تغطي خبرات المجموعة اليوم التطوير العقاري، ومواد البناء والإكساء، والتصنيع، وسلاسل التوريد، والخدمات اللوجستية، والصناعات الغذائية، والاستثمار الزراعي، إلى جانب استثمارات وشراكات استراتيجية في عدد من الدول.</p>
+            <p class="hakmi-p">لا تعمل المجموعة بوصفها مالكاً مالياً بعيداً عن التشغيل؛ بل تتبنى نموذجاً يجمع بين الاستثمار والإدارة والخبرة الفنية والرقابة على الأداء.</p>
+            <ul class="hakmi-timeline">
+              <li><time datetime="1985">1985</time><span>انطلاق الأعمال في المملكة العربية السعودية في مواد البناء والتشطيبات.</span></li>
+              <li><time datetime="2000">2000s</time><span>توسع عبر قطاعات وأسواق متعددة وبناء شركات متخصصة.</span></li>
+              <li><time datetime="2020">اليوم</time><span>منظومة استثمارية متكاملة تربط التطوير والصناعة والتوريد.</span></li>
+            </ul>
+          </div>
+          <div class="hakmi-split-media">
+            <div class="hakmi-leadership-slot" role="img" aria-label="موضع صورة قيادية — يُضاف بعد الاعتماد">موضع صورة قيادية<br><small>يُضاف بعد الاعتماد الرسمي</small></div>
+          </div>
+        </div>
         """
     )
     body += section(
         """
-        <h2 class="hakmi-h2">ما يميزنا</h2>
-        <hr class="hakmi-divider">
-        <ul class="hakmi-list">
-          <li>منظور مالك طويل الأجل بدلاً من الاستثمار قصير الأجل.</li>
-          <li>خبرة تشغيلية مباشرة في قطاعات حقيقية ومنتجة.</li>
-          <li>تكامل بين العقار ومواد البناء والتصنيع والتوريد.</li>
-          <li>قدرة على العمل عبر أسواق وثقافات تنظيمية مختلفة.</li>
-          <li>شبكة علاقات وشراكات وموردين وخبراء دوليين.</li>
-          <li>مرونة في تأسيس الشركات الخاصة بالمشروعات والدخول في الشراكات.</li>
-          <li>التزام بالثقة والجودة والمسؤولية تجاه الشركاء والمجتمعات.</li>
-        </ul>
-        <div class="hakmi-notice" style="margin-top:1.5rem">
-          <strong>نبذة من 45 كلمة:</strong> مجموعة الحاكمي القابضة مجموعة استثمارية عائلية خاصة تأسست أعمالها في السعودية عام 1985، وتمتد خبراتها عبر التطوير العقاري ومواد البناء والتصنيع والغذاء والزراعة والتجارة. تبني المجموعة استثمارات طويلة الأجل تجمع بين رأس المال والخبرة التشغيلية والشراكات المتخصصة.
+        <div class="hakmi-split-layout is-reverse">
+          <div class="hakmi-prose-measure">
+            <h2 class="hakmi-h2">ما يميزنا</h2>
+            <hr class="hakmi-divider">
+            <ul class="hakmi-list">
+              <li>منظور مالك طويل الأجل بدلاً من الاستثمار قصير الأجل.</li>
+              <li>خبرة تشغيلية مباشرة في قطاعات حقيقية ومنتجة.</li>
+              <li>تكامل بين العقار ومواد البناء والتصنيع والتوريد.</li>
+              <li>قدرة على العمل عبر أسواق وثقافات تنظيمية مختلفة.</li>
+              <li>شبكة علاقات وشراكات وموردين وخبراء دوليين.</li>
+              <li>مرونة في تأسيس الشركات الخاصة بالمشروعات والدخول في الشراكات.</li>
+              <li>التزام بالثقة والجودة والمسؤولية تجاه الشركاء والمجتمعات.</li>
+            </ul>
+          </div>
+          <div class="hakmi-notice">
+            <strong>نبذة من 45 كلمة:</strong> مجموعة الحاكمي القابضة مجموعة استثمارية عائلية خاصة تأسست أعمالها في السعودية عام 1985، وتمتد خبراتها عبر التطوير العقاري ومواد البناء والتصنيع والغذاء والزراعة والتجارة. تبني المجموعة استثمارات طويلة الأجل تجمع بين رأس المال والخبرة التشغيلية والشراكات المتخصصة.
+          </div>
         </div>
         """,
         alt=True,
@@ -177,7 +200,7 @@ def about_page():
         <h2 class="hakmi-h2">الاستثمار الذي يبقى أثره</h2>
         <hr class="hakmi-divider">
         <p class="hakmi-p">ترى مجموعة الحاكمي القابضة أن دورها لا يقتصر على تمويل المشروعات، بل يشمل بناء القدرات المحلية، ورفع المعايير، وخلق فرص العمل، ودعم الموردين والشركات، وتطوير أصول تخدم الاقتصاد والمجتمع على المدى الطويل.</p>
-        <div class="hakmi-page-grid">
+        <div class="hakmi-page-grid is-3">
           <article class="hakmi-data-card"><h3>العمل والمهارات</h3><p>توظيف وتدريب الكفاءات ونقل الخبرة إلى فرق محلية.</p></article>
           <article class="hakmi-data-card"><h3>الاقتصاد المحلي</h3><p>تحريك الإنشاء والصناعة والخدمات والتجارة وسلاسل التوريد.</p></article>
           <article class="hakmi-data-card"><h3>الجودة العمرانية</h3><p>إنشاء مجتمعات ومبانٍ ومرافق ترفع مستوى الاستخدام والقيمة.</p></article>
@@ -219,7 +242,7 @@ def sectors_page():
         </article>"""
 
     body = hero("قطاعاتنا", "قطاعات الأعمال", "صفحة رئيسية للقطاعات مع صفحات تفصيلية قابلة للإضافة.")
-    body += section(f'<div class="hakmi-page-grid is-2 hakmi-sectors-grid">{cards}</div>')
+    body += section(f'<div class="hakmi-page-grid is-3 hakmi-sectors-grid">{cards}</div>')
     write_page("sectors.html", "sectors", "قطاعاتنا | مجموعة الحاكمي القابضة", DEFAULT_DESC, body)
 
 
@@ -238,10 +261,11 @@ def companies_page():
     for cid, title, logo, name, country, sector, desc in companies:
         cards += f"""
         <article class="hakmi-company-card hakmi-data-card" data-filter-card="country" data-filter-value="{country}" id="{cid}">
-          <div class="hakmi-company-logo"><img src="{logo}" alt="{name}"></div>
+          <div class="hakmi-company-logo"><img src="{logo}" alt="{name}" onerror="this.src='assets/logo-gold.svg';this.alt='{name}'"></div>
           <h3>{title}</h3>
           <p>{desc}</p>
           <div class="hakmi-card-meta"><span class="hakmi-badge">{sector}</span><span class="hakmi-badge hakmi-badge-navy">{country}</span></div>
+          <a class="hakmi-card-link" href="companies.html#{cid}">عرض التفاصيل <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></a>
         </article>"""
 
     body = hero("شركاتنا", "شركات المجموعة", "المحتوى المتاح عند الإطلاق، مع ضرورة تدقيق الهيكل القانوني ونسب الملكية.")
@@ -254,7 +278,7 @@ def companies_page():
           <button type="button" class="hakmi-filter-btn" data-filter-value="المملكة العربية السعودية" aria-pressed="false">السعودية</button>
           <button type="button" class="hakmi-filter-btn" data-filter-value="متعدد" aria-pressed="false">متعدد</button>
         </div>
-        <div class="hakmi-page-grid is-2">""" + cards + "</div>"
+        <div class="hakmi-page-grid is-2 hakmi-companies-grid">""" + cards + "</div>"
     )
     write_page("companies.html", "companies", "شركاتنا | مجموعة الحاكمي القابضة", DEFAULT_DESC, body)
 
@@ -272,11 +296,14 @@ def projects_page():
     ]
     cards = ""
     for pid, title, country, status, status_label, desc in projects:
+        location = title.split(" - ")[-1] if " - " in title else country
         cards += f"""
-        <article class="hakmi-data-card" data-filter-card="status" data-filter-value="{status}" id="{pid}">
-          <div class="hakmi-card-meta"><span class="hakmi-status hakmi-status-{status}">{status_label}</span><span class="hakmi-badge hakmi-badge-navy">{country}</span></div>
+        <article class="hakmi-data-card hakmi-project-card" data-filter-card="status" data-filter-value="{status}" id="{pid}">
+          <div class="hakmi-project-visual"><p class="hakmi-project-location">{location} · {country}</p></div>
+          <div class="hakmi-card-meta"><span class="hakmi-status hakmi-status-{status}">{status_label}</span><span class="hakmi-badge">التطوير العقاري</span></div>
           <h3>{title}</h3>
           <p>{desc}</p>
+          <a class="hakmi-card-link" href="projects.html#{pid}">تفاصيل المشروع <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></a>
         </article>"""
 
     body = hero("المشروعات والاستثمارات", "محفظة المشروعات", "المشروعات السورية تظهر حسب حالة معتمدة: قائم، قيد التنفيذ، قيد التطوير، قيد التفاوض، أو قيد الدراسة.")
@@ -289,7 +316,6 @@ def projects_page():
           <button type="button" class="hakmi-filter-btn" data-filter-value="negotiation" aria-pressed="false">قيد التفاوض</button>
         </div>
         <div class="hakmi-page-grid is-2">""" + cards + """</div>
-        <div class="hakmi-notice" style="margin-top:1.5rem">كل صفحة مشروع يجب أن تعرض: الملخص، الحالة، الموقع، القطاع، الشركاء، نطاق المشروع، الأثر، الأخبار، الصور، المستندات الإعلامية، ونموذج التواصل. يمنع نشر أرقام المساحات أو التكاليف أو المبيعات قبل اعتمادها من إدارة المشروع.</div>
         """
     )
     write_page("projects.html", "projects", "المشروعات والاستثمارات | مجموعة الحاكمي القابضة", DEFAULT_DESC, body)
@@ -310,9 +336,20 @@ def presence_page():
         f'<article class="hakmi-country-card" id="{cid}"><h3>{name}</h3><p>{desc}</p></article>'
         for cid, name, desc in countries
     )
+    map_nodes = "".join(
+        f'<span class="hakmi-map-node{" is-primary" if cid == "saudi" else ""}">{name}</span>'
+        for cid, name, _ in countries
+    )
     body = hero("الانتشار", "الانتشار الجغرافي", "خريطة تربط كل دولة بالقطاع والشركة أو الاستثمار المرتبط بها.")
     body += section(
-        f'<p class="hakmi-lead">تربط المجموعة بين أسواق الاستهلاك ومصادر الصناعة وفرص التطوير والإنتاج. ويتيح هذا الانتشار نقل الخبرة والمنتج والشريك والتمويل بين الدول، مع الحفاظ على إدارة محلية تفهم خصوصية كل سوق.</p><div class="hakmi-page-grid">{cards}</div>'
+        f"""
+        <div class="hakmi-presence-map" aria-hidden="true">
+          <p class="hakmi-presence-map-label">شبكة الأسواق</p>
+          <div class="hakmi-presence-map-nodes">{map_nodes}</div>
+        </div>
+        <p class="hakmi-lead hakmi-prose-measure">تربط المجموعة بين أسواق الاستهلاك ومصادر الصناعة وفرص التطوير والإنتاج. ويتيح هذا الانتشار نقل الخبرة والمنتج والشريك والتمويل بين الدول، مع الحفاظ على إدارة محلية تفهم خصوصية كل سوق.</p>
+        <div class="hakmi-page-grid is-4">{cards}</div>
+        """
     )
     write_page("presence.html", "presence", "الانتشار | مجموعة الحاكمي القابضة", DEFAULT_DESC, body)
 
@@ -326,27 +363,37 @@ def news_page():
         ("partnerships-open", "الشراكات والاتفاقات", "2026", "فتح قنوات استقبال فرص الشراكة والاستثمار",
          "تستقبل المجموعة استفسارات الجهات العامة وملاك الأراضي والمستثمرين والمشغلين عبر القنوات المؤسسية الرسمية."),
     ]
+    cat_keys = {
+        "أخبار المجموعة": "group",
+        "تطورات المشروعات": "projects",
+        "الشراكات والاتفاقات": "partnerships",
+    }
     cards = "".join(
-        f"""<article class="hakmi-data-card hakmi-news-card" id="{pid}">
+        f"""<article class="hakmi-data-card hakmi-news-card" id="{pid}" data-news-category="{cat_keys.get(cat, "all")}">
+          <div class="hakmi-news-thumb"><time datetime="{date}">{date}</time></div>
           <span class="hakmi-badge">{cat}</span>
-          <time datetime="{date}">{date}</time>
           <h3>{title}</h3>
           <p>{summary}</p>
+          <div class="hakmi-news-meta"><span>مجموعة الحاكمي القابضة</span></div>
         </article>"""
         for pid, cat, date, title, summary in posts
     )
-    cats = "".join(f"<li>{c}</li>" for c in [
-        "أخبار المجموعة", "أخبار الشركات", "تطورات المشروعات", "الشراكات والاتفاقات",
-        "التصنيع والمنتجات", "الاستدامة والأثر", "الفعاليات والمعارض", "البيانات الصحفية"
-    ])
+    filters = (
+        '<button type="button" class="is-active" data-news-filter="all" aria-pressed="true">جميع الأخبار</button>'
+        + '<button type="button" data-news-filter="group" aria-pressed="false">أخبار المجموعة</button>'
+        + '<button type="button" data-news-filter="projects" aria-pressed="false">تطورات المشروعات</button>'
+        + '<button type="button" data-news-filter="partnerships" aria-pressed="false">الشراكات والاتفاقات</button>'
+    )
     body = hero("الأخبار", "الأخبار والمركز الإعلامي", "مركز واحد لجميع أخبار المجموعة والشركات والمشروعات.")
     body += section(
         f"""
-        <div class="hakmi-page-grid is-2">{cards}</div>
-        <div style="margin-top:2rem">
-          <h2 class="hakmi-h3">التصنيفات</h2>
-          <ul class="hakmi-list">{cats}</ul>
-          <p class="hakmi-p-muted" style="margin-top:1rem">Boilerplate: مجموعة الحاكمي القابضة مجموعة استثمارية عائلية خاصة أسسها نبيل حاكمي، وبدأت أعمالها في المملكة العربية السعودية عام 1985. تمتد خبراتها عبر التطوير العقاري ومواد البناء والتصنيع والغذاء والزراعة والتجارة، وتدير استثمارات وشراكات في عدد من الأسواق الإقليمية والدولية.</p>
+        <div class="hakmi-news-layout">
+          <div class="hakmi-page-grid is-2">{cards}</div>
+          <aside>
+            <h2 class="hakmi-h3">التصنيفات</h2>
+            <div class="hakmi-news-filters" role="group" aria-label="تصفية الأخبار">{filters}</div>
+            <p class="hakmi-p-muted" style="margin-top:1.25rem;font-size:0.88rem;line-height:1.75">مجموعة الحاكمي القابضة مجموعة استثمارية عائلية خاصة أسسها نبيل حاكمي، وبدأت أعمالها في المملكة العربية السعودية عام 1985. تمتد خبراتها عبر التطوير العقاري ومواد البناء والتصنيع والغذاء والزراعة والتجارة، وتدير استثمارات وشراكات في عدد من الأسواق الإقليمية والدولية.</p>
+          </aside>
         </div>
         """,
         alt=True,
@@ -355,13 +402,13 @@ def news_page():
 
 
 def partnerships_page():
-    areas = [
-        "تطوير الأراضي والمشروعات العقارية بالشراكة مع الجهات العامة أو الخاصة.",
-        "الاستحواذ أو المشاركة في شركات قائمة تحتاج إلى رأس مال وخبرة وتوسّع.",
-        "إقامة مصانع وخطوط إنتاج جديدة أو إعادة تأهيل منشآت قائمة.",
-        "شراكات زراعية وغذائية متكاملة من الإنتاج إلى التصنيع والتوزيع.",
-        "اتفاقات توريد وتصنيع وتمثيل تجاري مع مصنعين دوليين.",
-        "شراكات تشغيل وإدارة وتمويل لمشروعات محددة.",
+    models = [
+        ("تطوير عقاري", "تطوير الأراضي والمشروعات العقارية بالشراكة مع الجهات العامة أو الخاصة."),
+        ("استحواذ وتوسع", "الاستحواذ أو المشاركة في شركات قائمة تحتاج إلى رأس مال وخبرة وتوسّع."),
+        ("صناعة وإنتاج", "إقامة مصانع وخطوط إنتاج جديدة أو إعادة تأهيل منشآت قائمة."),
+        ("زراعة وغذاء", "شراكات زراعية وغذائية متكاملة من الإنتاج إلى التصنيع والتوزيع."),
+        ("توريد دولي", "اتفاقات توريد وتصنيع وتمثيل تجاري مع مصنعين دوليين."),
+        ("تشغيل وتمويل", "شراكات تشغيل وإدارة وتمويل لمشروعات محددة."),
     ]
     offers = [
         "رأس مال مرن بحسب هيكل الصفقة.",
@@ -374,10 +421,17 @@ def partnerships_page():
     body += section(
         """
         <h2 class="hakmi-h2">مجالات الشراكة</h2>
-        <ul class="hakmi-list">""" + "".join(f"<li>{a}</li>" for a in areas) + """</ul>
-        <h2 class="hakmi-h2" style="margin-top:2rem">ما تقدمه المجموعة</h2>
-        <ul class="hakmi-list">""" + "".join(f"<li>{o}</li>" for o in offers) + """</ul>
-        <p style="margin-top:1.5rem"><a class="hakmi-btn hakmi-btn-primary" href="contact.html">قدّم فرصة استثمارية</a></p>
+        <div class="hakmi-partnership-models">"""
+        + "".join(f'<article class="hakmi-model-card"><h3>{t}</h3><p>{d}</p></article>' for t, d in models)
+        + """</div>
+        <h2 class="hakmi-h2">ما تقدمه المجموعة</h2>
+        <div class="hakmi-offer-grid">"""
+        + "".join(f'<div class="hakmi-offer-item">{o}</div>' for o in offers)
+        + """</div>
+        <div class="hakmi-cta-panel">
+          <p>للاستفسارات المؤسسية وفرص الشراكة، تواصل عبر القنوات الرسمية.</p>
+          <a class="hakmi-btn hakmi-btn-primary" href="contact.html">قدّم فرصة استثمارية</a>
+        </div>
         """
     )
     write_page("partnerships.html", "partnerships", "الشراكات | مجموعة الحاكمي القابضة", DEFAULT_DESC, body)
@@ -436,24 +490,26 @@ def contact_page():
             "توظيف", "استفسار عن شركة", "استفسار عن مشروع", "استفسار عام"
         ])
     )
-    contact_list = "".join(
-        f"<li><strong>{label}:</strong> {value}</li>"
-        for label, value in [
-            ("المقر القانوني", "يضاف بعد اعتماد الكيان والعنوان الرسمي."),
-            ("مكتب السعودية", "يضاف العنوان والهاتف والبريد الرسمي."),
-            ("مكتب تركيا", "يضاف العنوان والهاتف والبريد الرسمي."),
-            ("مكتب سورية", "يضاف بعد تسجيل واعتماد المقر."),
-            ("البريد العام", "info@[domain]"),
-            ("الشراكات", "investments@[domain]"),
-            ("الإعلام", "media@[domain]"),
-            ("الوظائف", "careers@[domain]"),
-        ]
-    )
-    body = hero("تواصل معنا", "صفحة تواصل معنا", "يسر مجموعة الحاكمي القابضة استقبال الاستفسارات المؤسسية وفرص الشراكة والاستثمار والتواصل الإعلامي وطلبات الموردين والوظائف عبر القنوات الرسمية.")
+    office_cards = """
+          <div class="hakmi-office-cards">
+            <article class="hakmi-office-card"><h3>المقر القانوني</h3><p>يضاف بعد اعتماد الكيان والعنوان الرسمي.</p></article>
+            <article class="hakmi-office-card"><h3>مكتب السعودية</h3><p>يضاف العنوان والهاتف والبريد الرسمي.</p></article>
+            <article class="hakmi-office-card"><h3>مكتب تركيا</h3><p>يضاف العنوان والهاتف والبريد الرسمي.</p></article>
+            <article class="hakmi-office-card"><h3>مكتب سورية</h3><p>يضاف بعد تسجيل واعتماد المقر.</p></article>
+          </div>
+          <h2 class="hakmi-h3" style="margin-top:1.5rem">البريد المؤسسي</h2>
+          <ul class="hakmi-email-list">
+            <li><span>البريد العام</span><a href="mailto:info@hakmiholding.com">info@hakmiholding.com</a></li>
+            <li><span>الشراكات</span><a href="mailto:investments@hakmiholding.com">investments@hakmiholding.com</a></li>
+            <li><span>الإعلام</span><a href="mailto:media@hakmiholding.com">media@hakmiholding.com</a></li>
+            <li><span>الوظائف</span><a href="mailto:careers@hakmiholding.com">careers@hakmiholding.com</a></li>
+          </ul>"""
+    body = hero("تواصل معنا", "تواصل معنا", "يسر مجموعة الحاكمي القابضة استقبال الاستفسارات المؤسسية وفرص الشراكة والاستثمار والتواصل الإعلامي وطلبات الموردين والوظائف عبر القنوات الرسمية.")
     body += section(
         f"""
-        <div class="hakmi-page-grid is-2">
+        <div class="hakmi-contact-page-grid">
           <form class="hakmi-form-section" action="#" method="post">
+            <h2 class="hakmi-h2">نموذج الاستفسار</h2>
             <div class="hakmi-form-grid">
               <label><span>الاسم الكامل</span><input type="text" name="name" required></label>
               <label><span>المسمى الوظيفي والجهة</span><input type="text" name="role" required></label>
@@ -466,7 +522,7 @@ def contact_page():
           </form>
           <div>
             <h2 class="hakmi-h2">معلومات التواصل</h2>
-            <ul class="hakmi-list">{contact_list}</ul>
+            {office_cards}
           </div>
         </div>
         """
