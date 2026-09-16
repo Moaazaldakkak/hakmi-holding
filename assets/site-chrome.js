@@ -1,7 +1,9 @@
 (function () {
   "use strict";
 
-  var nav = (window.HAKMI && window.HAKMI.nav) || [];
+  var HAKMI = window.HAKMI || {};
+  var nav = HAKMI.nav || [];
+  var emails = HAKMI.emails || {};
   var pageId = document.body.getAttribute("data-page") || "";
 
   function isActive(item) {
@@ -34,14 +36,14 @@
             })
             .join("");
           return (
-            '<li class="hakmi-nav-item' +
+            '<li class="hakmi-nav-item hakmi-nav-has-sub' +
             (active ? " is-active" : "") +
             '">' +
             '<a class="' +
             linkClass +
-            '" href="#" aria-haspopup="true">' +
+            '" href="#" aria-haspopup="true" aria-expanded="false">' +
             item.label +
-            "</a>" +
+            '<span class="hakmi-nav-chevron" aria-hidden="true"></span></a>' +
             '<ul class="hakmi-nav-sub">' +
             sub +
             "</ul></li>"
@@ -88,30 +90,14 @@
       '<div class="hakmi-header-actions">' +
       '<a class="hakmi-btn hakmi-btn-light hakmi-btn-sm" href="contact.html">تواصل معنا</a>' +
       "</div></div></header>";
-
-    var header = document.getElementById("hakmi-header");
-    var toggle = header.querySelector(".hakmi-nav-toggle");
-    var more = header.querySelector(".hakmi-nav-item:has(.hakmi-nav-sub) > a");
-
-    if (toggle) {
-      toggle.addEventListener("click", function () {
-        var open = header.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-    }
-    if (more) {
-      more.addEventListener("click", function (e) {
-        if (window.matchMedia("(max-width: 1024px)").matches) {
-          e.preventDefault();
-          more.parentElement.classList.toggle("is-open");
-        }
-      });
-    }
   }
 
   function renderFooter() {
     var mount = document.getElementById("hakmi-site-footer");
     if (!mount) return;
+
+    var infoEmail = emails.info || "info@hakmiholding.com";
+    var investEmail = emails.investments || "investments@hakmiholding.com";
 
     mount.innerHTML =
       '<footer class="hakmi-site-footer">' +
@@ -143,10 +129,23 @@
       '<div class="hakmi-footer-col">' +
       "<h3>التواصل</h3>" +
       "<p>يسر المجموعة استقبال الاستفسارات المؤسسية عبر القنوات الرسمية.</p>" +
-      '<p><a href="contact.html">تواصل معنا</a></p>' +
+      '<ul class="hakmi-footer-emails">' +
+      '<li><a href="mailto:' +
+      infoEmail +
+      '">' +
+      infoEmail +
+      "</a></li>" +
+      '<li><a href="mailto:' +
+      investEmail +
+      '">' +
+      investEmail +
+      "</a></li>" +
+      "</ul>" +
+      '<p style="margin-top:0.75rem"><a href="contact.html">تواصل معنا</a></p>' +
       "</div></div>" +
       '<div class="hakmi-footer-bar">' +
       "<p>© 2026 مجموعة الحاكمي القابضة – جميع الحقوق محفوظة</p>" +
+      '<p class="hakmi-footer-ref"><a href="reference.html">مرجع التصميم</a></p>' +
       "</div></div></footer>";
   }
 

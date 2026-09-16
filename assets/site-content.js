@@ -15,8 +15,11 @@ window.HAKMI.nav = [
     children: [
       { label: "المشروعات والاستثمارات", href: "projects.html", id: "projects" },
       { label: "الانتشار", href: "presence.html", id: "presence" },
+      { label: "الأخبار", href: "news.html", id: "news" },
+      { label: "الشراكات", href: "partnerships.html", id: "partnerships" },
       { label: "الوظائف", href: "careers.html", id: "careers" },
-      { label: "القانونية", href: "legal.html", id: "legal" }
+      { label: "القانونية", href: "legal.html", id: "legal" },
+      { label: "مرجع التصميم", href: "reference.html", id: "reference" }
     ]
   },
   { label: "الأخبار", href: "news.html", id: "news" },
@@ -267,13 +270,30 @@ window.HAKMI.inquiryTypes = [
   "استفسار عام"
 ];
 
+window.HAKMI.emails = {
+  info: "info@hakmiholding.com",
+  investments: "investments@hakmiholding.com",
+  media: "media@hakmiholding.com",
+  careers: "careers@hakmiholding.com"
+};
+
 window.HAKMI.contactInfo = [
   { label: "المقر القانوني", value: "يضاف بعد اعتماد الكيان والعنوان الرسمي." },
   { label: "مكتب السعودية", value: "يضاف العنوان والهاتف والبريد الرسمي." },
   { label: "مكتب تركيا", value: "يضاف العنوان والهاتف والبريد الرسمي." },
-  { label: "مكتب سورية", value: "يضاف بعد تسجيل واعتماد المقر." },
-  { label: "البريد العام", value: "info@[domain]" },
-  { label: "الشراكات", value: "investments@[domain]" },
-  { label: "الإعلام", value: "media@[domain]" },
-  { label: "الوظائف", value: "careers@[domain]" }
+  { label: "مكتب سورية", value: "يضاف بعد تسجيل واعتماد المقر." }
+];
+
+window.HAKMI.contactEmails = [
+  { label: "البريد العام", value: "info@hakmiholding.com", href: "mailto:info@hakmiholding.com" },
+  { label: "الشراكات", value: "investments@hakmiholding.com", href: "mailto:investments@hakmiholding.com" },
+  { label: "الإعلام", value: "media@hakmiholding.com", href: "mailto:media@hakmiholding.com" },
+  { label: "الوظائف", value: "careers@hakmiholding.com", href: "mailto:careers@hakmiholding.com" }
+];
+
+window.HAKMI.portfolioWordmarks = [
+  { label: "Akzirve", href: "companies.html#akzirve" },
+  { label: "بيت الإباء", href: "companies.html#bayt-alibaa" },
+  { label: "قمم", href: "companies.html#qimam" },
+  { label: "HAKMI HOLDING", href: "about.html" }
 ];

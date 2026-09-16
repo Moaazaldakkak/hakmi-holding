@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/fonts/lyon-arabic.css">
   <link rel="stylesheet" href="assets/design-guidelines.css">
   <link rel="stylesheet" href="assets/hakmi.css">
+  <link rel="stylesheet" href="assets/hakmi-redesign.css">
   <link rel="stylesheet" href="assets/rtl-overrides.css">
 </head>
 <body class="hakmi-inner-page" data-page="contact">
@@ -19,15 +20,16 @@
     <section class="hakmi-page-hero">
       <div class="hakmi-page-hero-inner">
         <p class="hakmi-eyebrow">تواصل معنا</p>
-        <h1 class="hakmi-display">صفحة تواصل معنا</h1>
+        <h1 class="hakmi-display">تواصل معنا</h1>
         <p class="hakmi-lead">يسر مجموعة الحاكمي القابضة استقبال الاستفسارات المؤسسية وفرص الشراكة والاستثمار والتواصل الإعلامي وطلبات الموردين والوظائف عبر القنوات الرسمية.</p>
       </div>
     </section>
     <section class="hakmi-page-section">
       <div class="hakmi-page-section-inner">
         
-        <div class="hakmi-page-grid is-2">
+        <div class="hakmi-contact-page-grid">
           <form class="hakmi-form-section" action="#" method="post">
+            <h2 class="hakmi-h2">نموذج الاستفسار</h2>
             <div class="hakmi-form-grid">
               <label><span>الاسم الكامل</span><input type="text" name="name" required></label>
               <label><span>المسمى الوظيفي والجهة</span><input type="text" name="role" required></label>
@@ -40,7 +42,20 @@
           </form>
           <div>
             <h2 class="hakmi-h2">معلومات التواصل</h2>
-            <ul class="hakmi-list"><li><strong>المقر القانوني:</strong> يضاف بعد اعتماد الكيان والعنوان الرسمي.</li><li><strong>مكتب السعودية:</strong> يضاف العنوان والهاتف والبريد الرسمي.</li><li><strong>مكتب تركيا:</strong> يضاف العنوان والهاتف والبريد الرسمي.</li><li><strong>مكتب سورية:</strong> يضاف بعد تسجيل واعتماد المقر.</li><li><strong>البريد العام:</strong> info@[domain]</li><li><strong>الشراكات:</strong> investments@[domain]</li><li><strong>الإعلام:</strong> media@[domain]</li><li><strong>الوظائف:</strong> careers@[domain]</li></ul>
+            
+          <div class="hakmi-office-cards">
+            <article class="hakmi-office-card"><h3>المقر القانوني</h3><p>يضاف بعد اعتماد الكيان والعنوان الرسمي.</p></article>
+            <article class="hakmi-office-card"><h3>مكتب السعودية</h3><p>يضاف العنوان والهاتف والبريد الرسمي.</p></article>
+            <article class="hakmi-office-card"><h3>مكتب تركيا</h3><p>يضاف العنوان والهاتف والبريد الرسمي.</p></article>
+            <article class="hakmi-office-card"><h3>مكتب سورية</h3><p>يضاف بعد تسجيل واعتماد المقر.</p></article>
+          </div>
+          <h2 class="hakmi-h3" style="margin-top:1.5rem">البريد المؤسسي</h2>
+          <ul class="hakmi-email-list">
+            <li><span>البريد العام</span><a href="mailto:info@hakmiholding.com">info@hakmiholding.com</a></li>
+            <li><span>الشراكات</span><a href="mailto:investments@hakmiholding.com">investments@hakmiholding.com</a></li>
+            <li><span>الإعلام</span><a href="mailto:media@hakmiholding.com">media@hakmiholding.com</a></li>
+            <li><span>الوظائف</span><a href="mailto:careers@hakmiholding.com">careers@hakmiholding.com</a></li>
+          </ul>
           </div>
         </div>
         
@@ -50,5 +65,6 @@
   <div id="hakmi-site-footer"></div>
   <script src="assets/site-content.js"></script>
   <script src="assets/site-chrome.js"></script>
+  <script src="assets/site-enhancements.js"></script>
 </body>
 </html>

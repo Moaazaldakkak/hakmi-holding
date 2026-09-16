@@ -1244,16 +1244,21 @@ a.hakmi-cta-btn-secondary:hover {
 	}
 }
 
-/* Scroll reveal — matches Elementor fadeInUp on later sections */
+/* Scroll reveal — visible by default; hidden only after JS marks html.hakmi-js (prevents FOUC) */
 .hakmi-reveal {
+	opacity: 1;
+	transform: none;
+}
+
+html.hakmi-js .hakmi-reveal:not(.is-visible) {
 	opacity: 0;
-	transform: translate3d(0, 48px, 0);
-	transition: opacity 0.85s ease, transform 0.85s ease;
+	transform: translate3d(0, 28px, 0);
+	transition: opacity 0.7s ease, transform 0.7s ease;
 	transition-delay: var(--hakmi-reveal-delay, 0ms);
 	will-change: opacity, transform;
 }
 
-.hakmi-reveal.is-visible {
+html.hakmi-js .hakmi-reveal.is-visible {
 	opacity: 1;
 	transform: none;
 }
@@ -1266,6 +1271,7 @@ a.hakmi-cta-btn-secondary:hover {
 .hakmi-reveal-d6 { --hakmi-reveal-delay: 480ms; }
 
 @media (prefers-reduced-motion: reduce) {
+	html.hakmi-js .hakmi-reveal:not(.is-visible),
 	.hakmi-reveal {
 		opacity: 1;
 		transform: none;
