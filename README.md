@@ -1,45 +1,84 @@
-# Hakmi / noarch site copy
+# Hakmi Holding — Corporate Website
 
-**Purpose**: 100% matching local copy of the Noarch website (https://home.foxcreation.online/noarch/?storefront=envato-elements) saved as `index.html` with all assets mirrored locally.
+Arabic RTL corporate website for **مجموعة الحاكمي القابضة** (Hakmi Holding).
 
-**Source**: WordPress + Elementor site for Noarch Engineering Ltd (a Sheffield-based manufacturer serving aerospace, energy, defence, heavy industry). The live site uses:
-- Elementor page builder with many addon kits (Elementor, Elementskit, JEG, Metform, Template Kit Export).
-- Google Fonts: Roboto, Roboto Slab, Instrument Serif, Plus Jakarta Sans, JetBrains Mono.
-- Font Awesome 5 icons.
-- 23 full‑size images (various sizes from wp‑uploads).
-- Inline/embedded JavaScript for sliders, accordions, counters, testimonials, and the Elementor frontend.
+**Live:** https://hakmi.elogyc.com/
 
-**What was done**:
-1. Fetched the live page HTML via curl with `--resolve` (the server required this to connect).
-2. Downloaded 119 assets and mirrored them under `assets/` preserving the original path structure (`assets/wp-content/...`, `assets/wp-includes/...`, `assets/fonts/...`, `assets/wp-content/uploads/...`).
-3. Rewrote `index.html`:
-   - All `https://home.foxcreation.online/noarch/` → `assets/`.
-   - Google Fonts `<link>` tags → local `assets/fonts/{name}.css`.
-   - Stripped `srcset` and `sizes` attributes from `<img>` tags (variant images were not mirrored; the base `src` is retained).
-   - Version query strings (`?ver=...`) removed from local asset URLs.
-   - Kept navigation/href links to other pages as‑is (they point to the live site; clicking them from the local file will 404, but the visual page is intact).
-4. Verified the copy via headless Chrome (CDP):
-   - **0 broken images** out of 23 total.
-   - All 33 stylesheets loaded and applied.
-   - Responsive layout at three viewports:
-     - Desktop (1440px): full nav, 7‑column machines grid, "Get In Touch" visible.
-     - Tablet (800px): hamburger menu appears, button hidden, 4‑column grid.
-     - Mobile (390px): hamburger menu, 2‑column grid, no horizontal overflow.
-   - Counter animation data‑attributes (`data-to-value`) intact; they animate on scroll (same as live site).
-   - Font Awesome & ElementKit icon fonts load from local `assets/fonts/webfonts/`.
+## Stack
 
-**How to view**:
-- Place `index.html` in your XAMPP `htdocs` folder and open `http://localhost/Hakmi/index.html` in a browser.
-- Or double‑click `index.html`; assets are relative from the same folder, so the page should load CSS/fonts/images correctly.
+| Layer | Details |
+|-------|---------|
+| Pages | Static HTML (`index.html` + inner pages) |
+| Direction | Arabic RTL (`lang="ar" dir="rtl"`) |
+| Styles | `assets/hakmi.css`, `assets/hakmi-redesign.css`, `assets/design-guidelines.css`, `assets/rtl-overrides.css` |
+| Scripts | `assets/site-chrome.js`, `assets/site-content.js`, `assets/site-enhancements.js` |
+| Fonts | Lyon Arabic Display (`assets/fonts/lyon-arabic.css`) |
+| Homepage base | Evolved from a local WordPress/Elementor export (`assets/wp-content/…`) |
+| Page generator | `scripts/build-pages.py` (optional — regenerates inner pages from template) |
 
-**File layout**:
-- `index.html` – the page.
-- `assets/` – 119 files (7.1 MB) mirroring all CSS, JS, fonts, and images.
-- `assets/fonts/` – 30 woff2 webfiles + 5 Google‑Font CSS replacements.
-- `assets/wp-content/...` – Elementor/Theme/Kit CSS.
-- `assets/wp-includes/...` – jQuery + emoji scripts.
-- `assets/wp-content/uploads/...` – all 23 page images.
+No Node/npm build step. Open HTML files directly or serve the repo root with any static file server.
 
-**Notes**:
-- CRLF line‑ending warnings appear when git indexes the assets (Windows line endings). This does not affect functionality.
-- The live site’s dynamic features (AJAX‑loaded blog posts, forms, etc.) will not work offline, but the static visual page is fully rendered.
+## Brand tokens
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| Navy | `#1a344c` | Primary text, headers |
+| Teal | `#026481` | Secondary navy / accents |
+| Gold | `#d9aa5a` | Highlights, CTAs |
+| Coral | `#d65a3c` | Accent / emphasis |
+| Font | Lyon Arabic Display | Corporate Arabic typography |
+
+See `reference.html` and `assets/design-guidelines.css` for the full UI system.
+
+## Key pages
+
+| Page | File |
+|------|------|
+| Homepage | `index.html` |
+| About, Sectors, Companies, Projects, Presence, News, Partnerships, Careers, Contact, Legal | `about.html` … `legal.html` |
+| Design reference | `reference.html`, `ui-reference.html` |
+| Official Arabic content (source of truth) | `website_content_ar.html` |
+
+## Local setup
+
+```bash
+git clone https://github.com/Moaazaldakkak/hakmi-holding.git
+cd hakmi-holding
+```
+
+**Quick preview:** open `index.html` in a browser (relative asset paths work from repo root).
+
+**With a local server (recommended for inner-page navigation):**
+
+```bash
+python3 -m http.server 8080
+# → http://localhost:8080/index.html
+```
+
+**Regenerate inner pages** (only when editing `scripts/build-pages.py` or page templates):
+
+```bash
+python3 scripts/build-pages.py
+```
+
+## Review checklist
+
+- [ ] RTL layout and Arabic copy read naturally
+- [ ] Navigation links resolve across pages
+- [ ] Brand colors and Lyon Arabic Display render correctly
+- [ ] Changes match content in `website_content_ar.html` — do not invent company facts
+- [ ] Compare against `reference.html` for UI patterns
+
+## Deploy
+
+**Hostinger git auto-deploy from `master`.** Push merged changes to `master`; Hostinger pulls and publishes automatically.
+
+If the live site looks stale after a deploy, clear cache in hPanel (LiteSpeed / site cache).
+
+## Project docs (start here)
+
+| File | Purpose |
+|------|---------|
+| [AGENTS.md](./AGENTS.md) | Operating rules for AI and human contributors |
+| [STATUS.md](./STATUS.md) | Current project state (updated after meaningful work) |
+| [TASKS.md](./TASKS.md) | Open checklist; mirrored in [GitHub Issues](https://github.com/Moaazaldakkak/hakmi-holding/issues) |
