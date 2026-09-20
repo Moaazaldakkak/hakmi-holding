@@ -1,9 +1,10 @@
 # Project status
 
-Last updated: **2026-09-18**
+Last updated: **2026-09-20**
 
 ## Done
 
+- **2026-09-20** — PR: مقدمة المجموعة full-bleed background (Noarch `6f264ca6` pattern) — factory image + navy/teal gradient overlay, light text (`cursor/about-section-noarch-bg-1fe3`)
 - **2026-09-15** — PR #1: Homepage aligned with 2026 brand identity and official Arabic content (`cursor/hakmi-brand-ui-enhancements-7a4a`)
 - **2026-09-15** — PR #2: Full corporate launch pages — about, sectors, companies, projects, presence, news, partnerships, careers, contact, legal (`cursor/corporate-pages-faa9`)
 - **2026-09-15** — PR #3: Design reference page with UI elements and section patterns (`reference.html`) (`cursor/design-reference-page-a4a2`)

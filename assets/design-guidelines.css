@@ -287,41 +287,61 @@ h3 {
 }
 
 /* ------------------------------------------------------------------ */
-/* About: 2-column intro with brand imagery                            */
+/* About: full-bleed intro (Noarch 6f264ca6 bg pattern, Hakmi brand)   */
 /* ------------------------------------------------------------------ */
-.hakmi-about-section > .e-con-inner,
-.hakmi-about-section .hakmi-about-grid {
-	display: grid !important;
-	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-	gap: clamp(1.5rem, 3vw, 3rem);
-	align-items: center;
-	padding-block: clamp(3.5rem, 6vw, 5rem) !important;
-}
-
-.hakmi-about-media {
+.hakmi-about-section {
 	position: relative;
-	min-height: 320px;
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: var(--hakmi-navy-shade-2);
+	background-image: url("wp-content/uploads/sites/6/2026/06/a-factory-structure-with-mountains-in-the-backgrou-2026-03-26-10-19-29-utc_11zon-1.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.hakmi-about-media img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	min-height: 320px;
-	object-fit: cover;
-	object-position: center;
-}
-
-.hakmi-about-media::after {
+.hakmi-about-section::before {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(135deg, rgba(26, 52, 76, 0.08), rgba(2, 100, 129, 0.18));
+	background-image: linear-gradient(
+		96deg,
+		rgba(2, 100, 129, 0.08) 0%,
+		rgba(26, 52, 76, 0.92) 84%
+	);
+	opacity: 0.81;
 	pointer-events: none;
+	z-index: 0;
+}
+
+.hakmi-about-section > .e-con-inner,
+.hakmi-about-section .hakmi-about-grid {
+	position: relative;
+	z-index: 1;
+	display: flex !important;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 80vh;
+	width: 100%;
+	max-width: var(--hakmi-container-max, 1200px);
+	margin-inline: auto;
+	padding: 6em 1em !important;
+	box-sizing: border-box;
+}
+
+.hakmi-about-content {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(0.75rem, 1.5vw, 1.25rem);
+	max-width: min(40%, 34rem);
+	margin-inline-start: auto;
+	margin-inline-end: 0;
 }
 
 .hakmi-about-kicker {
-	margin: 0 0 0.75rem;
+	margin: 0;
 	color: var(--hakmi-gold);
 	font-size: 0.9rem;
 	font-weight: 600;
@@ -329,29 +349,47 @@ h3 {
 }
 
 .hakmi-about-content h2 {
-	margin: 0 0 1rem;
-	color: var(--hakmi-navy);
+	margin: 0;
+	color: var(--hakmi-white);
 	font-size: clamp(1.45rem, 2.4vw, 2rem);
 	font-weight: 700;
 	line-height: 1.55;
+	text-shadow: 0 2px 18px rgba(13, 26, 38, 0.35);
 }
 
 .hakmi-about-lead {
 	margin: 0;
-	color: var(--hakmi-navy-tint-1);
+	max-width: min(37%, 31rem);
+	color: rgba(255, 255, 255, 0.82);
 	font-size: 1.02rem;
 	line-height: 1.9;
 }
 
-@media (max-width: 900px) {
-	.hakmi-about-section > .e-con-inner,
-	.hakmi-about-section .hakmi-about-grid {
-		grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+	.hakmi-about-content {
+		max-width: min(56%, 36rem);
 	}
 
-	.hakmi-about-media {
-		min-height: 240px;
-		order: -1;
+	.hakmi-about-lead {
+		max-width: min(56%, 36rem);
+	}
+}
+
+@media (max-width: 767px) {
+	.hakmi-about-section,
+	.hakmi-about-section > .e-con-inner,
+	.hakmi-about-section .hakmi-about-grid {
+		min-height: min(80vh, 640px);
+	}
+
+	.hakmi-about-section > .e-con-inner,
+	.hakmi-about-section .hakmi-about-grid {
+		padding-block: clamp(3.5rem, 12vw, 6em) !important;
+	}
+
+	.hakmi-about-content,
+	.hakmi-about-lead {
+		max-width: 85%;
 	}
 }
 

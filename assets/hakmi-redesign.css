@@ -648,11 +648,7 @@ a.hakmi-partner-wordmark:hover {
 	color: rgba(255, 255, 255, 0.55);
 }
 
-/* Homepage spacing tighten */
-.hakmi-about-section > .e-con-inner,
-.hakmi-about-section .hakmi-about-grid {
-	padding-block: clamp(2.5rem, 4.5vw, 3.75rem) !important;
-}
+/* Homepage spacing tighten — about uses full-bleed 6em padding from design-guidelines */
 
 .hakmi-sectors-section > .e-con-inner {
 	padding-block: 56px !important;

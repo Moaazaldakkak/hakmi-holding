@@ -9,6 +9,7 @@ Hakmi Holding only. Check off items here and close matching [GitHub Issues](http
 
 ## Design & quality
 
+- [x] **مقدمة المجموعة full-bleed bg** — Noarch `6f264ca6` style on `.hakmi-about-section` (2026-09-20)
 - [ ] **Stronger visual redesign / photography** if user requests next pass (richer hero imagery, section photography, tighter spacing) — [#5](https://github.com/Moaazaldakkak/hakmi-holding/issues/5)
 - [ ] Review live site after each deploy; confirm cache cleared if changes not visible
 
