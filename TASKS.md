@@ -4,13 +4,14 @@ Hakmi Holding only. Check off items here and close matching [GitHub Issues](http
 
 ## Content & assets
 
-- [ ] Replace homepage partner **wordmarks** with real approved logos when available (`index.html` — `.hakmi-partner-wordmark` slots) — [#7](https://github.com/Moaazaldakkak/hakmi-holding/issues/7)
+- [ ] Replace the homepage carousel's current in-repo group brand assets with **distinct approved partner logos** when available (`index.html` — `.hakmi-partner-slot`) — [#7](https://github.com/Moaazaldakkak/hakmi-holding/issues/7)
 - [ ] Add real **office addresses, phones, and official emails** on `contact.html` after client approval (currently placeholder copy) — [#6](https://github.com/Moaazaldakkak/hakmi-holding/issues/6)
 
 ## Design & quality
 
 - [x] **مقدمة المجموعة full-bleed bg** — Noarch `6f264ca6` style on `.hakmi-about-section` (2026-09-20)
-- [ ] **Stronger visual redesign / photography** if user requests next pass (richer hero imagery, section photography, tighter spacing) — [#5](https://github.com/Moaazaldakkak/hakmi-holding/issues/5)
+- [x] **Six-part homepage redesign** — hero and fact-strip viewport fit, shorter about, light sectors, dark companies, accessible infinite logo carousel (draft [#10](https://github.com/Moaazaldakkak/hakmi-holding/pull/10), awaiting local approval)
+- [ ] Add **richer approved photography / imagery** across key sections when assets are available — [#5](https://github.com/Moaazaldakkak/hakmi-holding/issues/5)
 - [ ] Review live site after each deploy; confirm cache cleared if changes not visible
 
 ## Process

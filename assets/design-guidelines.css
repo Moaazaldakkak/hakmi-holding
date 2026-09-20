@@ -267,6 +267,8 @@ h3 {
 }
 
 .elementor-1527 .elementor-element.elementor-element-6d53849e {
+	display: flex !important;
+	flex-direction: column !important;
 	width: min(50%, 42rem) !important;
 	max-width: min(50%, 42rem) !important;
 	align-self: flex-start !important;

@@ -13,10 +13,10 @@ Last updated: **2026-09-20**
 
 ## In progress / next
 
-- User still wants **higher visual quality** overall
-- **Real partner logos** to replace text wordmarks on homepage partner strip
+- **2026-09-20** — Draft PR #10: six-part homepage redesign ready for local preview (hero/fact-strip viewport, shorter about, light sectors, dark companies, accessible logo carousel); intentionally not merged or deployed (`cursor/homepage-redesign-1c32`)
+- **Distinct approved partner logos** are still unavailable; the homepage carousel currently uses legitimate in-repo Akzirve, بيت الإباء, قمم, and Hakmi brand assets
 - **Richer photography / imagery** across key sections
-- Possible **stronger redesign pass** if user requests next iteration
+- Await local preview approval before merging PR #10
 
 ## Known issues
 
