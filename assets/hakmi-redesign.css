@@ -648,7 +648,7 @@ a.hakmi-partner-wordmark:hover {
 	color: rgba(255, 255, 255, 0.55);
 }
 
-/* Homepage spacing tighten — about uses full-bleed 6em padding from design-guidelines */
+/* Homepage section rhythm */
 
 .hakmi-sectors-section > .e-con-inner {
 	padding-block: 56px !important;
@@ -666,32 +666,4 @@ a.hakmi-partner-wordmark:hover {
 
 .hakmi-cta-inner {
 	padding-block: 64px 56px;
-}
-
-/* Hero premium refinements */
-.elementor-1527 .elementor-element.elementor-element-62516c04::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: linear-gradient(
-		115deg,
-		rgba(13, 26, 38, 0.82) 0%,
-		rgba(26, 52, 76, 0.55) 45%,
-		rgba(2, 100, 129, 0.35) 100%
-	);
-	pointer-events: none;
-	z-index: 0;
-}
-
-.elementor-1527 .elementor-element.elementor-element-62516c04 {
-	position: relative;
-}
-
-.elementor-1527 .elementor-element.elementor-element-62516c04 > .e-con-inner {
-	position: relative;
-	z-index: 1;
-}
-
-.elementor-1527 .elementor-element.elementor-element-7e96f104 .elementor-heading-title {
-	text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
 }
