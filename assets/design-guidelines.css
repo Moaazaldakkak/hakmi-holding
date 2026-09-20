@@ -632,10 +632,11 @@ h3 {
 	}
 }
 
-/* Selected companies — dark portfolio */
-.hakmi-companies-section {
-	background-color: var(--hakmi-navy-shade-1, #132739);
-	color: var(--hakmi-white);
+/* Selected companies — light portfolio (inverted from navy) */
+html body .hakmi-companies-section.e-con,
+html body .hakmi-companies-section {
+	background-color: var(--hakmi-bg-light, #f7eede) !important;
+	color: var(--hakmi-primary-navy) !important;
 }
 
 .hakmi-companies-section > .e-con-inner {
@@ -656,14 +657,14 @@ h3 {
 	max-width: 40rem;
 }
 
-.hakmi-companies-tag {
+html body .hakmi-companies-tag {
 	display: inline-block;
 	margin: 0 0 12px;
 	padding: 0.35rem 0.85rem;
 	border-radius: 0;
-	border: 1px solid rgba(217, 170, 90, 0.24);
-	background: rgba(217, 170, 90, 0.08);
-	color: var(--hakmi-gold-tint-4, #f7eede);
+	border: 1px solid rgba(217, 170, 90, 0.45);
+	background: rgba(217, 170, 90, 0.12);
+	color: var(--hakmi-navy, #1a344c);
 	font-size: 0.8rem;
 	font-weight: 600;
 }
@@ -673,28 +674,28 @@ h3 {
 	color: var(--hakmi-gold);
 }
 
-.hakmi-companies-title {
+html body .hakmi-companies-title {
 	margin: 0 0 0.65rem;
-	color: var(--hakmi-white);
+	color: var(--hakmi-primary-navy, #1a344c);
 	font-size: clamp(2rem, 3.4vw, 3rem);
 	font-weight: 700;
 	line-height: 1.2;
 }
 
-.hakmi-companies-lead {
+html body .hakmi-companies-lead {
 	margin: 0;
-	color: rgba(255, 255, 255, 0.76);
+	color: rgba(26, 52, 76, 0.78);
 	font-size: 1rem;
 	line-height: 1.85;
-	opacity: 0.78;
+	opacity: 1;
 }
 
-.hakmi-companies-aside {
+html body .hakmi-companies-aside {
 	display: flex;
 	align-items: center;
 	gap: 8px;
 	margin: 0;
-	color: rgba(255, 255, 255, 0.72);
+	color: rgba(26, 52, 76, 0.72);
 	font-size: 0.9rem;
 	white-space: nowrap;
 }
@@ -710,14 +711,15 @@ h3 {
 	gap: 16px;
 }
 
-.hakmi-company-card {
+html body .hakmi-company-card {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
 	padding: 22px 20px 18px;
-	border: 1px solid rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(26, 52, 76, 0.13);
 	border-radius: 0;
-	background: rgba(255, 255, 255, 0.055);
+	background: #fff;
+	box-shadow: 0 12px 36px rgba(26, 52, 76, 0.06);
 }
 
 .hakmi-company-logo {
@@ -738,30 +740,30 @@ h3 {
 	object-fit: contain;
 }
 
-.hakmi-company-card h3 {
+html body .hakmi-company-card h3 {
 	margin: 0 0 0.55rem;
-	color: var(--hakmi-white);
+	color: var(--hakmi-primary-navy, #1a344c);
 	font-size: 1.05rem;
 	font-weight: 700;
 }
 
-.hakmi-company-card p {
+html body .hakmi-company-card p {
 	margin: 0 0 1.25rem;
-	color: rgba(255, 255, 255, 0.76);
+	color: rgba(26, 52, 76, 0.78);
 	font-size: 0.92rem;
 	line-height: 1.8;
-	opacity: 0.78;
+	opacity: 1;
 	flex: 1 1 auto;
 }
 
-.hakmi-company-meta {
+html body .hakmi-company-meta {
 	display: flex;
 	align-items: center;
 	gap: 8px;
 	margin-top: auto;
 	padding-top: 12px;
-	border-top: 1px solid rgba(255, 255, 255, 0.12);
-	color: var(--hakmi-gold-tint-3, #efddb8);
+	border-top: 1px solid rgba(26, 52, 76, 0.12);
+	color: var(--hakmi-teal, #026481);
 	font-size: 0.8rem;
 }
 
@@ -834,36 +836,38 @@ h3 {
 	line-height: 1.85;
 }
 
-.hakmi-marquee {
+html body .hakmi-marquee {
 	position: relative;
+	overflow: hidden;
 	mask-image: linear-gradient(to left, transparent, #000 8%, #000 92%, transparent);
 	-webkit-mask-image: linear-gradient(to left, transparent, #000 8%, #000 92%, transparent);
 }
 
-.hakmi-marquee-track {
+html body .hakmi-marquee-track {
 	display: flex;
 	align-items: center;
 	width: max-content;
 	gap: 0;
 	direction: ltr;
-	animation: hakmi-marquee-loop 28s linear infinite;
+	animation: hakmi-marquee-loop 36s linear infinite;
 	will-change: transform;
 }
 
-.hakmi-marquee:hover .hakmi-marquee-track,
-.hakmi-marquee:focus-within .hakmi-marquee-track {
+html body .hakmi-marquee:hover .hakmi-marquee-track,
+html body .hakmi-marquee:focus-within .hakmi-marquee-track {
 	animation-play-state: paused;
 }
 
-.hakmi-marquee-group {
+html body .hakmi-marquee-group {
 	display: flex;
 	align-items: center;
+	flex: 0 0 auto;
 	gap: 1.25rem;
 	padding-inline-end: 1.25rem;
 	direction: rtl;
 }
 
-.hakmi-partner-slot {
+html body .hakmi-partner-slot {
 	flex: 0 0 auto;
 	display: flex;
 	align-items: center;
@@ -879,9 +883,10 @@ h3 {
 	letter-spacing: 0.02em;
 	text-align: center;
 	text-decoration: none;
+	overflow: visible;
 }
 
-.hakmi-partner-slot img {
+html body .hakmi-partner-slot img {
 	display: block;
 	max-width: 140px;
 	max-height: 52px;
@@ -890,37 +895,52 @@ h3 {
 	object-fit: contain;
 	filter: none;
 	opacity: 1;
+	transform: scale(1);
+	transform-origin: center center;
+	transition: transform 280ms ease;
 }
 
-.hakmi-partner-slot.is-filled {
+html body .hakmi-partner-slot:hover img,
+html body .hakmi-partner-slot:focus-visible img {
+	transform: scale(1.06);
+}
+
+html body .hakmi-partner-slot.is-filled {
 	border-color: rgba(217, 170, 90, 0.24);
 	background: #fff;
 }
 
 @keyframes hakmi-marquee-loop {
 	from {
-		transform: translateX(0);
+		transform: translate3d(0, 0, 0);
 	}
 	to {
-		transform: translateX(-50%);
+		transform: translate3d(-50%, 0, 0);
 	}
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.hakmi-marquee-track {
-		animation: none;
+	html body .hakmi-marquee-track {
+		animation: none !important;
 		width: 100%;
 	}
 
-	.hakmi-marquee-group {
+	html body .hakmi-marquee-group {
 		flex-wrap: wrap;
 		justify-content: center;
 		width: 100%;
 		padding: 0;
 	}
 
-	.hakmi-marquee-group[aria-hidden="true"] {
+	html body .hakmi-marquee-group[aria-hidden="true"] {
 		display: none;
+	}
+
+	html body .hakmi-partner-slot img,
+	html body .hakmi-partner-slot:hover img,
+	html body .hakmi-partner-slot:focus-visible img {
+		transition: none;
+		transform: none;
 	}
 }
 
@@ -942,10 +962,10 @@ html {
 	overflow-x: hidden;
 }
 
-/* CTA above footer */
-.hakmi-cta-section {
-	background: var(--hakmi-primary-navy);
-	color: #fff;
+/* CTA above footer — light (inverted from navy) */
+html body .hakmi-cta-section {
+	background: var(--hakmi-white, #ffffff) !important;
+	color: var(--hakmi-primary-navy, #1a344c);
 	text-align: center;
 }
 
@@ -955,22 +975,22 @@ html {
 	padding: 88px var(--hakmi-content-pad) 80px;
 }
 
-.hakmi-cta-badge {
+html body .hakmi-cta-badge {
 	display: inline-block;
 	margin: 0 0 1.25rem;
 	padding: 0.4rem 1rem;
 	border: 1px solid var(--hakmi-accent-gold);
 	border-radius: 0;
-	color: var(--hakmi-accent-gold);
+	color: var(--hakmi-navy, #1a344c);
 	font-size: 0.85rem;
 	font-weight: 600;
-	background-color: #d2c1aa29;
+	background-color: rgba(217, 170, 90, 0.16);
 }
 
-.hakmi-cta-title {
+html body .hakmi-cta-title {
 	margin: 0 auto 1.25rem;
 	max-width: 22ch;
-	color: #fff;
+	color: var(--hakmi-primary-navy, #1a344c);
 	font-size: clamp(1.75rem, 3.4vw, 2.75rem);
 	font-weight: 700;
 	line-height: 1.35;
@@ -981,16 +1001,16 @@ html {
 	margin: 0 auto 2rem;
 }
 
-.hakmi-cta-copy h3 {
+html body .hakmi-cta-copy h3 {
 	margin: 0 0 0.65rem;
-	color: #fff;
+	color: var(--hakmi-primary-navy, #1a344c);
 	font-size: 1.15rem;
 	font-weight: 700;
 }
 
-.hakmi-cta-copy p {
+html body .hakmi-cta-copy p {
 	margin: 0;
-	color: rgba(255, 255, 255, 0.78);
+	color: rgba(26, 52, 76, 0.78);
 	font-size: 1rem;
 	line-height: 1.9;
 }

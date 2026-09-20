@@ -4,6 +4,7 @@ Last updated: **2026-09-20**
 
 ## Done
 
+- **2026-09-20** — PR #10 merged: six-part homepage redesign (hero/fact-strip, about, light sectors, dark companies, partner carousel, CTA)
 - **2026-09-20** — PR: مقدمة المجموعة full-bleed background (Noarch `6f264ca6` pattern) — factory image + navy/teal gradient overlay, light text (`cursor/about-section-noarch-bg-1fe3`)
 - **2026-09-15** — PR #1: Homepage aligned with 2026 brand identity and official Arabic content (`cursor/hakmi-brand-ui-enhancements-7a4a`)
 - **2026-09-15** — PR #2: Full corporate launch pages — about, sectors, companies, projects, presence, news, partnerships, careers, contact, legal (`cursor/corporate-pages-faa9`)
@@ -13,10 +14,9 @@ Last updated: **2026-09-20**
 
 ## In progress / next
 
-- **2026-09-20** — Draft PR #10: six-part homepage redesign ready for local preview (hero/fact-strip viewport, shorter about, light sectors, dark companies, accessible logo carousel); intentionally not merged or deployed (`cursor/homepage-redesign-1c32`)
-- **Distinct approved partner logos** are still unavailable; the homepage carousel currently uses legitimate in-repo Akzirve, بيت الإباء, قمم, and Hakmi brand assets
+- **2026-09-20** — Draft PR: invert شركات المجموعة + شراكات استراتيجية to light palettes; infinite شركائنا marquee with hover scale (`cursor/homepage-color-carousel-2c7d`) — do not merge until preview
+- **Distinct approved partner logos** are still unavailable; carousel uses in-repo Akzirve, بيت الإباء, قمم, and Hakmi brand assets only
 - **Richer photography / imagery** across key sections
-- Await local preview approval before merging PR #10
 
 ## Known issues
 
