@@ -10,6 +10,7 @@ Hakmi Holding only. Check off items here and close matching [GitHub Issues](http
 ## Design & quality
 
 - [x] **مقدمة المجموعة full-bleed bg** — Noarch `6f264ca6` style on `.hakmi-about-section` (2026-09-20)
+- [ ] **Homepage color invert + infinite partner carousel** — شركات المجموعة and شراكات استراتيجية opposite of master dark palettes; شركائنا seamless loop + hover scale (draft PR, `cursor/homepage-color-carousel-2c7d`)
 - [x] **Six-part homepage redesign** — hero and fact-strip viewport fit, shorter about, light sectors, dark companies, accessible infinite logo carousel (draft [#10](https://github.com/Moaazaldakkak/hakmi-holding/pull/10), awaiting local approval)
 - [ ] Add **richer approved photography / imagery** across key sections when assets are available — [#5](https://github.com/Moaazaldakkak/hakmi-holding/issues/5)
 - [ ] Review live site after each deploy; confirm cache cleared if changes not visible
