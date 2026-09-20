@@ -353,6 +353,58 @@ h3 {
 	}
 }
 
+@media (min-width: 1025px) and (max-height: 820px) {
+	:root {
+		--hakmi-fact-strip-height: 96px;
+	}
+
+	.elementor-1527 .elementor-element.elementor-element-62516c04 > .e-con-inner {
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: center !important;
+		height: 100%;
+		min-height: 0;
+		padding-block: clamp(4.25rem, 9vh, 5.25rem) 0.65rem !important;
+		gap: 0.6rem !important;
+	}
+
+	.elementor-1527 .elementor-element.elementor-element-6d53849e {
+		width: min(54%, 38rem) !important;
+		max-width: min(54%, 38rem) !important;
+		gap: clamp(0.65rem, 1.5vh, 1rem) !important;
+		flex: 0 1 auto;
+		min-height: 0;
+	}
+
+	.elementor-1527 .elementor-element.elementor-element-7e96f104 .hakmi-display {
+		font-size: clamp(2.15rem, 3.8vw, 2.85rem) !important;
+		line-height: 1.12 !important;
+	}
+
+	.elementor-1527 .elementor-element.elementor-element-101271d5 .hakmi-lead {
+		font-size: clamp(0.92rem, 1.05vw, 1rem) !important;
+		line-height: 1.62 !important;
+	}
+
+	.elementor-1527 .elementor-element.elementor-element-3e41fe34 {
+		gap: 0.55rem !important;
+	}
+
+	.hakmi-fact-strip > .e-con-inner {
+		padding-block: 0.65rem !important;
+		gap: 0.35rem !important;
+	}
+
+	.hakmi-fact-strip .elementor-icon-box-title {
+		font-size: 0.92rem !important;
+	}
+
+	.hakmi-fact-strip .elementor-icon-box-description {
+		font-size: 0.78rem !important;
+		line-height: 1.42 !important;
+	}
+}
+
 @media (max-width: 1024px) {
 	.elementor-1527 .elementor-element.elementor-element-62516c04 {
 		min-height: min(760px, 86svh);
@@ -510,6 +562,124 @@ h3 {
 	.hakmi-about-content,
 	.hakmi-about-lead {
 		max-width: 100%;
+	}
+}
+
+/* ------------------------------------------------------------------ */
+/* Homepage intro split: about + sectors (RTL sticky image on visual left) */
+/* ------------------------------------------------------------------ */
+.hakmi-intro-split {
+	background-color: var(--hakmi-gold-tint-4, #f7eede) !important;
+	color: var(--hakmi-primary-navy);
+}
+
+.hakmi-intro-split-inner {
+	display: grid !important;
+	grid-template-columns: minmax(0, 1fr) minmax(260px, 38%);
+	gap: clamp(1.25rem, 2.5vw, 2.25rem);
+	align-items: start;
+	width: 100%;
+	max-width: var(--hakmi-content-max, 1440px);
+	margin-inline: auto;
+	padding: clamp(2.75rem, 5vw, 4.5rem) var(--hakmi-content-pad, 1rem) !important;
+	box-sizing: border-box;
+}
+
+.hakmi-intro-split-content {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(2rem, 4vw, 3.25rem);
+	min-width: 0;
+}
+
+.hakmi-intro-split .hakmi-about-content {
+	max-width: none;
+	margin-inline: 0;
+	gap: clamp(0.65rem, 1.2vw, 1rem);
+}
+
+.hakmi-intro-split .hakmi-about-kicker {
+	color: var(--hakmi-accent-gold);
+}
+
+.hakmi-intro-split .hakmi-about-content h2 {
+	color: var(--hakmi-primary-navy);
+	font-size: clamp(1.3rem, 2.1vw, 1.85rem);
+	font-weight: 700;
+	line-height: 1.55;
+	text-shadow: none;
+}
+
+.hakmi-intro-split .hakmi-about-lead {
+	max-width: none;
+	color: var(--hakmi-text-muted);
+	font-size: clamp(0.95rem, 1.05vw, 1.02rem);
+	line-height: 1.85;
+}
+
+.hakmi-intro-split .hakmi-sectors-block {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.hakmi-intro-split .hakmi-sectors-intro .hakmi-sectors-title {
+	margin: 0;
+	font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+	line-height: 1.25;
+	text-align: start;
+}
+
+.hakmi-intro-split-media {
+	position: relative;
+	align-self: stretch;
+	overflow: hidden;
+	background: var(--hakmi-navy-shade-2);
+}
+
+.hakmi-intro-split-media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+@media (min-width: 1025px) {
+	.hakmi-intro-split-media {
+		position: sticky;
+		top: 0;
+		height: 100vh;
+		max-height: 100vh;
+	}
+
+	.hakmi-intro-split-media img {
+		min-height: 100%;
+		max-height: 100vh;
+	}
+}
+
+@media (max-width: 1024px) {
+	.hakmi-intro-split-inner {
+		grid-template-columns: 1fr;
+	}
+
+	.hakmi-intro-split-media {
+		order: -1;
+		position: relative;
+		top: auto;
+		height: auto;
+		max-height: min(40vh, 320px);
+	}
+}
+
+@media (max-width: 767px) {
+	.hakmi-intro-split-inner {
+		padding-block: 2.5rem !important;
+	}
+
+	.hakmi-intro-split-media {
+		max-height: min(36vh, 260px);
 	}
 }
 
