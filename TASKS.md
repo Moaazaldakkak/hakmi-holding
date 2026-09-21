@@ -22,5 +22,5 @@ Hakmi Holding only. Check off items here and close matching [GitHub Issues](http
 
 ## Optional / backlog
 
-- [ ] Audit remaining Noarch/Elementor legacy markup on `index.html` for cleanup opportunities (low priority)
+- [x] Audit remaining Noarch/Elementor legacy markup on `index.html` for cleanup opportunities (done 2026-09-21: full removal, see STATUS)
 - [ ] Consolidate `ui-reference.html` vs `reference.html` if redundant (confirm with user first)

@@ -4,6 +4,8 @@ Last updated: **2026-09-21**
 
 ## Done
 
+- **2026-09-21** — Removed all Elementor/WordPress legacy: clean `index.html` rewrite (same copy/design, Hakmi classes only, `hakmi-reveal` animations), deleted `assets/wp-content/` + `assets/wp-includes/` + `assets/rtl-fix.js` + Elementor font exports (Lyon Arabic only now), moved hero/about images to `assets/images/` and logos to `assets/logos/`, archived `index-rtl.html` + `draft-sections.html` to `archive/`
+
 - **2026-09-21** — Reverted PR #12 on `master` (user request): restored separate about/sectors sections, design-ref nav link, pre-split layout
 - **2026-09-20** — PR #10 merged: six-part homepage redesign (hero/fact-strip, about, light sectors, dark companies, partner carousel, CTA)
 - **2026-09-20** — PR: مقدمة المجموعة full-bleed background (Noarch `6f264ca6` pattern) — factory image + navy/teal gradient overlay, light text (`cursor/about-section-noarch-bg-1fe3`)

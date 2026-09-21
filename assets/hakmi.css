@@ -29,7 +29,7 @@
 	--hakmi-white: #ffffff;
 	--hakmi-light: #f0ddbd;
 	--hakmi-border: #d1d6db;
-	--hakmi-font: var(--hakmi-font-fallback, "Lyon Arabic Display", "Instrument Serif", "Noto Naskh Arabic", Georgia, serif);
+	--hakmi-font: var(--hakmi-font-fallback, "Lyon Arabic Display", "Noto Naskh Arabic", Georgia, serif);
 	--hakmi-radius: 0;
 	--hakmi-transition: 180ms ease;
 	--hakmi-content: 1120px;
