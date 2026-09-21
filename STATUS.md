@@ -14,6 +14,7 @@ Last updated: **2026-09-20**
 
 ## In progress / next
 
+- **2026-09-20** — Draft PR: hide مرجع التصميم nav links, short-viewport hero fit, unified about+sectors sticky split (`cursor/homepage-split-nav-hero-e9c9`) — do not merge until local preview
 - **2026-09-20** — Draft PR: invert شركات المجموعة + شراكات استراتيجية to light palettes; infinite شركائنا marquee with hover scale (`cursor/homepage-color-carousel-2c7d`) — do not merge until preview
 - **Distinct approved partner logos** are still unavailable; carousel uses in-repo Akzirve, بيت الإباء, قمم, and Hakmi brand assets only
 - **Richer photography / imagery** across key sections

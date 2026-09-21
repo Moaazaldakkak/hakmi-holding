@@ -650,8 +650,9 @@ a.hakmi-partner-wordmark:hover {
 
 /* Homepage section rhythm */
 
-.hakmi-sectors-section > .e-con-inner {
-	padding-block: 56px !important;
+.hakmi-sectors-section > .e-con-inner,
+.hakmi-intro-split .hakmi-sectors-block {
+	padding-block: 0 !important;
 	gap: 28px !important;
 }
 
