@@ -18,7 +18,8 @@ window.HAKMI.nav = [
       { label: "الأخبار", href: "news.html", id: "news" },
       { label: "الشراكات", href: "partnerships.html", id: "partnerships" },
       { label: "الوظائف", href: "careers.html", id: "careers" },
-      { label: "القانونية", href: "legal.html", id: "legal" }
+      { label: "القانونية", href: "legal.html", id: "legal" },
+      { label: "مرجع التصميم", href: "reference.html", id: "reference" }
     ]
   },
   { label: "الأخبار", href: "news.html", id: "news" },

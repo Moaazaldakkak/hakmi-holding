@@ -145,6 +145,7 @@
       "</div></div>" +
       '<div class="hakmi-footer-bar">' +
       "<p>© 2026 مجموعة الحاكمي القابضة – جميع الحقوق محفوظة</p>" +
+      '<p class="hakmi-footer-ref"><a href="reference.html">مرجع التصميم</a></p>' +
       "</div></div></footer>";
   }
 
