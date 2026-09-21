@@ -1,9 +1,10 @@
 # Project status
 
-Last updated: **2026-09-20**
+Last updated: **2026-09-21**
 
 ## Done
 
+- **2026-09-21** — Reverted PR #12 on `master` (user request): restored separate about/sectors sections, design-ref nav link, pre-split layout
 - **2026-09-20** — PR #10 merged: six-part homepage redesign (hero/fact-strip, about, light sectors, dark companies, partner carousel, CTA)
 - **2026-09-20** — PR: مقدمة المجموعة full-bleed background (Noarch `6f264ca6` pattern) — factory image + navy/teal gradient overlay, light text (`cursor/about-section-noarch-bg-1fe3`)
 - **2026-09-15** — PR #1: Homepage aligned with 2026 brand identity and official Arabic content (`cursor/hakmi-brand-ui-enhancements-7a4a`)
