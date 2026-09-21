@@ -650,12 +650,12 @@ a.hakmi-partner-wordmark:hover {
 
 /* Homepage section rhythm */
 
-.hakmi-sectors-section > .e-con-inner {
+.hakmi-sectors-section > .hakmi-section-inner {
 	padding-block: 56px !important;
 	gap: 28px !important;
 }
 
-.hakmi-companies-section > .e-con-inner {
+.hakmi-companies-section > .hakmi-section-inner {
 	padding-block: 56px !important;
 	gap: 24px !important;
 }
@@ -668,7 +668,6 @@ a.hakmi-partner-wordmark:hover {
 	padding-block: 64px 56px;
 }
 
-html body .hakmi-companies-section.e-con,
 html body .hakmi-companies-section {
 	background-color: var(--hakmi-bg-light, #f7eede) !important;
 	color: var(--hakmi-primary-navy, #1a344c) !important;

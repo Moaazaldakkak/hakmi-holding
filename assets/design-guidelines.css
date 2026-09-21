@@ -52,26 +52,10 @@
 	--hakmi-bg-light: var(--hakmi-gold-tint-4);
 	--hakmi-bg-card: var(--hakmi-white);
 	--hakmi-border: var(--hakmi-navy-tint-4);
-	--hakmi-font: var(--hakmi-font-fallback, "Lyon Arabic Display", "Instrument Serif", "Noto Naskh Arabic", Georgia, "Times New Roman", serif);
+	--hakmi-font: var(--hakmi-font-fallback, "Lyon Arabic Display", "Noto Naskh Arabic", Georgia, "Times New Roman", serif);
 	--hakmi-content-max: 1440px;
 	--hakmi-content-pad: 16px;
 	--hakmi-fact-strip-height: 118px;
-}
-
-/* ------------------------------------------------------------------ */
-/* Remap Elementor kit tokens to Hakmi brand                           */
-/* ------------------------------------------------------------------ */
-.elementor-kit-4 {
-	--e-global-color-secondary: var(--hakmi-navy);
-	--e-global-color-accent: var(--hakmi-gold);
-	--e-global-color-31c76fa: var(--hakmi-navy-tint-1);
-
-	--e-global-typography-primary-font-family: "Lyon Arabic Display";
-	--e-global-typography-secondary-font-family: "Lyon Arabic Display";
-	--e-global-typography-text-font-family: "Lyon Arabic Display";
-	--e-global-typography-accent-font-family: "Lyon Arabic Display";
-	--e-global-typography-d41d0c7-font-family: "Lyon Arabic Display";
-	--e-global-typography-c201a61-font-family: "Lyon Arabic Display";
 }
 
 html,
@@ -83,16 +67,6 @@ body {
 }
 
 body,
-.elementor,
-.elementor-widget-text-editor,
-.elementor-widget-text-editor p,
-.elementor-icon-box-title,
-.elementor-icon-box-description,
-.elementor-heading-title,
-.elementskit-navbar-nav,
-.jkit-button-wrapper,
-.profile-name,
-.profile-des,
 h1,
 h2,
 h3,
@@ -104,7 +78,6 @@ textarea {
 	font-family: var(--hakmi-font) !important;
 }
 
-.elementor-heading-title,
 h1,
 h2,
 h3 {
@@ -113,8 +86,9 @@ h3 {
 }
 
 /* Content width + edge padding */
-.e-con-boxed > .e-con-inner,
-.elementor-section .elementor-container {
+.hakmi-hero-inner,
+.hakmi-section-inner,
+.hakmi-fact-inner {
 	max-width: var(--hakmi-content-max) !important;
 	width: 100%;
 	padding-inline: var(--hakmi-content-pad) !important;
@@ -122,128 +96,69 @@ h3 {
 	box-sizing: border-box;
 }
 
-/* Header logo */
-.elementor-1267 .elementor-widget-image img,
-.elementor-1419 .elementor-widget-image img {
-	max-height: 42px;
-	width: auto;
-	height: auto;
+/* Fact strip: title + subtitle */
+.hakmi-fact-inner {
+	display: flex;
+	flex-direction: column;
 }
 
-/* ------------------------------------------------------------------ */
-/* Accent gold replaces template orange                                */
-/* ------------------------------------------------------------------ */
-.elementor-view-default .elementor-icon,
-.elementor-icon-list-icon i,
-.elementor-icon-list-icon svg,
-.elementor-counter-number,
-.elementor-counter-number-prefix,
-.elementor-counter-number-suffix {
-	color: var(--hakmi-accent-gold);
-	fill: var(--hakmi-accent-gold);
+.hakmi-fact-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
 }
 
-.elementor-widget-divider .elementor-divider-separator {
-	border-color: var(--hakmi-accent-gold);
+.hakmi-fact-item {
+	transition: transform 180ms ease;
 }
 
-.elementor-view-stacked .elementor-icon {
-	background-color: var(--hakmi-accent-gold) !important;
-	color: var(--hakmi-primary-navy) !important;
-	fill: var(--hakmi-primary-navy) !important;
+.hakmi-fact-item:hover {
+	transform: translateY(-8px);
 }
 
-.jkit-testimonials .profile-name {
-	color: var(--hakmi-accent-gold);
-}
-
-/* ------------------------------------------------------------------ */
-/* Buttons                                                             */
-/* ------------------------------------------------------------------ */
-.jkit-button .jkit-button-wrapper,
-.elementor-button,
-.elementor-button-link {
-	border-radius: 0;
-	font-family: var(--hakmi-font) !important;
-	font-weight: 600;
-	letter-spacing: 0.02em;
-	transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-}
-
-.jkit-button .jkit-button-wrapper:hover,
-.elementor-button:hover,
-.elementor-button-link:hover {
-	background-color: var(--hakmi-accent-gold) !important;
-	border-color: var(--hakmi-accent-gold) !important;
-	color: var(--hakmi-navy) !important;
-}
-
-/* Hero secondary CTA */
-.hakmi-hero-secondary .jkit-button-wrapper {
-	background: transparent !important;
-	border: 1px solid rgba(255, 255, 255, 0.55) !important;
-	color: #fff !important;
-}
-
-.hakmi-hero-secondary .jkit-button-wrapper:hover {
-	border-color: var(--hakmi-accent-gold) !important;
-	color: var(--hakmi-accent-gold) !important;
-	background: transparent !important;
-}
-
-.elementor-element-3e41fe34 {
-	display: flex !important;
-	flex-direction: row !important;
-	flex-wrap: wrap !important;
-	gap: 12px !important;
-	align-items: center !important;
-	width: auto !important;
-}
-
-/* Fact strip: title + subtitle, quieter icons */
-.hakmi-fact-strip .elementor-icon-box-icon {
-	display: none;
-}
-
-.hakmi-fact-strip .elementor-icon-box-title {
+.hakmi-fact-title {
+	margin: 0 0 2px;
 	color: var(--hakmi-primary-navy);
 	font-size: 1.15rem;
 	transition: color 180ms ease;
 }
 
-.hakmi-fact-strip .elementor-icon-box-description {
+.hakmi-fact-description {
+	margin: 0;
 	color: var(--hakmi-text-muted);
 	transition: color 180ms ease;
 }
 
-.elementor-element-769023b4 .elementor-element-18861dba > .e-con:hover .elementor-icon-box-title,
-.elementor-element-769023b4 .elementor-element-18861dba > .e-con:hover .elementor-icon-box-title span,
-.elementor-element-769023b4 .elementor-element-18861dba > .e-con:hover .elementor-icon-box-description {
+.hakmi-fact-grid > .hakmi-fact-item:hover .hakmi-fact-title,
+.hakmi-fact-grid > .hakmi-fact-item:hover .hakmi-fact-title span,
+.hakmi-fact-grid > .hakmi-fact-item:hover .hakmi-fact-description {
 	color: var(--hakmi-accent-gold) !important;
 }
 
-/* Companies process: hide numeric step labels */
-.hakmi-companies-process .elementor-element-6dff06c,
-.hakmi-companies-process .elementor-element-63bcb046,
-.hakmi-companies-process .elementor-element-38f2a5da,
-.hakmi-companies-process .elementor-element-148cded9 {
-	display: none !important;
-}
-
-/* Fact strip: force 3 columns */
-.hakmi-fact-strip .elementor-element-18861dba {
-	grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+.hakmi-fact-note {
+	margin: 0;
+	padding-top: 1em;
+	border-top: 1px solid rgba(26, 52, 76, 0.12);
+	color: var(--hakmi-text-muted);
+	font-size: 0.9rem;
 }
 
 /* ------------------------------------------------------------------ */
 /* Above-the-fold: hero + fact strip fit in first viewport (desktop)   */
 /* ------------------------------------------------------------------ */
-.elementor-1527 .elementor-element.elementor-element-62516c04 {
+.hakmi-hero {
 	position: relative;
 	isolation: isolate;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--hakmi-navy-shade-2);
+	background-image: url("images/hero-bg.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.elementor-1527 .elementor-element.elementor-element-62516c04::before {
+.hakmi-hero::before {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -260,13 +175,13 @@ h3 {
 	pointer-events: none;
 }
 
-.elementor-1527 .elementor-element.elementor-element-62516c04 > .e-con-inner {
+.hakmi-hero > .hakmi-hero-inner {
 	position: relative;
 	z-index: 1;
 	align-items: flex-start !important;
 }
 
-.elementor-1527 .elementor-element.elementor-element-6d53849e {
+.hakmi-hero-content {
 	display: flex !important;
 	flex-direction: column !important;
 	width: min(50%, 42rem) !important;
@@ -275,12 +190,7 @@ h3 {
 	gap: clamp(1.25rem, 2.5vh, 2rem) !important;
 }
 
-.elementor-1527 .elementor-element.elementor-element-1e389830 {
-	width: 100% !important;
-	max-width: none !important;
-}
-
-.elementor-1527 .elementor-element.elementor-element-7e96f104 .hakmi-display {
+.hakmi-hero .hakmi-display {
 	margin: 0;
 	color: #fff;
 	font-size: clamp(3rem, 4.7vw, 4.65rem) !important;
@@ -289,7 +199,7 @@ h3 {
 	text-shadow: 0 3px 28px rgba(0, 0, 0, 0.42);
 }
 
-.elementor-1527 .elementor-element.elementor-element-101271d5 .hakmi-lead {
+.hakmi-hero .hakmi-lead {
 	max-width: 41rem;
 	margin: 0;
 	color: rgba(255, 255, 255, 0.92);
@@ -298,7 +208,7 @@ h3 {
 	text-shadow: 0 2px 18px rgba(0, 0, 0, 0.32);
 }
 
-.elementor-1527 .elementor-element.elementor-element-3e41fe34 {
+.hakmi-hero-actions {
 	display: flex !important;
 	flex-direction: row !important;
 	flex-wrap: wrap;
@@ -308,12 +218,8 @@ h3 {
 	gap: 0.75rem !important;
 }
 
-.elementor-1527 .hakmi-hero-secondary .hakmi-header-actions {
-	display: flex;
-}
-
 @media (min-width: 1025px) {
-	.elementor-1527 .elementor-element.elementor-element-62516c04 {
+	.hakmi-hero {
 		--min-height: calc(100svh - var(--hakmi-fact-strip-height));
 		min-height: calc(100svh - var(--hakmi-fact-strip-height)) !important;
 		height: calc(100svh - var(--hakmi-fact-strip-height));
@@ -322,7 +228,7 @@ h3 {
 		overflow: hidden;
 	}
 
-	.elementor-1527 .elementor-element.elementor-element-62516c04 > .e-con-inner {
+	.hakmi-hero > .hakmi-hero-inner {
 		padding-block: clamp(5.25rem, 12vh, 7.5rem) 1.25rem !important;
 		gap: 1rem !important;
 	}
@@ -333,52 +239,52 @@ h3 {
 		overflow: hidden;
 	}
 
-	.hakmi-fact-strip > .e-con-inner {
+	.hakmi-fact-strip > .hakmi-fact-inner {
 		height: 100%;
 		padding-block: 1rem !important;
 		gap: 0.5rem !important;
 	}
 
-	.hakmi-fact-strip .elementor-icon-box-title {
+	.hakmi-fact-strip .hakmi-fact-title {
 		font-size: 1.05rem !important;
 	}
 
-	.hakmi-fact-strip .elementor-icon-box-description {
+	.hakmi-fact-strip .hakmi-fact-description {
 		font-size: 0.88rem !important;
 		line-height: 1.55 !important;
 	}
 
-	.hakmi-fact-strip .elementor-element-1005869e {
+	.hakmi-fact-strip .hakmi-fact-note {
 		display: none !important;
 	}
 }
 
 @media (max-width: 1024px) {
-	.elementor-1527 .elementor-element.elementor-element-62516c04 {
+	.hakmi-hero {
 		min-height: min(760px, 86svh);
 	}
 
-	.elementor-1527 .elementor-element.elementor-element-62516c04 > .e-con-inner {
+	.hakmi-hero > .hakmi-hero-inner {
 		padding-block: 7rem 3.5rem !important;
 	}
 
-	.elementor-1527 .elementor-element.elementor-element-6d53849e {
+	.hakmi-hero-content {
 		width: min(68%, 40rem) !important;
 		max-width: min(68%, 40rem) !important;
 	}
 
-	.elementor-1527 .elementor-element.elementor-element-7e96f104 .hakmi-display {
+	.hakmi-hero .hakmi-display {
 		font-size: clamp(2.65rem, 6vw, 3.8rem) !important;
 	}
 }
 
 @media (max-width: 767px) {
-	.elementor-1527 .elementor-element.elementor-element-62516c04 {
+	.hakmi-hero {
 		min-height: 0;
 		height: auto;
 	}
 
-	.elementor-1527 .elementor-element.elementor-element-62516c04::before {
+	.hakmi-hero::before {
 		background: linear-gradient(
 			to bottom,
 			rgba(13, 26, 38, 0.78) 0%,
@@ -387,27 +293,27 @@ h3 {
 		) !important;
 	}
 
-	.elementor-1527 .elementor-element.elementor-element-62516c04 > .e-con-inner {
+	.hakmi-hero > .hakmi-hero-inner {
 		padding-block: 7rem 3.25rem !important;
 	}
 
-	.elementor-1527 .elementor-element.elementor-element-6d53849e {
+	.hakmi-hero-content {
 		width: 100% !important;
 		max-width: 100% !important;
 	}
 
-	.elementor-1527 .elementor-element.elementor-element-7e96f104 .hakmi-display {
+	.hakmi-hero .hakmi-display {
 		font-size: clamp(2.35rem, 11vw, 3.25rem) !important;
 	}
 
-	.elementor-1527 .elementor-element.elementor-element-101271d5 .hakmi-lead {
+	.hakmi-hero .hakmi-lead {
 		font-size: 1.03rem !important;
 		line-height: 1.75 !important;
 	}
 }
 
 /* ------------------------------------------------------------------ */
-/* About: full-bleed intro (Noarch 6f264ca6 bg pattern, Hakmi brand)   */
+/* About: full-bleed intro (factory image + navy/teal overlay) */
 /* ------------------------------------------------------------------ */
 .hakmi-about-section {
 	position: relative;
@@ -416,7 +322,7 @@ h3 {
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: var(--hakmi-navy-shade-2);
-	background-image: url("wp-content/uploads/sites/6/2026/06/a-factory-structure-with-mountains-in-the-backgrou-2026-03-26-10-19-29-utc_11zon-1.jpg");
+	background-image: url("images/about-factory.jpg");
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -436,7 +342,6 @@ h3 {
 	z-index: 0;
 }
 
-.hakmi-about-section > .e-con-inner,
 .hakmi-about-section .hakmi-about-grid {
 	position: relative;
 	z-index: 1;
@@ -497,12 +402,10 @@ h3 {
 
 @media (max-width: 767px) {
 	.hakmi-about-section,
-	.hakmi-about-section > .e-con-inner,
 	.hakmi-about-section .hakmi-about-grid {
 		min-height: min(70vh, 620px);
 	}
 
-	.hakmi-about-section > .e-con-inner,
 	.hakmi-about-section .hakmi-about-grid {
 		padding-block: clamp(3.5rem, 12vw, 6em) !important;
 	}
@@ -519,7 +422,7 @@ h3 {
 	color: var(--hakmi-primary-navy);
 }
 
-.hakmi-sectors-section > .e-con-inner {
+.hakmi-sectors-section > .hakmi-section-inner {
 	display: flex !important;
 	flex-direction: column !important;
 	gap: 40px !important;
@@ -633,13 +536,12 @@ h3 {
 }
 
 /* Selected companies — light portfolio (inverted from navy) */
-html body .hakmi-companies-section.e-con,
 html body .hakmi-companies-section {
 	background-color: var(--hakmi-bg-light, #f7eede) !important;
 	color: var(--hakmi-primary-navy) !important;
 }
 
-.hakmi-companies-section > .e-con-inner {
+.hakmi-companies-section > .hakmi-section-inner {
 	display: flex !important;
 	flex-direction: column !important;
 	gap: 32px !important;
@@ -947,17 +849,6 @@ html body .hakmi-partner-slot.is-filled {
 /* ------------------------------------------------------------------ */
 /* Surfaces                                                            */
 /* ------------------------------------------------------------------ */
-.elementor-kit-4,
-.page,
-.site {
-	background-color: var(--hakmi-bg-light);
-}
-
-a.ekit-menu-nav-link:hover,
-.elementskit-navbar-nav > li > a:hover {
-	color: var(--hakmi-accent-gold) !important;
-}
-
 html {
 	overflow-x: hidden;
 }
@@ -1431,10 +1322,6 @@ a.hakmi-cta-btn-secondary:hover {
 	margin: 0;
 	color: rgba(255, 255, 255, 0.55);
 	font-size: 0.8rem;
-}
-
-.ekit-template-content-footer {
-	display: none !important;
 }
 
 @media (max-width: 1024px) {
